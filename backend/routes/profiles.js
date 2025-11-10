@@ -1,24 +1,32 @@
-import express from "express";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const { v4: uuidv4 } = require('uuid');
 
 const router = express.Router();
+const dataPath = path.join(__dirname, '../data/profissionais.json');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const dataPath = path.join(__dirname, "../data/profiles.json");
-
-// GET /profiles
-router.get("/", (req, res) => {
-  fs.readFile(dataPath, "utf-8", (err, data) => {
-    if (err) {
-      console.error("Erro ao ler o JSON:", err);
-      return res.status(500).json({ error: "Erro ao carregar dados" });
-    }
-    const profiles = JSON.parse(data);
-    res.json(profiles);
-  });
+// GET - listar todos
+router.get('/', (req, res) => {
+  const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  res.json(data);
 });
 
-export default router;
+// GET - buscar por ID
+router.get('/:id', (req, res) => {
+  const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  const profissional = data.find(p => p.id === req.params.id);
+  if (!profissional) return res.status(404).json({ message: 'Profissional não encontrado' });
+  res.json(profissional);
+});
+
+// POST - adicionar novo profissional
+router.post('/', (req, res) => {
+  const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+  const novo = { id: uuidv4(), ...req.body };
+  data.push(novo);
+  fs.writeFileSync(dataPath, JSON.stringify(data, null, 2));
+  res.status(201).json(novo);
+});
+
+module.exports = router;
