@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require("path");
 const fs = require("fs-extra");
 
-const DATA_PATH = path.join(__dirname, "..", "data", "profissionais.json");
+const DATA_PATH = path.join(__dirname, "..", "data", "profiles.json");
 
 
 function readData() {
