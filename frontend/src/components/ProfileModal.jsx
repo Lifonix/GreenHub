@@ -1,66 +1,66 @@
-export default function ProfileModal({ profile, onClose }) {
+import React, { useState } from "react";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
+
+export default function ProfileModal({ profile, onClose, onRecommend, onMessage }) {
+  const [msg, setMsg] = useState("");
+
+  const send = () => {
+    if (!msg.trim()) return alert("Digite uma mensagem!");
+    onMessage && onMessage(msg);
+    setMsg("");
+  };
+
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/60 z-50 p-4">
-      <div className="bg-white dark:bg-gray-900 rounded-xl p-6 max-w-lg w-full relative shadow-xl border border-gray-200 dark:border-gray-700">
-        <button
-          onClick={onClose}
-          className="absolute top-3 right-4 text-gray-500 hover:text-red-500"
-        >
-          Fechar
-        </button>
-
-        <div className="text-center mb-4">
-          <img
-            src={profile.foto}
-            alt={profile.nome}
-            className="w-24 h-24 rounded-full mx-auto object-cover"
-          />
-          <h2 className="text-2xl font-semibold mt-3">{profile.nome}</h2>
-          <p className="text-gray-500">{profile.cargo}</p>
-          <p className="mt-1 text-sm text-gray-400">{profile.localizacao}</p>
+    <Modal
+      isOpen={!!profile}
+      onRequestClose={onClose}
+      overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-start z-50"
+      className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-6 mt-16 w-full max-w-3xl outline-none"
+    >
+      <div className="flex justify-between items-start">
+        <div className="flex gap-4">
+          <img src={profile.foto} alt="" className="w-24 h-24 rounded-full object-cover" />
+          <div>
+            <h2 className="text-2xl font-semibold">{profile.nome}</h2>
+            <p className="text-gray-500 dark:text-gray-300">{profile.cargo}</p>
+            <p className="text-xs text-gray-400">{profile.localizacao}</p>
+          </div>
         </div>
-
-        <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
-          <h3 className="font-semibold text-blue-600 dark:text-blue-400 mb-2">
-            Habilidades Técnicas
-          </h3>
-          <ul className="flex flex-wrap gap-2">
-            {profile.habilidadesTecnicas.map((h, i) => (
-              <li
-                key={i}
-                className="bg-blue-100 dark:bg-blue-800 text-blue-700 dark:text-blue-300 px-2 py-1 rounded-full text-xs"
-              >
-                {h}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mt-4">
-          <h3 className="font-semibold text-blue-600 dark:text-blue-400 mb-2">
-            Soft Skills
-          </h3>
-          <ul className="flex flex-wrap gap-2">
-            {profile.softSkills.map((s, i) => (
-              <li
-                key={i}
-                className="bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300 px-2 py-1 rounded-full text-xs"
-              >
-                {s}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="flex justify-center gap-3 mt-6">
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-            Recomendar
-          </button>
-          <button className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition">
-            Enviar mensagem
-          </button>
-        </div>
+        <button onClick={onClose} className="text-gray-400 hover:text-red-500">✕</button>
       </div>
-    </div>
+
+      <p className="mt-4">{profile.resumo}</p>
+
+      <div className="mt-6 flex flex-wrap gap-2">
+        {profile.habilidadesTecnicas?.map((h) => (
+          <span key={h} className="px-3 py-1 border rounded-full text-sm">{h}</span>
+        ))}
+      </div>
+
+      <textarea
+        value={msg}
+        onChange={(e) => setMsg(e.target.value)}
+        className="w-full mt-4 p-2 border rounded-lg bg-white dark:bg-gray-800"
+        placeholder="Escreva uma mensagem..."
+        rows="3"
+      ></textarea>
+
+      <div className="flex gap-2 mt-3">
+        <button
+          onClick={send}
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+        >
+          Enviar Mensagem
+        </button>
+        <button
+          onClick={() => onRecommend && onRecommend()}
+          className="border px-4 py-2 rounded-lg"
+        >
+          Recomendar
+        </button>
+      </div>
+    </Modal>
   );
 }
