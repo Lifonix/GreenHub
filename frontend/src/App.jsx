@@ -12,7 +12,7 @@ export default function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/profiles")
+      .get("http://localhost:5000/api/profissionais")
       .then((res) => {
         setProfiles(res.data);
         setFiltered(res.data);
@@ -33,26 +33,25 @@ export default function App() {
   };
 
   return (
-    <div className={darkMode ? "dark bg-gray-900 text-white min-h-screen" : "bg-gray-100 min-h-screen"}>
-      <div className="max-w-6xl mx-auto p-6">
-        {/* Cabeçalho */}
-        <header className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold text-blue-600 dark:text-blue-400">
-            ConectaFuturo
-          </h1>
-          <div className="flex items-center gap-3">
+    <div className={darkMode ? "dark bg-gray-900 text-white min-h-screen" : "bg-gray-50 min-h-screen"}>
+      <div className="max-w-7xl mx-auto p-6">
+        {/* Header */}
+        <header className="flex justify-between items-center mb-8 border-b border-gray-200 dark:border-gray-700 pb-4">
+          <h1 className="text-3xl font-bold text-blue-600 dark:text-blue-400">Lifonix</h1>
+
+          <div className="flex items-center gap-4">
             <input
               type="text"
               placeholder="Buscar por nome, cidade ou área..."
               value={search}
               onChange={handleSearch}
-              className="p-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800"
+              className="p-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 w-64"
             />
             <button
               onClick={() => setDarkMode(!darkMode)}
-              className="p-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600"
+              className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
             >
-              {darkMode ? "☀️" : "🌙"}
+              {darkMode ? "Modo Claro" : "Modo Escuro"}
             </button>
           </div>
         </header>
