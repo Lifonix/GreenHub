@@ -1,1 +1,22 @@
-@import "tailwindcss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Theme base */
+:root {
+  --primary: #60A5FA;
+  --text-dark: #1f2937;
+  --border: #E5E7EB;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.card {
+  @apply rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition;
+}

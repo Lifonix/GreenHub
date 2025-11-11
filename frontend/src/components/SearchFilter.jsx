@@ -1,54 +1,51 @@
-import React from "react";
+export default function SearchFilter({ profiles, filters, setFilters }) {
+  const areas = [...new Set(profiles.map((p) => p.area))];
+  const cities = [...new Set(profiles.map((p) => p.localizacao))];
+  const techs = [
+    ...new Set(profiles.flatMap((p) => p.habilidadesTecnicas || [])),
+  ];
 
-/*
- SearchFilter: receives arrays for areas/cities/techs and controlled props
-*/
-export default function SearchFilter({
-  areas = [],
-  cities = [],
-  techs = [],
-  areaFilter,
-  cityFilter,
-  techFilter,
-  setAreaFilter,
-  setCityFilter,
-  setTechFilter,
-  setSearch,
-}) {
   return (
-    <div>
-      <h3 className="font-semibold mb-3">Filtros</h3>
-
-      <label className="block text-xs mb-1">Busca</label>
-      <input
-        placeholder="Busca geral..."
-        onChange={(e) => setSearch(e.target.value)}
-        className="w-full mb-3 px-3 py-2 rounded-lg border bg-white dark:bg-[#071226] dark:border-gray-700"
-      />
-
-      <label className="block text-xs mb-1">Área</label>
-      <select value={areaFilter} onChange={(e) => setAreaFilter(e.target.value)} className="w-full mb-3 p-2 rounded-lg border bg-white dark:bg-[#071226]">
-        <option value="">Todas</option>
-        {areas.map((a) => <option key={a} value={a}>{a}</option>)}
+    <div className="flex flex-wrap justify-center gap-3 border border-gray-200 rounded-xl p-3 bg-white shadow-sm">
+      <select
+        value={filters.area}
+        onChange={(e) => setFilters({ ...filters, area: e.target.value })}
+        className="px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm"
+      >
+        <option value="">Todas as áreas</option>
+        {areas.map((a) => (
+          <option key={a}>{a}</option>
+        ))}
       </select>
 
-      <label className="block text-xs mb-1">Cidade</label>
-      <select value={cityFilter} onChange={(e) => setCityFilter(e.target.value)} className="w-full mb-3 p-2 rounded-lg border bg-white dark:bg-[#071226]">
-        <option value="">Todas</option>
-        {cities.map((c) => <option key={c} value={c}>{c}</option>)}
+      <select
+        value={filters.city}
+        onChange={(e) => setFilters({ ...filters, city: e.target.value })}
+        className="px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm"
+      >
+        <option value="">Todas as cidades</option>
+        {cities.map((c) => (
+          <option key={c}>{c}</option>
+        ))}
       </select>
 
-      <label className="block text-xs mb-1">Tecnologia</label>
-      <select value={techFilter} onChange={(e) => setTechFilter(e.target.value)} className="w-full mb-3 p-2 rounded-lg border bg-white dark:bg-[#071226]">
-        <option value="">Todas</option>
-        {techs.map((t) => <option key={t} value={t}>{t}</option>)}
+      <select
+        value={filters.tech}
+        onChange={(e) => setFilters({ ...filters, tech: e.target.value })}
+        className="px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm"
+      >
+        <option value="">Todas as tecnologias</option>
+        {techs.map((t) => (
+          <option key={t}>{t}</option>
+        ))}
       </select>
 
-      <div className="mt-3">
-        <button onClick={() => { setAreaFilter(""); setCityFilter(""); setTechFilter(""); setSearch(""); }} className="px-3 py-2 rounded-md border text-sm">
-          Limpar filtros
-        </button>
-      </div>
+      <button
+        onClick={() => setFilters({ search: "", area: "", city: "", tech: "" })}
+        className="px-4 py-2 rounded-lg border border-gray-200 bg-gray-50 text-gray-700 text-sm hover:bg-gray-100"
+      >
+        Limpar filtros
+      </button>
     </div>
   );
 }

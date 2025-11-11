@@ -1,45 +1,59 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-
-export default function Header({ search, setSearch }) {
-  const [dark, setDark] = useState(() => localStorage.getItem("lifonix-theme") === "dark");
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", dark);
-    localStorage.setItem("lifonix-theme", dark ? "dark" : "light");
-  }, [dark]);
+export default function Header({ dark, setDark, onLoginClick, user, filters, setFilters }) {
+  const headerBg = dark ? "bg-gray-900 text-gray-100 border-gray-800" : "bg-white text-gray-800 border-gray-200";
+  const inputBg = dark ? "bg-gray-800 border-gray-700 text-gray-100 placeholder-gray-400" : "bg-white border-gray-200 text-gray-700";
+  const loginBtn = dark
+    ? "bg-[#60A5FA] text-white hover:bg-[#60A5FA]/90"
+    : "bg-[#60A5FA] text-white hover:bg-[#60A5FA]/90";
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-[#071226] backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg flex items-center justify-center bg-[var(--accent)] text-white font-bold">L</div>
-          <div>
-            <div className="text-lg font-bold">Lifonix</div>
-            <div className="text-xs text-gray-500">Network</div>
-          </div>
-        </div>
+    <header
+      className={`sticky top-0 z-50 border-b shadow-sm transition-colors duration-300 ${headerBg}`}
+    >
+      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4 gap-4">
+        {/* Logo */}
+        <h1 className="text-2xl font-bold text-[#60A5FA]">Lifonix</h1>
 
-        <div className="flex-1 px-4">
-          <input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Buscar por nome, cargo, área ou cidade..."
-            className="w-full max-w-2xl mx-auto block px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#071226] focus:ring-2 focus:ring-[var(--accent)] outline-none transition"
-          />
-        </div>
+        {/* Campo de busca */}
+        <input
+          type="text"
+          placeholder="Buscar profissionais..."
+          value={filters.search}
+          onChange={(e) => setFilters({ ...filters, search: e.target.value })}
+          className={`w-full sm:w-1/2 px-4 py-2 rounded-full focus:ring-2 focus:ring-[#60A5FA] outline-none transition ${inputBg}`}
+        />
 
+        {/* Ações */}
         <div className="flex items-center gap-3">
+          {/* Alternar modo */}
           <button
             onClick={() => setDark(!dark)}
-            className="px-3 py-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+            className="px-3 py-2 rounded-full bg-gray-100/10 hover:bg-gray-200/20 transition text-lg"
           >
             {dark ? "☀️" : "🌙"}
           </button>
 
-          <button className="px-4 py-2 rounded-full border border-gray-200 hover:shadow-sm text-sm">
-            Login
-          </button>
+          {/* Login */}
+          {user ? (
+            <button
+                onClick={() => {
+                localStorage.removeItem("lifonix-token");
+                localStorage.removeItem("lifonix-user");
+                window.location.reload();
+                }}
+                className="px-4 py-2 rounded-full border border-[#60A5FA] text-[#60A5FA] hover:bg-[#60A5FA]/10 transition text-sm"
+            >
+                Sair ({user.nome.split(" ")[0]})
+            </button>
+            ) : (
+            <button
+                onClick={onLoginClick}
+                className={`px-4 py-2 rounded-full font-medium transition ${loginBtn}`}
+            >
+                Login
+            </button>
+            )}
         </div>
       </div>
     </header>
