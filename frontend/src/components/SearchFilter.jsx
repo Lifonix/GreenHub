@@ -1,52 +1,54 @@
-import { useState } from "react";
+import React from "react";
 
-export default function SearchFilter({ onSearch }) {
-  const [term, setTerm] = useState("");
-  const [area, setArea] = useState("");
-  const [cidade, setCidade] = useState("");
-  const [tecnologia, setTecnologia] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSearch(term, area, cidade, tecnologia);
-  };
-
+/*
+ SearchFilter: receives arrays for areas/cities/techs and controlled props
+*/
+export default function SearchFilter({
+  areas = [],
+  cities = [],
+  techs = [],
+  areaFilter,
+  cityFilter,
+  techFilter,
+  setAreaFilter,
+  setCityFilter,
+  setTechFilter,
+  setSearch,
+}) {
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-wrap gap-4 justify-center bg-white dark:bg-gray-800 p-4 rounded-xl shadow"
-    >
+    <div>
+      <h3 className="font-semibold mb-3">Filtros</h3>
+
+      <label className="block text-xs mb-1">Busca</label>
       <input
-        type="text"
-        placeholder="Buscar por nome..."
-        value={term}
-        onChange={(e) => setTerm(e.target.value)}
-        className="border rounded-lg px-3 py-2 w-48"
+        placeholder="Busca geral..."
+        onChange={(e) => setSearch(e.target.value)}
+        className="w-full mb-3 px-3 py-2 rounded-lg border bg-white dark:bg-[#071226] dark:border-gray-700"
       />
-      <input
-        type="text"
-        placeholder="Área"
-        value={area}
-        onChange={(e) => setArea(e.target.value)}
-        className="border rounded-lg px-3 py-2 w-40"
-      />
-      <input
-        type="text"
-        placeholder="Cidade"
-        value={cidade}
-        onChange={(e) => setCidade(e.target.value)}
-        className="border rounded-lg px-3 py-2 w-40"
-      />
-      <input
-        type="text"
-        placeholder="Tecnologia"
-        value={tecnologia}
-        onChange={(e) => setTecnologia(e.target.value)}
-        className="border rounded-lg px-3 py-2 w-40"
-      />
-      <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">
-        Buscar
-      </button>
-    </form>
+
+      <label className="block text-xs mb-1">Área</label>
+      <select value={areaFilter} onChange={(e) => setAreaFilter(e.target.value)} className="w-full mb-3 p-2 rounded-lg border bg-white dark:bg-[#071226]">
+        <option value="">Todas</option>
+        {areas.map((a) => <option key={a} value={a}>{a}</option>)}
+      </select>
+
+      <label className="block text-xs mb-1">Cidade</label>
+      <select value={cityFilter} onChange={(e) => setCityFilter(e.target.value)} className="w-full mb-3 p-2 rounded-lg border bg-white dark:bg-[#071226]">
+        <option value="">Todas</option>
+        {cities.map((c) => <option key={c} value={c}>{c}</option>)}
+      </select>
+
+      <label className="block text-xs mb-1">Tecnologia</label>
+      <select value={techFilter} onChange={(e) => setTechFilter(e.target.value)} className="w-full mb-3 p-2 rounded-lg border bg-white dark:bg-[#071226]">
+        <option value="">Todas</option>
+        {techs.map((t) => <option key={t} value={t}>{t}</option>)}
+      </select>
+
+      <div className="mt-3">
+        <button onClick={() => { setAreaFilter(""); setCityFilter(""); setTechFilter(""); setSearch(""); }} className="px-3 py-2 rounded-md border text-sm">
+          Limpar filtros
+        </button>
+      </div>
+    </div>
   );
 }
