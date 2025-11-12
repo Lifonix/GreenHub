@@ -5,6 +5,8 @@ import SearchFilter from "./components/SearchFilter";
 import ProfileCard from "./components/ProfileCard";
 import ProfileModal from "./components/ProfileModal";
 import LoginModal from "./components/LoginModal";
+import AboutSection from "./components/AboutSection";
+
 
 export default function App() {
   const [profiles, setProfiles] = useState([]);

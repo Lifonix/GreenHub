@@ -1,8 +1,12 @@
 import React from "react";
 
 export default function Header({ dark, setDark, onLoginClick, user, filters, setFilters }) {
-  const headerBg = dark ? "bg-gray-900 text-gray-100 border-gray-800" : "bg-white text-gray-800 border-gray-200";
-  const inputBg = dark ? "bg-gray-800 border-gray-700 text-gray-100 placeholder-gray-400" : "bg-white border-gray-200 text-gray-700";
+  const headerBg = dark
+    ? "bg-gray-900 text-gray-100 border-gray-800"
+    : "bg-white text-gray-800 border-gray-200";
+  const inputBg = dark
+    ? "bg-gray-800 border-gray-700 text-gray-100 placeholder-gray-400"
+    : "bg-white border-gray-200 text-gray-700";
   const loginBtn = dark
     ? "bg-[#60A5FA] text-white hover:bg-[#60A5FA]/90"
     : "bg-[#60A5FA] text-white hover:bg-[#60A5FA]/90";
@@ -13,7 +17,11 @@ export default function Header({ dark, setDark, onLoginClick, user, filters, set
     >
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4 gap-4">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-[#60A5FA]">Lifonix</h1>
+        <h1 className="text-2xl font-bold text-[#60A5FA] cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          Lifonix
+        </h1>
 
         {/* Campo de busca */}
         <input
@@ -26,6 +34,18 @@ export default function Header({ dark, setDark, onLoginClick, user, filters, set
 
         {/* Ações */}
         <div className="flex items-center gap-3">
+          {/* Botão Sobre */}
+          <button
+            onClick={() =>
+              document.getElementById("sobre")?.scrollIntoView({ behavior: "smooth" })
+            }
+            className={`text-sm font-medium ${
+              dark ? "text-gray-200 hover:text-[#60A5FA]" : "text-gray-700 hover:text-[#2563EB]"
+            } transition`}
+          >
+            Sobre
+          </button>
+
           {/* Alternar modo */}
           <button
             onClick={() => setDark(!dark)}
@@ -34,26 +54,26 @@ export default function Header({ dark, setDark, onLoginClick, user, filters, set
             {dark ? "☀️" : "🌙"}
           </button>
 
-          {/* Login */}
+          {/* Login / Sair */}
           {user ? (
             <button
-                onClick={() => {
+              onClick={() => {
                 localStorage.removeItem("lifonix-token");
                 localStorage.removeItem("lifonix-user");
                 window.location.reload();
-                }}
-                className="px-4 py-2 rounded-full border border-[#60A5FA] text-[#60A5FA] hover:bg-[#60A5FA]/10 transition text-sm"
+              }}
+              className="px-4 py-2 rounded-full border border-[#60A5FA] text-[#60A5FA] hover:bg-[#60A5FA]/10 transition text-sm"
             >
-                Sair ({user.nome.split(" ")[0]})
+              Sair ({user.nome.split(" ")[0]})
             </button>
-            ) : (
+          ) : (
             <button
-                onClick={onLoginClick}
-                className={`px-4 py-2 rounded-full font-medium transition ${loginBtn}`}
+              onClick={onLoginClick}
+              className={`px-4 py-2 rounded-full font-medium transition ${loginBtn}`}
             >
-                Login
+              Login
             </button>
-            )}
+          )}
         </div>
       </div>
     </header>

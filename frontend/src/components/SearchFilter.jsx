@@ -10,7 +10,7 @@ export default function SearchFilter({ profiles, filters, setFilters }) {
       <select
         value={filters.area}
         onChange={(e) => setFilters({ ...filters, area: e.target.value })}
-        className="px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm"
+        className="px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm text-black"
       >
         <option value="">Todas as áreas</option>
         {areas.map((a) => (
@@ -21,7 +21,7 @@ export default function SearchFilter({ profiles, filters, setFilters }) {
       <select
         value={filters.city}
         onChange={(e) => setFilters({ ...filters, city: e.target.value })}
-        className="px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm"
+        className="px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm text-black"
       >
         <option value="">Todas as cidades</option>
         {cities.map((c) => (
@@ -32,7 +32,7 @@ export default function SearchFilter({ profiles, filters, setFilters }) {
       <select
         value={filters.tech}
         onChange={(e) => setFilters({ ...filters, tech: e.target.value })}
-        className="px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm"
+        className="px-3 py-2 rounded-lg border border-gray-200 bg-white text-sm text-black"
       >
         <option value="">Todas as tecnologias</option>
         {techs.map((t) => (
