@@ -7,6 +7,10 @@ import ProfileModal from "./components/ProfileModal";
 import LoginModal from "./components/LoginModal";
 import Footer from "./components/Footer";
 import AboutSection from "./components/AboutSection";
+import CommunityStats from "./components/CommunitySection";
+import TrendingSkills from "./components/TrendingSkills";
+import StoriesSection from "./components/StoriesSection";
+import ValuesSection from "./components/ValueSection";
 
 export default function App() {
   const [profiles, setProfiles] = useState([]);
@@ -91,13 +95,23 @@ export default function App() {
           <SearchFilter profiles={profiles} filters={filters} setFilters={setFilters} />
           <main className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredProfiles.map((profile) => (
-              <ProfileCard key={profile.id} profile={profile} onClick={() => setSelectedProfile(profile)} />
+              <ProfileCard
+                key={profile.id}
+                profile={profile}
+                onClick={() => setSelectedProfile(profile)}
+              />
             ))}
           </main>
         </div>
       )}
 
-      {/* Seção Sobre - movida para o final */}
+      {/* 🔹 NOVAS SEÇÕES */}
+      <CommunityStats />
+      <TrendingSkills />
+      <StoriesSection />
+      <ValuesSection />
+
+      {/* Sobre Nós */}
       <AboutSection />
 
       {/* Modais */}
