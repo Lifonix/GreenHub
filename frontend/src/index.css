@@ -17,6 +17,3 @@ html, body, #root {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-.card {
-  @apply rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition;
-}

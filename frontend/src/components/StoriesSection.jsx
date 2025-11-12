@@ -21,7 +21,7 @@ export default function StoriesSection() {
       historia:
         "A Lifonix me conectou com pessoas incríveis que compartilham os mesmos valores sobre o futuro do trabalho.",
       cidade: "São Paulo/SP",
-      imagem: "https://i.pravatar.cc/150?img=12",
+      imagem: "https://i.pravatar.cc/150?img=47", 
     },
   ];
 
