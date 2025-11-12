@@ -43,7 +43,7 @@ export default function Header({ dark, setDark, onLoginClick, user, filters, set
               dark ? "text-gray-200 hover:text-[#60A5FA]" : "text-gray-700 hover:text-[#2563EB]"
             } transition`}
           >
-            Sobre
+            Sobre nós
           </button>
 
           {/* Alternar modo */}

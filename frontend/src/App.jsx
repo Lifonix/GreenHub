@@ -21,9 +21,13 @@ export default function App() {
   const [mostrar, setMostrar] = useState(false);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/profissionais").then((res) => {
-      setProfiles(res.data);
-    });
+    axios
+      .get("http://localhost:5000/api/profissionais")
+      .then((res) => {
+        console.log("Perfis recebidos:", res.data.length);
+        setProfiles(res.data);
+      })
+      .catch((err) => console.error("Erro ao buscar profissionais:", err));
   }, []);
 
   const filteredProfiles = profiles.filter((p) => {
@@ -39,12 +43,23 @@ export default function App() {
     );
   });
 
+  const handleMostrar = () => {
+    const novoEstado = !mostrar;
+    setMostrar(novoEstado);
+
+    if (!novoEstado) return;
+    setTimeout(() => {
+      document.getElementById("profissionais")?.scrollIntoView({ behavior: "smooth" });
+    }, 300);
+  };
+
   return (
     <div
       className={`${
         dark ? "dark bg-gray-900 text-gray-100" : "bg-white text-gray-900"
       } min-h-screen flex flex-col transition`}
     >
+      {/* Header */}
       <Header
         dark={dark}
         setDark={setDark}
@@ -63,19 +78,16 @@ export default function App() {
           Descubra talentos e propósitos na plataforma Lifonix — feita para unir tecnologia, propósito e pessoas.
         </p>
         <button
-          onClick={() => setMostrar(!mostrar)}
+          onClick={handleMostrar}
           className="mt-6 px-6 py-3 rounded-full bg-[#60A5FA] text-white font-medium hover:opacity-90 transition"
         >
           {mostrar ? "Ocultar profissionais" : "Explorar profissionais"}
         </button>
       </section>
 
-      {/* Seção Sobre */}
-      <AboutSection />
-
       {/* Lista de profissionais */}
       {mostrar && (
-        <div className="max-w-6xl mx-auto px-6 pb-16 fade-in">
+        <div id="profissionais" className="max-w-6xl mx-auto px-6 pb-16 fade-in">
           <SearchFilter profiles={profiles} filters={filters} setFilters={setFilters} />
           <main className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredProfiles.map((profile) => (
@@ -85,10 +97,16 @@ export default function App() {
         </div>
       )}
 
+      {/* Seção Sobre - movida para o final */}
+      <AboutSection />
+
       {/* Modais */}
-      {selectedProfile && <ProfileModal profile={selectedProfile} onClose={() => setSelectedProfile(null)} />}
+      {selectedProfile && (
+        <ProfileModal profile={selectedProfile} onClose={() => setSelectedProfile(null)} />
+      )}
       {showLogin && <LoginModal onClose={() => setShowLogin(false)} setUser={setUser} />}
 
+      {/* Footer */}
       <Footer />
     </div>
   );
