@@ -1,51 +1,55 @@
-// src/components/StoriesSection.jsx
 import React from "react";
 
 export default function StoriesSection() {
   const stories = [
     {
-      nome: "Gabriela & Henrique",
-      descricao:
-        "Gabriela, designer, e Henrique, engenheiro de software, se conheceram pela Lifonix. Hoje, lideram juntos o projeto de UX inclusivo da plataforma.",
-      foto: "https://i.pravatar.cc/150?img=47",
+      nome: "Gabriela Souza",
+      foto: "https://i.pravatar.cc/150?img=66",
+      relato:
+        "Encontrei oportunidades alinhadas ao meu propósito. Hoje atuo em projetos que geram impacto positivo.",
     },
     {
-      nome: "Luciana & Pedro",
-      descricao:
-        "Luciana encontrou Pedro pela Lifonix e criou uma startup focada em IA Ética. A parceria nasceu de uma simples recomendação profissional.",
-      foto: "https://i.pravatar.cc/150?img=12",
+      nome: "Henrique Lopes",
+      foto: "https://i.pravatar.cc/150?img=67",
+      relato:
+        "A Lifonix me conectou com talentos incríveis. Transformei ideias em soluções sustentáveis.",
     },
     {
-      nome: "Amanda & Tiago",
-      descricao:
-        "A conexão feita pela Lifonix levou Amanda e Tiago a desenvolver um app que ajuda comunidades a se prepararem para o mercado digital.",
-      foto: "https://i.pravatar.cc/150?img=22",
+      nome: "Juliana Ribeiro",
+      foto: "https://i.pravatar.cc/150?img=49",
+      relato:
+        "Aqui encontrei uma comunidade colaborativa que valoriza empatia e inovação.",
     },
   ];
 
   return (
-    <section className="bg-[#F9FAFB] py-16 px-6">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-2xl font-bold text-[#2563EB] mb-8">
+    <section className="py-20 bg-white dark:bg-[#0C1A0C] border-t border-[#D1FAE5] dark:border-[#14532D] transition-colors duration-300">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        <h2 className="text-3xl font-bold text-[#166534] dark:text-[#4ADE80] mb-3">
           Histórias de Conexão
         </h2>
-        <p className="text-gray-600 mb-10">
-          Na Lifonix, conexões se transformam em oportunidades reais e
-          transformadoras.
+        <p className="text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
+          Pessoas que encontraram propósito e colaboração dentro da rede Lifonix.
         </p>
-        <div className="grid md:grid-cols-3 gap-8">
-          {stories.map((s, i) => (
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {stories.map((story, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:shadow-lg transition"
+              className="bg-[#F1F9F1] dark:bg-[#1B2E1D] border border-[#D1FAE5] dark:border-[#14532D]
+                         rounded-xl p-6 shadow-sm hover:shadow-md transition-all"
             >
               <img
-                src={s.foto}
-                alt={s.nome}
-                className="w-20 h-20 rounded-full mx-auto mb-4"
+                src={story.foto}
+                alt={story.nome}
+                className="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-[#22C55E]"
               />
-              <h3 className="font-semibold text-gray-800">{s.nome}</h3>
-              <p className="text-sm text-gray-600 mt-3">{s.descricao}</p>
+              <h3 className="font-semibold text-[#166534] dark:text-[#4ADE80]">
+                {story.nome}
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mt-3 italic leading-relaxed">
+                “{story.relato}”
+              </p>
             </div>
           ))}
         </div>

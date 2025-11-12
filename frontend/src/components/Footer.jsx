@@ -1,40 +1,31 @@
-// src/components/Footer.jsx
 import React from "react";
 
-export default function Footer() {
+export default function Footer({ dark }) {
   return (
-    <footer className="bg-gradient-to-r from-[#60A5FA]/10 to-[#2563EB]/10 border-t border-gray-200 mt-auto">
-      <div className="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-8 text-center md:text-left">
-        {/* Logo e descrição */}
+    <footer
+      className={`w-full mt-auto py-8 border-t transition-colors ${
+        dark
+          ? "bg-[#102913] border-[#14532D] text-[#A7F3D0]"
+          : "bg-[#ECFDF5] border-[#BBF7D0] text-[#14532D]"
+      }`}
+    >
+      <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4">
         <div>
-          <h2 className="text-2xl font-bold text-[#2563EB] mb-2">Lifonix</h2>
-          <p className="text-gray-600 text-sm">
-            Conectando pessoas, competências e propósito através da tecnologia.
+          <h2 className="text-2xl font-bold text-[#22C55E]">Lifonix</h2>
+          <p className="text-sm opacity-80">
+            Conectando pessoas, competências e propósitos por meio da tecnologia 🌿
           </p>
         </div>
 
-        {/* Links rápidos */}
-        <div>
-          <h3 className="font-semibold text-gray-800 mb-3">Explorar</h3>
-          <ul className="space-y-2 text-sm text-gray-600">
-            <li><a href="#" className="hover:text-[#2563EB] transition">Início</a></li>
-            <li><a href="#profissionais" className="hover:text-[#2563EB] transition">Profissionais</a></li>
-            <li><a href="#sobre" className="hover:text-[#2563EB] transition">Sobre</a></li>
-            <li><a href="#" className="hover:text-[#2563EB] transition">Contato</a></li>
-          </ul>
+        <div className="flex gap-6 text-sm font-medium">
+          <a href="/" className="hover:text-[#22C55E] transition">Início</a>
+          <a href="/sobre" className="hover:text-[#22C55E] transition">Sobre</a>
+          <a href="#contato" className="hover:text-[#22C55E] transition">Contato</a>
         </div>
 
-        {/* Contato */}
-        <div>
-          <h3 className="font-semibold text-gray-800 mb-3">Fale Conosco</h3>
-          <p className="text-gray-600 text-sm">contato@lifonix.com</p>
-          <p className="text-gray-600 text-sm">São Paulo, Brasil</p>
-        </div>
-      </div>
-
-      {/* Linha inferior */}
-      <div className="border-t border-gray-200 py-4 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Lifonix. Todos os direitos reservados.
+        <p className="text-xs opacity-70">
+          © {new Date().getFullYear()} Lifonix. Todos os direitos reservados.
+        </p>
       </div>
     </footer>
   );

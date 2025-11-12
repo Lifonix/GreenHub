@@ -1,44 +1,53 @@
-export default function ProfileModal({ profile, onClose }) {
-  if (!profile) return null;
+import React from "react";
 
+export default function ProfileModal({ profile, onClose }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-4">
-      <div className="bg-white max-w-3xl w-full rounded-2xl shadow-xl relative overflow-y-auto max-h-[90vh]">
-        {/* Botão de fechar */}
+    <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50 px-4">
+      <div className="bg-white dark:bg-[#1B2E1D] text-gray-800 dark:text-gray-100 rounded-2xl shadow-xl max-w-2xl w-full p-8 relative">
+        {/* Botão fechar */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-5 text-gray-400 hover:text-gray-600 text-2xl"
+          className="absolute top-4 right-4 text-gray-500 hover:text-[#22C55E] text-2xl font-bold"
         >
           ×
         </button>
 
         {/* Cabeçalho */}
-        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 p-6 border-b border-gray-200">
+        <div className="flex flex-col items-center text-center">
           <img
             src={profile.foto}
             alt={profile.nome}
-            className="w-28 h-28 rounded-full object-cover border-2 border-[#60A5FA]"
+            className="w-28 h-28 rounded-full border-2 border-[#22C55E] mb-3 object-cover"
           />
-          <div className="text-center sm:text-left">
-            <h2 className="text-2xl font-bold text-gray-900">{profile.nome}</h2>
-            <p className="text-[#60A5FA] font-medium">{profile.cargo}</p>
-            <p className="text-gray-500 text-sm mt-1">{profile.localizacao}</p>
-            <p className="text-gray-700 mt-3">{profile.resumo}</p>
-          </div>
+          <h2 className="text-2xl font-bold text-[#166534] dark:text-[#4ADE80]">
+            {profile.nome}
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300">{profile.cargo}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{profile.localizacao}</p>
         </div>
 
         {/* Conteúdo */}
-        <div className="p-6 space-y-6">
+        <div className="mt-6 space-y-5">
+          {/* Resumo */}
+          <section>
+            <h3 className="font-semibold text-[#166534] dark:text-[#4ADE80] mb-1">
+              Resumo
+            </h3>
+            <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+              {profile.resumo}
+            </p>
+          </section>
+
           {/* Habilidades Técnicas */}
           <section>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              🧠 Habilidades Técnicas
+            <h3 className="font-semibold text-[#166534] dark:text-[#4ADE80] mb-1">
+              Habilidades Técnicas
             </h3>
             <div className="flex flex-wrap gap-2">
               {profile.habilidadesTecnicas?.map((skill, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 bg-[#60A5FA]/10 text-[#60A5FA] rounded-full text-sm"
+                  className="text-xs px-3 py-1 rounded-full bg-[#DCFCE7] dark:bg-[#14532D] text-[#166534] dark:text-[#4ADE80]"
                 >
                   {skill}
                 </span>
@@ -48,16 +57,16 @@ export default function ProfileModal({ profile, onClose }) {
 
           {/* Soft Skills */}
           <section>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              💬 Soft Skills
+            <h3 className="font-semibold text-[#166534] dark:text-[#4ADE80] mb-1">
+              Soft Skills
             </h3>
             <div className="flex flex-wrap gap-2">
-              {profile.softSkills?.map((s, i) => (
+              {profile.softSkills?.map((soft, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 bg-[#60A5FA]/10 text-[#60A5FA] rounded-full text-sm"
+                  className="text-xs px-3 py-1 rounded-full bg-[#D1FAE5] dark:bg-[#1B2E1D] text-[#166534] dark:text-[#4ADE80]"
                 >
-                  {s}
+                  {soft}
                 </span>
               ))}
             </div>
@@ -65,114 +74,62 @@ export default function ProfileModal({ profile, onClose }) {
 
           {/* Experiências */}
           <section>
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">
-              💼 Experiências Profissionais
+            <h3 className="font-semibold text-[#166534] dark:text-[#4ADE80] mb-2">
+              Experiências
             </h3>
-            {profile.experiencias?.map((exp, i) => (
-              <div key={i} className="border border-gray-200 rounded-lg p-3 mb-2">
-                <p className="font-semibold text-gray-800">{exp.cargo}</p>
-                <p className="text-sm text-gray-600">{exp.empresa}</p>
-                <p className="text-xs text-gray-500 mb-2">
-                  {exp.inicio} — {exp.fim}
-                </p>
-                <p className="text-sm text-gray-700">{exp.descricao}</p>
-              </div>
-            ))}
-          </section>
-
-          {/* Formação */}
-          <section>
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">
-              🎓 Formação Acadêmica
-            </h3>
-            {profile.formacao?.map((f, i) => (
-              <div key={i} className="border border-gray-200 rounded-lg p-3 mb-2">
-                <p className="font-semibold text-gray-800">{f.curso}</p>
-                <p className="text-sm text-gray-600">{f.instituicao}</p>
-                <p className="text-xs text-gray-500">Concluído em {f.ano}</p>
-              </div>
-            ))}
-          </section>
-
-          {/* Projetos */}
-          <section>
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">
-              🚀 Projetos
-            </h3>
-            {profile.projetos?.map((p, i) => (
-              <div key={i} className="border border-gray-200 rounded-lg p-3 mb-2">
-                <p className="font-semibold text-gray-800">{p.titulo}</p>
-                <p className="text-sm text-gray-700 mb-2">{p.descricao}</p>
-                {p.link && (
-                  <a
-                    href={p.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-[#60A5FA] text-sm hover:underline"
-                  >
-                    Ver projeto
-                  </a>
-                )}
-              </div>
-            ))}
-          </section>
-
-          {/* Certificações */}
-          <section>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              📜 Certificações
-            </h3>
-            <ul className="list-disc list-inside text-gray-700 text-sm">
-              {profile.certificacoes?.map((c, i) => (
-                <li key={i}>{c}</li>
-              ))}
-            </ul>
-          </section>
-
-          {/* Idiomas */}
-          <section>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">🌍 Idiomas</h3>
-            <ul className="list-disc list-inside text-gray-700 text-sm">
-              {profile.idiomas?.map((i, idx) => (
-                <li key={idx}>
-                  {i.idioma} — {i.nivel}
+            <ul className="space-y-2">
+              {profile.experiencias?.map((exp, i) => (
+                <li key={i} className="border-l-4 border-[#22C55E] pl-3">
+                  <p className="font-medium text-sm">{exp.cargo} — {exp.empresa}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    {exp.inicio} - {exp.fim}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{exp.descricao}</p>
                 </li>
               ))}
             </ul>
           </section>
 
-          {/* Áreas de Interesse */}
+          {/* Formação */}
           <section>
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">
-              💡 Áreas de Interesse
+            <h3 className="font-semibold text-[#166534] dark:text-[#4ADE80] mb-2">
+              Formação Acadêmica
             </h3>
-            <div className="flex flex-wrap gap-2">
-              {profile.areaInteresses?.map((a, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 bg-[#60A5FA]/10 text-[#60A5FA] rounded-full text-sm"
-                >
-                  {a}
-                </span>
+            <ul className="space-y-2">
+              {profile.formacao?.map((form, i) => (
+                <li key={i} className="text-sm text-gray-700 dark:text-gray-300">
+                  🎓 {form.curso} — {form.instituicao} ({form.ano})
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
 
-          {/* Botões de ação */}
-          <div className="flex justify-end gap-3 pt-4 border-t border-gray-200">
-            <button
-              onClick={() => alert(`Você recomendou ${profile.nome}!`)}
-              className="px-5 py-2 bg-[#60A5FA] text-white rounded-full hover:opacity-90 transition"
-            >
-              Recomendar profissional
-            </button>
-            <button
-              onClick={() => alert(`Mensagem enviada para ${profile.nome}!`)}
-              className="px-5 py-2 border border-[#60A5FA] text-[#60A5FA] rounded-full hover:bg-[#60A5FA]/10 transition"
-            >
-              Enviar mensagem
-            </button>
-          </div>
+          {/* Projetos */}
+          <section>
+            <h3 className="font-semibold text-[#166534] dark:text-[#4ADE80] mb-2">
+              Projetos
+            </h3>
+            <ul className="space-y-2">
+              {profile.projetos?.map((proj, i) => (
+                <li key={i}>
+                  <p className="text-sm font-medium text-[#166534] dark:text-[#4ADE80]">
+                    {proj.titulo}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{proj.descricao}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+
+        {/* Botões */}
+        <div className="flex justify-center gap-4 mt-8">
+          <button className="px-5 py-2 rounded-full bg-[#22C55E] text-white hover:bg-[#16A34A] transition">
+            Recomendar Profissional
+          </button>
+          <button className="px-5 py-2 rounded-full border border-[#22C55E] text-[#22C55E] hover:bg-[#DCFCE7] dark:hover:bg-[#14532D] transition">
+            Enviar Mensagem
+          </button>
         </div>
       </div>
     </div>
