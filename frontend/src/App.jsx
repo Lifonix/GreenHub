@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import CreateProfiles from "./components/CreateProfiles";
 
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home dark={dark} setDark={setDark} />} />
         <Route path="/sobre" element={<About />} />
+        <Route path="/create-profile" element={<CreateProfiles />} />
       </Routes>
     </Router>
   );

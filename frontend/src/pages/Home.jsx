@@ -74,7 +74,7 @@ export default function Home({ dark, setDark }) {
 
           {/* Botão que leva ao formulário de criação de perfil */}
           <button
-            onClick={() => navigate("/criar-perfil")}
+            onClick={() => navigate("/create-profile")} // 👈 navega para a rota de criação de perfil
             className="px-6 py-3 rounded-full bg-[#15803D] hover:bg-[#166534] text-white font-medium transition"
           >
             Criar Seu Perfil
