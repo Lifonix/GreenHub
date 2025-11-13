@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Header from "./components/Header";
+
 
 export default function App() {
   // Estado dark mode, persistido no localStorage

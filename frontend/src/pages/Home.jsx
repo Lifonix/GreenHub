@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // 👈 import do hook
 import axios from "axios";
 import Header from "../components/Header";
 import SearchFilter from "../components/SearchFilter";
@@ -11,6 +12,7 @@ import CommunityMetrics from "../components/CommunitySection";
 import StoriesSection from "../components/StoriesSection";
 
 export default function Home({ dark, setDark }) {
+  const navigate = useNavigate(); // 👈 inicializa o hook
   const [profiles, setProfiles] = useState([]);
   const [selectedProfile, setSelectedProfile] = useState(null);
   const [filters, setFilters] = useState({ search: "", area: "", city: "", tech: "" });
@@ -60,12 +62,24 @@ export default function Home({ dark, setDark }) {
         <p className="text-gray-600 dark:text-gray-300 mt-3 max-w-xl mx-auto">
           Descubra talentos e propósitos na plataforma Lifonix — feita para unir tecnologia, propósito e pessoas.
         </p>
-        <button
-          onClick={() => setMostrar(!mostrar)}
-          className="mt-6 px-6 py-3 rounded-full bg-[#22C55E] hover:bg-[#16A34A] text-white font-medium transition"
-        >
-          {mostrar ? "Ocultar profissionais" : "Explorar profissionais"}
-        </button>
+
+        <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
+          {/* Botão para explorar profissionais */}
+          <button
+            onClick={() => setMostrar(!mostrar)}
+            className="px-6 py-3 rounded-full bg-[#22C55E] hover:bg-[#16A34A] text-white font-medium transition"
+          >
+            {mostrar ? "Ocultar profissionais" : "Explorar profissionais"}
+          </button>
+
+          {/* Botão que leva ao formulário de criação de perfil */}
+          <button
+            onClick={() => navigate("/criar-perfil")}
+            className="px-6 py-3 rounded-full bg-[#15803D] hover:bg-[#166534] text-white font-medium transition"
+          >
+            Criar Seu Perfil
+          </button>
+        </div>
       </section>
 
       {/* Lista de profissionais */}
