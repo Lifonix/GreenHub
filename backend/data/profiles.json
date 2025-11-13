@@ -2,13 +2,22 @@
   {
     "id": "e80cfb76-9a72-4b8d-b0de-1cc82b4b3af3",
     "nome": "Ana Clara Monteiro",
-    "foto": "https://i.pravatar.cc/150?img=11",
+    "foto": "https://randomuser.me/api/portraits/women/89.jpg",
     "cargo": "Engenheira de Software",
     "resumo": "Desenvolvedora full stack apaixonada por IA e soluções escaláveis.",
     "localizacao": "São Paulo/SP",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["React", "Node.js", "TypeScript", "Docker"],
-    "softSkills": ["Comunicação", "Trabalho em equipe", "Resiliência"],
+    "habilidadesTecnicas": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "Docker"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Trabalho em equipe",
+      "Resiliência"
+    ],
     "experiencias": [
       {
         "empresa": "TechNova",
@@ -19,7 +28,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Software", "instituicao": "FIAP", "ano": 2023 }
+      {
+        "curso": "Engenharia de Software",
+        "instituicao": "FIAP",
+        "ano": 2023
+      }
     ],
     "projetos": [
       {
@@ -28,20 +41,38 @@
         "descricao": "Plataforma de networking profissional."
       }
     ],
-    "certificacoes": ["AWS Certified Developer"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["IA ética", "Educação"]
+    "certificacoes": [
+      "AWS Certified Developer"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "IA ética",
+      "Educação"
+    ]
   },
   {
     "id": "54b3d6c4-b3aa-4a7b-a49a-13dcfbdf3a76",
     "nome": "Bruno Henrique Lima",
-    "foto": "https://i.pravatar.cc/150?img=12",
+    "foto": "https://randomuser.me/api/portraits/men/45.jpg",
     "cargo": "Analista de Dados",
     "resumo": "Especialista em visualização de dados e storytelling analítico.",
     "localizacao": "Rio de Janeiro/RJ",
     "area": "Data Science",
-    "habilidadesTecnicas": ["Python", "Pandas", "SQL", "Power BI"],
-    "softSkills": ["Curiosidade analítica", "Pensamento crítico"],
+    "habilidadesTecnicas": [
+      "Python",
+      "Pandas",
+      "SQL",
+      "Power BI"
+    ],
+    "softSkills": [
+      "Curiosidade analítica",
+      "Pensamento crítico"
+    ],
     "experiencias": [
       {
         "empresa": "DataPlus",
@@ -52,7 +83,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Ciência de Dados", "instituicao": "USP", "ano": 2022 }
+      {
+        "curso": "Ciência de Dados",
+        "instituicao": "USP",
+        "ano": 2022
+      }
     ],
     "projetos": [
       {
@@ -61,20 +96,38 @@
         "descricao": "Dashboard interativo de performance comercial."
       }
     ],
-    "certificacoes": ["Microsoft Power BI Expert"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Negócios", "Educação"]
+    "certificacoes": [
+      "Microsoft Power BI Expert"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Negócios",
+      "Educação"
+    ]
   },
   {
     "id": "ebf83a55-8e83-44e2-851d-c9f471e3cc7d",
     "nome": "Camila Souza Ferreira",
-    "foto": "https://i.pravatar.cc/150?img=13",
+    "foto": "https://randomuser.me/api/portraits/women/83.jpg",
     "cargo": "UX Designer",
     "resumo": "Focada em criar experiências acessíveis e humanas.",
     "localizacao": "Curitiba/PR",
     "area": "Design",
-    "habilidadesTecnicas": ["Figma", "HTML", "CSS", "UX Research"],
-    "softSkills": ["Empatia", "Comunicação visual"],
+    "habilidadesTecnicas": [
+      "Figma",
+      "HTML",
+      "CSS",
+      "UX Research"
+    ],
+    "softSkills": [
+      "Empatia",
+      "Comunicação visual"
+    ],
     "experiencias": [
       {
         "empresa": "PixelLab",
@@ -85,7 +138,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Design Digital", "instituicao": "PUC PR", "ano": 2021 }
+      {
+        "curso": "Design Digital",
+        "instituicao": "PUC PR",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -94,20 +151,38 @@
         "descricao": "Aplicativo voltado à inclusão de pessoas com deficiência."
       }
     ],
-    "certificacoes": ["Google UX Certification"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Design inclusivo", "Acessibilidade"]
+    "certificacoes": [
+      "Google UX Certification"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Design inclusivo",
+      "Acessibilidade"
+    ]
   },
   {
     "id": "b67c0c55-cc2c-4c3b-9a0a-7a4d6f6cfa61",
     "nome": "Diego Matos Nunes",
-    "foto": "https://i.pravatar.cc/150?img=14",
+    "foto": "https://randomuser.me/api/portraits/men/54.jpg",
     "cargo": "Desenvolvedor Back-end",
     "resumo": "Apaixonado por arquitetura de software e sistemas distribuídos.",
     "localizacao": "Belo Horizonte/MG",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["Node.js", "NestJS", "PostgreSQL", "Docker"],
-    "softSkills": ["Proatividade", "Trabalho em equipe"],
+    "habilidadesTecnicas": [
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "softSkills": [
+      "Proatividade",
+      "Trabalho em equipe"
+    ],
     "experiencias": [
       {
         "empresa": "CodeWorks",
@@ -118,7 +193,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Sistemas de Informação", "instituicao": "UFMG", "ano": 2020 }
+      {
+        "curso": "Sistemas de Informação",
+        "instituicao": "UFMG",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -127,20 +206,37 @@
         "descricao": "Sistema de backend para e-commerce com autenticação JWT."
       }
     ],
-    "certificacoes": ["AWS Certified Developer"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Cloud", "Sistemas distribuídos"]
+    "certificacoes": [
+      "AWS Certified Developer"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Cloud",
+      "Sistemas distribuídos"
+    ]
   },
   {
     "id": "0b8920ce-7e18-4902-b5a4-13db22141a4d",
     "nome": "Elisa Andrade Figueiredo",
-    "foto": "https://i.pravatar.cc/150?img=15",
+    "foto": "https://randomuser.me/api/portraits/women/46.jpg",
     "cargo": "Gerente de Projetos",
     "resumo": "Especialista em metodologias ágeis e liderança de equipes remotas.",
     "localizacao": "Campinas/SP",
     "area": "Gestão",
-    "habilidadesTecnicas": ["Scrum", "Kanban", "Jira"],
-    "softSkills": ["Liderança", "Comunicação assertiva"],
+    "habilidadesTecnicas": [
+      "Scrum",
+      "Kanban",
+      "Jira"
+    ],
+    "softSkills": [
+      "Liderança",
+      "Comunicação assertiva"
+    ],
     "experiencias": [
       {
         "empresa": "AgileWorks",
@@ -151,7 +247,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Administração", "instituicao": "Mackenzie", "ano": 2019 }
+      {
+        "curso": "Administração",
+        "instituicao": "Mackenzie",
+        "ano": 2019
+      }
     ],
     "projetos": [
       {
@@ -160,20 +260,38 @@
         "descricao": "Projeto de transformação ágil em empresas de médio porte."
       }
     ],
-    "certificacoes": ["Scrum Master PSM I"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Gestão de pessoas", "Agilidade"]
+    "certificacoes": [
+      "Scrum Master PSM I"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Gestão de pessoas",
+      "Agilidade"
+    ]
   },
   {
     "id": "f89b06d3-65f9-4dc3-819a-f0c0d9f3b678",
     "nome": "Felipe Ramos Oliveira",
-    "foto": "https://i.pravatar.cc/150?img=16",
+    "foto": "https://randomuser.me/api/portraits/men/73.jpg",
     "cargo": "DevOps Engineer",
     "resumo": "Focado em automação de pipelines e infraestrutura como código.",
     "localizacao": "Porto Alegre/RS",
     "area": "Infraestrutura",
-    "habilidadesTecnicas": ["AWS", "Terraform", "Docker", "CI/CD"],
-    "softSkills": ["Resiliência", "Atenção a detalhes"],
+    "habilidadesTecnicas": [
+      "AWS",
+      "Terraform",
+      "Docker",
+      "CI/CD"
+    ],
+    "softSkills": [
+      "Resiliência",
+      "Atenção a detalhes"
+    ],
     "experiencias": [
       {
         "empresa": "CloudHub",
@@ -184,7 +302,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia da Computação", "instituicao": "PUC RS", "ano": 2021 }
+      {
+        "curso": "Engenharia da Computação",
+        "instituicao": "PUC RS",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -193,20 +315,37 @@
         "descricao": "Automatização de ambientes AWS com Terraform e Ansible."
       }
     ],
-    "certificacoes": ["AWS DevOps Engineer"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Cloud", "Automação"]
+    "certificacoes": [
+      "AWS DevOps Engineer"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Cloud",
+      "Automação"
+    ]
   },
   {
     "id": "9a2cdd21-2c54-4eb2-b918-3a7168b0132b",
     "nome": "Gabriela Tavares Costa",
-    "foto": "https://i.pravatar.cc/150?img=17",
+    "foto": "https://randomuser.me/api/portraits/women/46.jpg",
     "cargo": "Product Designer",
     "resumo": "Cria soluções centradas no usuário com foco em impacto social.",
     "localizacao": "São Paulo/SP",
     "area": "Design",
-    "habilidadesTecnicas": ["Figma", "UX Writing", "Prototipagem"],
-    "softSkills": ["Empatia", "Comunicação"],
+    "habilidadesTecnicas": [
+      "Figma",
+      "UX Writing",
+      "Prototipagem"
+    ],
+    "softSkills": [
+      "Empatia",
+      "Comunicação"
+    ],
     "experiencias": [
       {
         "empresa": "DesignUp",
@@ -217,7 +356,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Design de Produto", "instituicao": "Belas Artes", "ano": 2022 }
+      {
+        "curso": "Design de Produto",
+        "instituicao": "Belas Artes",
+        "ano": 2022
+      }
     ],
     "projetos": [
       {
@@ -226,20 +369,38 @@
         "descricao": "App para incentivar consumo consciente."
       }
     ],
-    "certificacoes": ["UX Writing Academy"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Sustentabilidade", "Design inclusivo"]
+    "certificacoes": [
+      "UX Writing Academy"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Sustentabilidade",
+      "Design inclusivo"
+    ]
   },
   {
     "id": "ab6ed318-71a2-4c53-b826-73dc57d123b0",
     "nome": "Henrique Dias Souza",
-    "foto": "https://i.pravatar.cc/150?img=18",
+    "foto": "https://randomuser.me/api/portraits/men/73.jpg",
     "cargo": "Engenheiro de Dados",
     "resumo": "Desenvolve pipelines robustos e escaláveis para big data.",
     "localizacao": "Recife/PE",
     "area": "Data Science",
-    "habilidadesTecnicas": ["Python", "Spark", "Airflow", "AWS"],
-    "softSkills": ["Trabalho em equipe", "Resolução de problemas"],
+    "habilidadesTecnicas": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "AWS"
+    ],
+    "softSkills": [
+      "Trabalho em equipe",
+      "Resolução de problemas"
+    ],
     "experiencias": [
       {
         "empresa": "DataLink",
@@ -250,7 +411,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Ciência da Computação", "instituicao": "UFPE", "ano": 2021 }
+      {
+        "curso": "Ciência da Computação",
+        "instituicao": "UFPE",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -259,20 +424,38 @@
         "descricao": "Criação de arquitetura de dados corporativa na AWS."
       }
     ],
-    "certificacoes": ["AWS Data Analytics Specialty"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Big Data", "Machine Learning"]
+    "certificacoes": [
+      "AWS Data Analytics Specialty"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Big Data",
+      "Machine Learning"
+    ]
   },
   {
     "id": "ff4b6f9d-782f-45d6-8270-84a6b1877e6c",
     "nome": "Isabela Rodrigues Pinto",
-    "foto": "https://i.pravatar.cc/150?img=19",
+    "foto": "https://randomuser.me/api/portraits/women/75.jpg",
     "cargo": "Front-end Developer",
     "resumo": "Especialista em interfaces modernas e acessíveis.",
     "localizacao": "Florianópolis/SC",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["React", "Tailwind CSS", "TypeScript", "Next.js"],
-    "softSkills": ["Criatividade", "Detalhismo"],
+    "habilidadesTecnicas": [
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "Next.js"
+    ],
+    "softSkills": [
+      "Criatividade",
+      "Detalhismo"
+    ],
     "experiencias": [
       {
         "empresa": "WebStudio",
@@ -283,7 +466,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Análise e Desenvolvimento de Sistemas", "instituicao": "SENAC", "ano": 2023 }
+      {
+        "curso": "Análise e Desenvolvimento de Sistemas",
+        "instituicao": "SENAC",
+        "ano": 2023
+      }
     ],
     "projetos": [
       {
@@ -292,20 +479,38 @@
         "descricao": "Site pessoal desenvolvido em React e Tailwind."
       }
     ],
-    "certificacoes": ["Google Front-End Specialist"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Design de interface", "Acessibilidade"]
+    "certificacoes": [
+      "Google Front-End Specialist"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Design de interface",
+      "Acessibilidade"
+    ]
   },
   {
     "id": "e8dc7ac3-1b7b-4c43-aaa2-d2cb4e871c72",
     "nome": "João Pedro Almeida",
-    "foto": "https://i.pravatar.cc/150?img=20",
+    "foto": "https://randomuser.me/api/portraits/men/69.jpg",
     "cargo": "Cientista de Dados",
     "resumo": "Entusiasta de IA e modelagem estatística aplicada a negócios.",
     "localizacao": "São Paulo/SP",
     "area": "Data Science",
-    "habilidadesTecnicas": ["Python", "TensorFlow", "SQL", "Power BI"],
-    "softSkills": ["Curiosidade", "Comunicação analítica"],
+    "habilidadesTecnicas": [
+      "Python",
+      "TensorFlow",
+      "SQL",
+      "Power BI"
+    ],
+    "softSkills": [
+      "Curiosidade",
+      "Comunicação analítica"
+    ],
     "experiencias": [
       {
         "empresa": "AI Labs",
@@ -316,7 +521,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Computação", "instituicao": "USP", "ano": 2022 }
+      {
+        "curso": "Engenharia de Computação",
+        "instituicao": "USP",
+        "ano": 2022
+      }
     ],
     "projetos": [
       {
@@ -325,20 +534,39 @@
         "descricao": "Sistema de machine learning para prever demanda comercial."
       }
     ],
-    "certificacoes": ["TensorFlow Developer"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["IA", "Educação", "Sustentabilidade"]
-  } ,
+    "certificacoes": [
+      "TensorFlow Developer"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "IA",
+      "Educação",
+      "Sustentabilidade"
+    ]
+  },
   {
     "id": "0e2f85c3-97a3-4cf3-a3b2-563db3fb9b87",
     "nome": "Karen Oliveira Duarte",
-    "foto": "https://i.pravatar.cc/150?img=21",
+    "foto": "https://randomuser.me/api/portraits/women/96.jpg",
     "cargo": "Desenvolvedora Mobile",
     "resumo": "Especialista em aplicativos híbridos com React Native e Flutter.",
     "localizacao": "Salvador/BA",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["React Native", "Flutter", "TypeScript", "Firebase"],
-    "softSkills": ["Criatividade", "Autonomia"],
+    "habilidadesTecnicas": [
+      "React Native",
+      "Flutter",
+      "TypeScript",
+      "Firebase"
+    ],
+    "softSkills": [
+      "Criatividade",
+      "Autonomia"
+    ],
     "experiencias": [
       {
         "empresa": "AppFlow",
@@ -349,7 +577,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Análise e Desenvolvimento de Sistemas", "instituicao": "UNIFACS", "ano": 2020 }
+      {
+        "curso": "Análise e Desenvolvimento de Sistemas",
+        "instituicao": "UNIFACS",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -358,20 +590,38 @@
         "descricao": "Aplicativo de meditação e bem-estar emocional."
       }
     ],
-    "certificacoes": ["Google Associate Android Developer"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Saúde", "Tecnologia"]
+    "certificacoes": [
+      "Google Associate Android Developer"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Saúde",
+      "Tecnologia"
+    ]
   },
   {
     "id": "d74657c5-7c0c-42e3-bb75-14440da588a4",
     "nome": "Lucas Fernandes Prado",
-    "foto": "https://i.pravatar.cc/150?img=22",
+    "foto": "https://randomuser.me/api/portraits/men/4.jpg",
     "cargo": "Desenvolvedor Full Stack",
     "resumo": "Apaixonado por código limpo e boas práticas de desenvolvimento.",
     "localizacao": "São Paulo/SP",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["React", "Node.js", "MongoDB", "Express"],
-    "softSkills": ["Colaboração", "Autogestão"],
+    "habilidadesTecnicas": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express"
+    ],
+    "softSkills": [
+      "Colaboração",
+      "Autogestão"
+    ],
     "experiencias": [
       {
         "empresa": "DevStudio",
@@ -382,7 +632,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Computação", "instituicao": "FEI", "ano": 2023 }
+      {
+        "curso": "Engenharia de Computação",
+        "instituicao": "FEI",
+        "ano": 2023
+      }
     ],
     "projetos": [
       {
@@ -391,20 +645,38 @@
         "descricao": "Aplicativo web de gerenciamento de tarefas."
       }
     ],
-    "certificacoes": ["Node.js Specialist"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Tecnologia", "Educação"]
+    "certificacoes": [
+      "Node.js Specialist"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Tecnologia",
+      "Educação"
+    ]
   },
   {
     "id": "1d8aef7e-54c2-4b3d-9baf-27b2a78a7a32",
     "nome": "Mariana Castro Lopes",
-    "foto": "https://i.pravatar.cc/150?img=23",
+    "foto": "https://randomuser.me/api/portraits/women/7.jpg",
     "cargo": "Engenheira de Qualidade de Software",
     "resumo": "Focada em automação de testes e melhoria contínua.",
     "localizacao": "São José dos Campos/SP",
     "area": "Qualidade",
-    "habilidadesTecnicas": ["Cypress", "Selenium", "Postman", "Jest"],
-    "softSkills": ["Organização", "Pensamento analítico"],
+    "habilidadesTecnicas": [
+      "Cypress",
+      "Selenium",
+      "Postman",
+      "Jest"
+    ],
+    "softSkills": [
+      "Organização",
+      "Pensamento analítico"
+    ],
     "experiencias": [
       {
         "empresa": "QualityTech",
@@ -415,7 +687,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Ciência da Computação", "instituicao": "UNESP", "ano": 2021 }
+      {
+        "curso": "Ciência da Computação",
+        "instituicao": "UNESP",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -424,20 +700,38 @@
         "descricao": "Framework completo de automação de testes em Cypress."
       }
     ],
-    "certificacoes": ["ISTQB Foundation"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Qualidade", "Automação"]
+    "certificacoes": [
+      "ISTQB Foundation"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Qualidade",
+      "Automação"
+    ]
   },
   {
     "id": "9e81cb3c-0baf-4e77-b781-26acb72dcf9a",
     "nome": "Natália Mendes Barros",
-    "foto": "https://i.pravatar.cc/150?img=24",
+    "foto": "https://randomuser.me/api/portraits/women/14.jpg",
     "cargo": "Cientista de Dados Júnior",
     "resumo": "Explora dados para encontrar insights e padrões de comportamento.",
     "localizacao": "Belo Horizonte/MG",
     "area": "Data Science",
-    "habilidadesTecnicas": ["Python", "Pandas", "Machine Learning", "SQL"],
-    "softSkills": ["Curiosidade", "Pensamento lógico"],
+    "habilidadesTecnicas": [
+      "Python",
+      "Pandas",
+      "Machine Learning",
+      "SQL"
+    ],
+    "softSkills": [
+      "Curiosidade",
+      "Pensamento lógico"
+    ],
     "experiencias": [
       {
         "empresa": "InsightLab",
@@ -448,7 +742,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Estatística", "instituicao": "UFMG", "ano": 2022 }
+      {
+        "curso": "Estatística",
+        "instituicao": "UFMG",
+        "ano": 2022
+      }
     ],
     "projetos": [
       {
@@ -457,20 +755,38 @@
         "descricao": "Modelo de machine learning para personalizar recomendações de aprendizado."
       }
     ],
-    "certificacoes": ["TensorFlow Specialist"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Educação", "IA ética"]
+    "certificacoes": [
+      "TensorFlow Specialist"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Educação",
+      "IA ética"
+    ]
   },
   {
     "id": "0ef8b24b-52a1-4e6a-bf88-dafc412857b9",
     "nome": "Otávio Nogueira Santos",
-    "foto": "https://i.pravatar.cc/150?img=25",
+    "foto": "https://randomuser.me/api/portraits/men/38.jpg",
     "cargo": "Engenheiro de Machine Learning",
     "resumo": "Cria modelos de IA para aplicações corporativas escaláveis.",
     "localizacao": "Fortaleza/CE",
     "area": "IA e Dados",
-    "habilidadesTecnicas": ["Python", "TensorFlow", "Keras", "AWS Sagemaker"],
-    "softSkills": ["Liderança técnica", "Pensamento crítico"],
+    "habilidadesTecnicas": [
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "AWS Sagemaker"
+    ],
+    "softSkills": [
+      "Liderança técnica",
+      "Pensamento crítico"
+    ],
     "experiencias": [
       {
         "empresa": "AI Solutions",
@@ -481,7 +797,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia Elétrica", "instituicao": "UFC", "ano": 2020 }
+      {
+        "curso": "Engenharia Elétrica",
+        "instituicao": "UFC",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -490,20 +810,39 @@
         "descricao": "Modelo de IA para auxiliar diagnósticos clínicos."
       }
     ],
-    "certificacoes": ["AWS Machine Learning Specialty"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Saúde", "IA", "Educação"]
+    "certificacoes": [
+      "AWS Machine Learning Specialty"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Saúde",
+      "IA",
+      "Educação"
+    ]
   },
   {
     "id": "09d8b59e-8b65-49cd-8cd8-fdc0f556891c",
     "nome": "Paula Vieira Martins",
-    "foto": "https://i.pravatar.cc/150?img=26",
+    "foto": "https://randomuser.me/api/portraits/women/51.jpg",
     "cargo": "Analista de Marketing Digital",
     "resumo": "Especialista em SEO, tráfego pago e automação de campanhas.",
     "localizacao": "São Paulo/SP",
     "area": "Marketing",
-    "habilidadesTecnicas": ["Google Ads", "SEO", "Analytics", "Hubspot"],
-    "softSkills": ["Comunicação", "Proatividade"],
+    "habilidadesTecnicas": [
+      "Google Ads",
+      "SEO",
+      "Analytics",
+      "Hubspot"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Proatividade"
+    ],
     "experiencias": [
       {
         "empresa": "DigitalGrow",
@@ -514,7 +853,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Publicidade e Propaganda", "instituicao": "ESPM", "ano": 2019 }
+      {
+        "curso": "Publicidade e Propaganda",
+        "instituicao": "ESPM",
+        "ano": 2019
+      }
     ],
     "projetos": [
       {
@@ -523,20 +866,38 @@
         "descricao": "Criação de estratégia de mídia para e-commerce sustentável."
       }
     ],
-    "certificacoes": ["Google Ads Professional"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Sustentabilidade", "Empreendedorismo"]
+    "certificacoes": [
+      "Google Ads Professional"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Sustentabilidade",
+      "Empreendedorismo"
+    ]
   },
   {
     "id": "de3f1c9b-47ef-47df-936d-4cf8b9c4b817",
     "nome": "Rafael Azevedo Neri",
-    "foto": "https://i.pravatar.cc/150?img=27",
+    "foto": "https://randomuser.me/api/portraits/men/33.jpg",
     "cargo": "Engenheiro de Software",
     "resumo": "Desenvolve soluções back-end de alta performance e segurança.",
     "localizacao": "São Paulo/SP",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["Node.js", "TypeScript", "PostgreSQL", "Redis"],
-    "softSkills": ["Resiliência", "Colaboração"],
+    "habilidadesTecnicas": [
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "softSkills": [
+      "Resiliência",
+      "Colaboração"
+    ],
     "experiencias": [
       {
         "empresa": "SecureTech",
@@ -547,7 +908,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Computação", "instituicao": "PUC-SP", "ano": 2021 }
+      {
+        "curso": "Engenharia de Computação",
+        "instituicao": "PUC-SP",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -556,20 +921,38 @@
         "descricao": "Back-end de alta disponibilidade para fintech."
       }
     ],
-    "certificacoes": ["Oracle Java Certified"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Fintech", "Cloud"]
+    "certificacoes": [
+      "Oracle Java Certified"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Fintech",
+      "Cloud"
+    ]
   },
   {
     "id": "3e25347a-cc8e-43a9-9e18-d7c23b25f41d",
     "nome": "Sabrina Moura Costa",
-    "foto": "https://i.pravatar.cc/150?img=28",
+    "foto": "https://randomuser.me/api/portraits/women/99.jpg",
     "cargo": "Product Owner",
     "resumo": "Transforma ideias em produtos digitais com propósito.",
     "localizacao": "Campinas/SP",
     "area": "Gestão de Produto",
-    "habilidadesTecnicas": ["Scrum", "Kanban", "UX", "Jira"],
-    "softSkills": ["Liderança", "Empatia"],
+    "habilidadesTecnicas": [
+      "Scrum",
+      "Kanban",
+      "UX",
+      "Jira"
+    ],
+    "softSkills": [
+      "Liderança",
+      "Empatia"
+    ],
     "experiencias": [
       {
         "empresa": "ProdFlow",
@@ -580,7 +963,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Produção", "instituicao": "Unicamp", "ano": 2020 }
+      {
+        "curso": "Engenharia de Produção",
+        "instituicao": "Unicamp",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -589,20 +976,38 @@
         "descricao": "Plataforma para coleta e gestão de feedbacks corporativos."
       }
     ],
-    "certificacoes": ["CSPO – Scrum Alliance"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Gestão", "Inovação"]
+    "certificacoes": [
+      "CSPO – Scrum Alliance"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Gestão",
+      "Inovação"
+    ]
   },
   {
     "id": "2920f8a0-41eb-44b2-98cf-5a8e226e5ed4",
     "nome": "Tiago Carvalho Ramos",
-    "foto": "https://i.pravatar.cc/150?img=29",
+    "foto": "https://randomuser.me/api/portraits/men/44.jpg",
     "cargo": "Analista de Segurança da Informação",
     "resumo": "Focado em proteger dados e mitigar riscos cibernéticos.",
     "localizacao": "Curitiba/PR",
     "area": "Segurança",
-    "habilidadesTecnicas": ["Linux", "Pentest", "SIEM", "Firewall"],
-    "softSkills": ["Detalhismo", "Pensamento crítico"],
+    "habilidadesTecnicas": [
+      "Linux",
+      "Pentest",
+      "SIEM",
+      "Firewall"
+    ],
+    "softSkills": [
+      "Detalhismo",
+      "Pensamento crítico"
+    ],
     "experiencias": [
       {
         "empresa": "SecurePlus",
@@ -613,7 +1018,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Segurança da Informação", "instituicao": "UTFPR", "ano": 2020 }
+      {
+        "curso": "Segurança da Informação",
+        "instituicao": "UTFPR",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -622,20 +1031,37 @@
         "descricao": "Relatórios de auditoria de segurança e mitigação de riscos."
       }
     ],
-    "certificacoes": ["CompTIA Security+"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Cibersegurança", "Privacidade"]
+    "certificacoes": [
+      "CompTIA Security+"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Cibersegurança",
+      "Privacidade"
+    ]
   },
   {
     "id": "df127c82-224c-4ab1-8f27-ec16a21e16f1",
     "nome": "Vanessa Lopes Araujo",
-    "foto": "https://i.pravatar.cc/150?img=30",
+    "foto": "https://randomuser.me/api/portraits/women/50.jpg",
     "cargo": "Psicóloga Organizacional",
     "resumo": "Apoia o desenvolvimento humano e bem-estar nas empresas.",
     "localizacao": "Rio de Janeiro/RJ",
     "area": "Recursos Humanos",
-    "habilidadesTecnicas": ["Entrevistas comportamentais", "Dinâmicas de grupo", "Treinamentos"],
-    "softSkills": ["Empatia", "Comunicação"],
+    "habilidadesTecnicas": [
+      "Entrevistas comportamentais",
+      "Dinâmicas de grupo",
+      "Treinamentos"
+    ],
+    "softSkills": [
+      "Empatia",
+      "Comunicação"
+    ],
     "experiencias": [
       {
         "empresa": "HumanPlus",
@@ -646,7 +1072,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Psicologia", "instituicao": "UFRJ", "ano": 2019 }
+      {
+        "curso": "Psicologia",
+        "instituicao": "UFRJ",
+        "ano": 2019
+      }
     ],
     "projetos": [
       {
@@ -655,20 +1085,38 @@
         "descricao": "Iniciativa para melhorar a qualidade de vida dos colaboradores."
       }
     ],
-    "certificacoes": ["Coaching Executivo"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Pessoas", "Cultura Organizacional"]
+    "certificacoes": [
+      "Coaching Executivo"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Pessoas",
+      "Cultura Organizacional"
+    ]
   },
   {
     "id": "a930cc8d-1b5f-4ef8-9cb3-b28a74c8b236",
     "nome": "Wellington Moreira Silva",
-    "foto": "https://i.pravatar.cc/150?img=31",
+    "foto": "https://randomuser.me/api/portraits/men/65.jpg",
     "cargo": "Desenvolvedor Front-end",
     "resumo": "Cria interfaces responsivas e modernas com foco na experiência do usuário.",
     "localizacao": "Goiânia/GO",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["React", "Tailwind CSS", "Next.js", "TypeScript"],
-    "softSkills": ["Criatividade", "Comunicação visual"],
+    "habilidadesTecnicas": [
+      "React",
+      "Tailwind CSS",
+      "Next.js",
+      "TypeScript"
+    ],
+    "softSkills": [
+      "Criatividade",
+      "Comunicação visual"
+    ],
     "experiencias": [
       {
         "empresa": "DesignCode",
@@ -679,7 +1127,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Sistemas de Informação", "instituicao": "PUC GO", "ano": 2022 }
+      {
+        "curso": "Sistemas de Informação",
+        "instituicao": "PUC GO",
+        "ano": 2022
+      }
     ],
     "projetos": [
       {
@@ -688,20 +1140,38 @@
         "descricao": "Interface inspirada no LinkedIn para conectar profissionais."
       }
     ],
-    "certificacoes": ["Front-end Specialist"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Design", "Tecnologia"]
+    "certificacoes": [
+      "Front-end Specialist"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Design",
+      "Tecnologia"
+    ]
   },
   {
     "id": "cf7bc986-1dbf-4572-91f4-50e9bcd9dc9b",
     "nome": "Xavier Souza Prado",
-    "foto": "https://i.pravatar.cc/150?img=32",
+    "foto": "https://randomuser.me/api/portraits/men/73.jpg",
     "cargo": "Engenheiro de Redes",
     "resumo": "Responsável por redes corporativas de alta disponibilidade.",
     "localizacao": "Fortaleza/CE",
     "area": "Infraestrutura",
-    "habilidadesTecnicas": ["Cisco", "Linux", "Firewall", "Cloud Networking"],
-    "softSkills": ["Resiliência", "Liderança técnica"],
+    "habilidadesTecnicas": [
+      "Cisco",
+      "Linux",
+      "Firewall",
+      "Cloud Networking"
+    ],
+    "softSkills": [
+      "Resiliência",
+      "Liderança técnica"
+    ],
     "experiencias": [
       {
         "empresa": "NetGlobal",
@@ -712,7 +1182,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Redes", "instituicao": "IFCE", "ano": 2019 }
+      {
+        "curso": "Engenharia de Redes",
+        "instituicao": "IFCE",
+        "ano": 2019
+      }
     ],
     "projetos": [
       {
@@ -721,20 +1195,37 @@
         "descricao": "Automação de configuração de redes AWS e Azure."
       }
     ],
-    "certificacoes": ["CCNP Routing & Switching"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Infraestrutura", "Segurança"]
+    "certificacoes": [
+      "CCNP Routing & Switching"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Infraestrutura",
+      "Segurança"
+    ]
   },
   {
     "id": "8a6e9471-3482-43db-93d8-1d7c129c02b5",
     "nome": "Yara Martins Gomes",
-    "foto": "https://i.pravatar.cc/150?img=33",
+    "foto": "https://randomuser.me/api/portraits/women/62.jpg",
     "cargo": "Analista de Recursos Humanos",
     "resumo": "Focada em recrutamento, clima e desenvolvimento de talentos.",
     "localizacao": "São Paulo/SP",
     "area": "Recursos Humanos",
-    "habilidadesTecnicas": ["Recrutamento", "Gestão de desempenho", "Onboarding"],
-    "softSkills": ["Empatia", "Organização"],
+    "habilidadesTecnicas": [
+      "Recrutamento",
+      "Gestão de desempenho",
+      "Onboarding"
+    ],
+    "softSkills": [
+      "Empatia",
+      "Organização"
+    ],
     "experiencias": [
       {
         "empresa": "TalentCorp",
@@ -745,7 +1236,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Psicologia", "instituicao": "PUC-SP", "ano": 2020 }
+      {
+        "curso": "Psicologia",
+        "instituicao": "PUC-SP",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -754,20 +1249,38 @@
         "descricao": "Plataforma de cultura e reconhecimento interno."
       }
     ],
-    "certificacoes": ["Gestão de Pessoas – FGV"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Cultura", "Gestão"]
+    "certificacoes": [
+      "Gestão de Pessoas – FGV"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Cultura",
+      "Gestão"
+    ]
   },
   {
     "id": "c22b238d-bdd6-49e1-9541-4cb998ce776a",
     "nome": "Zuleica Ferreira Pinto",
-    "foto": "https://i.pravatar.cc/150?img=34",
+    "foto": "https://randomuser.me/api/portraits/women/77.jpg",
     "cargo": "Desenvolvedora Front-end",
     "resumo": "Focada em performance e acessibilidade web.",
     "localizacao": "Recife/PE",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["Vue.js", "React", "HTML5", "CSS3"],
-    "softSkills": ["Proatividade", "Detalhismo"],
+    "habilidadesTecnicas": [
+      "Vue.js",
+      "React",
+      "HTML5",
+      "CSS3"
+    ],
+    "softSkills": [
+      "Proatividade",
+      "Detalhismo"
+    ],
     "experiencias": [
       {
         "empresa": "WebSmart",
@@ -778,7 +1291,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Design Digital", "instituicao": "UPE", "ano": 2021 }
+      {
+        "curso": "Design Digital",
+        "instituicao": "UPE",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -787,20 +1304,38 @@
         "descricao": "Portal de acessibilidade digital para instituições públicas."
       }
     ],
-    "certificacoes": ["W3C Accessibility Certification"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Acessibilidade", "Educação"]
+    "certificacoes": [
+      "W3C Accessibility Certification"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Acessibilidade",
+      "Educação"
+    ]
   },
   {
     "id": "6b6a3efc-2ed4-4712-9e4e-301fb1e623a9",
     "nome": "André Luiz Ribeiro",
-    "foto": "https://i.pravatar.cc/150?img=35",
+    "foto": "https://randomuser.me/api/portraits/men/37.jpg",
     "cargo": "Engenheiro de Software",
     "resumo": "Apaixonado por arquitetura limpa e escalável.",
     "localizacao": "Porto Alegre/RS",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["Java", "Spring Boot", "MySQL", "Docker"],
-    "softSkills": ["Colaboração", "Resiliência"],
+    "habilidadesTecnicas": [
+      "Java",
+      "Spring Boot",
+      "MySQL",
+      "Docker"
+    ],
+    "softSkills": [
+      "Colaboração",
+      "Resiliência"
+    ],
     "experiencias": [
       {
         "empresa": "TechHouse",
@@ -811,7 +1346,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia da Computação", "instituicao": "UFRGS", "ano": 2020 }
+      {
+        "curso": "Engenharia da Computação",
+        "instituicao": "UFRGS",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -820,20 +1359,38 @@
         "descricao": "Aplicação para gestão de reservas em hotéis."
       }
     ],
-    "certificacoes": ["Oracle Java Developer"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Arquitetura", "Cloud"]
+    "certificacoes": [
+      "Oracle Java Developer"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Arquitetura",
+      "Cloud"
+    ]
   },
   {
     "id": "b0b1d14e-7c89-4c8f-8792-2539a8f3eec2",
     "nome": "Beatriz Ramos Almeida",
-    "foto": "https://i.pravatar.cc/150?img=36",
+    "foto": "https://randomuser.me/api/portraits/women/96.jpg",
     "cargo": "Analista de UX Research",
     "resumo": "Estuda o comportamento dos usuários para criar experiências melhores.",
     "localizacao": "São Paulo/SP",
     "area": "Design",
-    "habilidadesTecnicas": ["UX Research", "Entrevistas", "Personas", "Figma"],
-    "softSkills": ["Empatia", "Curiosidade"],
+    "habilidadesTecnicas": [
+      "UX Research",
+      "Entrevistas",
+      "Personas",
+      "Figma"
+    ],
+    "softSkills": [
+      "Empatia",
+      "Curiosidade"
+    ],
     "experiencias": [
       {
         "empresa": "ExperienceLab",
@@ -844,7 +1401,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Psicologia", "instituicao": "USP", "ano": 2019 }
+      {
+        "curso": "Psicologia",
+        "instituicao": "USP",
+        "ano": 2019
+      }
     ],
     "projetos": [
       {
@@ -853,20 +1414,38 @@
         "descricao": "Estudo de acessibilidade em interfaces educacionais."
       }
     ],
-    "certificacoes": ["UX Research Expert"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Educação", "Acessibilidade"]
+    "certificacoes": [
+      "UX Research Expert"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Educação",
+      "Acessibilidade"
+    ]
   },
   {
     "id": "bd61538e-b6d1-4cf3-9c33-f761693d9aa7",
     "nome": "Caio Augusto Ribeiro",
-    "foto": "https://i.pravatar.cc/150?img=37",
+    "foto": "https://randomuser.me/api/portraits/men/3.jpg",
     "cargo": "Engenheiro de Software Pleno",
     "resumo": "Especialista em microserviços e APIs REST de alta performance.",
     "localizacao": "São Paulo/SP",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["Node.js", "GraphQL", "TypeScript", "AWS"],
-    "softSkills": ["Resolução de problemas", "Autogestão"],
+    "habilidadesTecnicas": [
+      "Node.js",
+      "GraphQL",
+      "TypeScript",
+      "AWS"
+    ],
+    "softSkills": [
+      "Resolução de problemas",
+      "Autogestão"
+    ],
     "experiencias": [
       {
         "empresa": "API Connect",
@@ -877,7 +1456,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Ciência da Computação", "instituicao": "USP", "ano": 2021 }
+      {
+        "curso": "Ciência da Computação",
+        "instituicao": "USP",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -886,20 +1469,38 @@
         "descricao": "Middleware para roteamento de microserviços."
       }
     ],
-    "certificacoes": ["AWS Developer Associate"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Arquitetura de software", "Cloud"]
+    "certificacoes": [
+      "AWS Developer Associate"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Arquitetura de software",
+      "Cloud"
+    ]
   },
   {
     "id": "edb72e36-bcb8-4ab2-bc67-c2b348f42291",
     "nome": "Daniela Correia Lopes",
-    "foto": "https://i.pravatar.cc/150?img=38",
+    "foto": "https://randomuser.me/api/portraits/women/94.jpg",
     "cargo": "Analista de BI",
     "resumo": "Cria dashboards e relatórios de alta performance para negócios.",
     "localizacao": "Belo Horizonte/MG",
     "area": "Data Analytics",
-    "habilidadesTecnicas": ["Power BI", "SQL", "Excel", "Python"],
-    "softSkills": ["Análise crítica", "Comunicação"],
+    "habilidadesTecnicas": [
+      "Power BI",
+      "SQL",
+      "Excel",
+      "Python"
+    ],
+    "softSkills": [
+      "Análise crítica",
+      "Comunicação"
+    ],
     "experiencias": [
       {
         "empresa": "Insight Corp",
@@ -910,7 +1511,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Administração", "instituicao": "UFMG", "ano": 2019 }
+      {
+        "curso": "Administração",
+        "instituicao": "UFMG",
+        "ano": 2019
+      }
     ],
     "projetos": [
       {
@@ -919,20 +1524,38 @@
         "descricao": "Criação de relatórios interativos para o setor financeiro."
       }
     ],
-    "certificacoes": ["Microsoft BI Expert"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Data Analytics", "Negócios"]
+    "certificacoes": [
+      "Microsoft BI Expert"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Data Analytics",
+      "Negócios"
+    ]
   },
   {
     "id": "fa86ffdc-58c0-4a3e-814d-86f61cb4f3c7",
     "nome": "Eduardo Oliveira Santos",
-    "foto": "https://i.pravatar.cc/150?img=39",
+    "foto": "https://randomuser.me/api/portraits/men/40.jpg",
     "cargo": "Tech Lead",
     "resumo": "Lidera equipes técnicas com foco em qualidade e boas práticas.",
     "localizacao": "São Paulo/SP",
     "area": "Gestão de Tecnologia",
-    "habilidadesTecnicas": ["Node.js", "React", "AWS", "CI/CD"],
-    "softSkills": ["Liderança", "Visão estratégica"],
+    "habilidadesTecnicas": [
+      "Node.js",
+      "React",
+      "AWS",
+      "CI/CD"
+    ],
+    "softSkills": [
+      "Liderança",
+      "Visão estratégica"
+    ],
     "experiencias": [
       {
         "empresa": "Lifonix Labs",
@@ -943,7 +1566,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Software", "instituicao": "FIAP", "ano": 2021 }
+      {
+        "curso": "Engenharia de Software",
+        "instituicao": "FIAP",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -952,20 +1579,38 @@
         "descricao": "Rede social profissional moderna e minimalista."
       }
     ],
-    "certificacoes": ["AWS Solutions Architect"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Gestão", "Tecnologia"]
+    "certificacoes": [
+      "AWS Solutions Architect"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Gestão",
+      "Tecnologia"
+    ]
   },
   {
     "id": "8a23ab1b-0a44-4238-bf93-f1189b234f1e",
     "nome": "Fernanda Prado Almeida",
-    "foto": "https://i.pravatar.cc/150?img=40",
+    "foto": "https://randomuser.me/api/portraits/women/4.jpg",
     "cargo": "Desenvolvedora Full Stack",
     "resumo": "Desenvolve soluções completas do front-end ao back-end.",
     "localizacao": "São Paulo/SP",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["React", "Node.js", "MongoDB", "Express"],
-    "softSkills": ["Trabalho em equipe", "Aprendizado contínuo"],
+    "habilidadesTecnicas": [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express"
+    ],
+    "softSkills": [
+      "Trabalho em equipe",
+      "Aprendizado contínuo"
+    ],
     "experiencias": [
       {
         "empresa": "FullStackers",
@@ -976,7 +1621,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia da Computação", "instituicao": "USP", "ano": 2022 }
+      {
+        "curso": "Engenharia da Computação",
+        "instituicao": "USP",
+        "ano": 2022
+      }
     ],
     "projetos": [
       {
@@ -985,20 +1634,38 @@
         "descricao": "Plataforma de portfólios para profissionais criativos."
       }
     ],
-    "certificacoes": ["Full Stack Developer – FIAP"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Educação", "Inovação"]
+    "certificacoes": [
+      "Full Stack Developer – FIAP"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Educação",
+      "Inovação"
+    ]
   },
   {
     "id": "0e3bca0b-32c9-47e4-a2ef-10c77af24c5a",
     "nome": "Gustavo Henrique Amaral",
-    "foto": "https://i.pravatar.cc/150?img=41",
+    "foto": "https://randomuser.me/api/portraits/men/28.jpg",
     "cargo": "Analista de Sistemas",
     "resumo": "Especialista em levantamento de requisitos e modelagem de sistemas.",
     "localizacao": "São Paulo/SP",
     "area": "Análise de Sistemas",
-    "habilidadesTecnicas": ["UML", "SQL", "Java", "Documentação técnica"],
-    "softSkills": ["Comunicação", "Organização"],
+    "habilidadesTecnicas": [
+      "UML",
+      "SQL",
+      "Java",
+      "Documentação técnica"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Organização"
+    ],
     "experiencias": [
       {
         "empresa": "SoftVision",
@@ -1009,7 +1676,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Análise e Desenvolvimento de Sistemas", "instituicao": "FATEC", "ano": 2020 }
+      {
+        "curso": "Análise e Desenvolvimento de Sistemas",
+        "instituicao": "FATEC",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -1018,20 +1689,38 @@
         "descricao": "Software para controle de pacientes e prontuários."
       }
     ],
-    "certificacoes": ["Analista de Requisitos – IREB"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Saúde", "Gestão de projetos"]
+    "certificacoes": [
+      "Analista de Requisitos – IREB"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Saúde",
+      "Gestão de projetos"
+    ]
   },
   {
     "id": "d2f8f27b-3b0f-49d2-8417-4c9f5b67cf37",
     "nome": "Helena Dias Campos",
-    "foto": "https://i.pravatar.cc/150?img=42",
+    "foto": "https://randomuser.me/api/portraits/men/86.jpg",
     "cargo": "Cientista de Dados Sênior",
     "resumo": "Experiência em análise preditiva e big data.",
     "localizacao": "Brasília/DF",
     "area": "Data Science",
-    "habilidadesTecnicas": ["Python", "R", "Spark", "Hadoop"],
-    "softSkills": ["Pensamento crítico", "Trabalho em equipe"],
+    "habilidadesTecnicas": [
+      "Python",
+      "R",
+      "Spark",
+      "Hadoop"
+    ],
+    "softSkills": [
+      "Pensamento crítico",
+      "Trabalho em equipe"
+    ],
     "experiencias": [
       {
         "empresa": "DataVision",
@@ -1042,7 +1731,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Estatística", "instituicao": "UnB", "ano": 2017 }
+      {
+        "curso": "Estatística",
+        "instituicao": "UnB",
+        "ano": 2017
+      }
     ],
     "projetos": [
       {
@@ -1051,20 +1744,38 @@
         "descricao": "Sistema para previsão de congestionamentos em grandes cidades."
       }
     ],
-    "certificacoes": ["TensorFlow Advanced"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Mobilidade", "IA aplicada"]
+    "certificacoes": [
+      "TensorFlow Advanced"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Mobilidade",
+      "IA aplicada"
+    ]
   },
   {
     "id": "3a9d7486-8b13-4d6e-b8b9-cd5953a427da",
     "nome": "Igor Fernandes Lopes",
-    "foto": "https://i.pravatar.cc/150?img=43",
+    "foto": "https://randomuser.me/api/portraits/men/82.jpg",
     "cargo": "Desenvolvedor Back-end",
     "resumo": "Cria APIs escaláveis e microserviços em ambiente cloud.",
     "localizacao": "Florianópolis/SC",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["Node.js", "Go", "MongoDB", "Kubernetes"],
-    "softSkills": ["Foco em resultados", "Proatividade"],
+    "habilidadesTecnicas": [
+      "Node.js",
+      "Go",
+      "MongoDB",
+      "Kubernetes"
+    ],
+    "softSkills": [
+      "Foco em resultados",
+      "Proatividade"
+    ],
     "experiencias": [
       {
         "empresa": "CloudX",
@@ -1075,7 +1786,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Computação", "instituicao": "UFSC", "ano": 2021 }
+      {
+        "curso": "Engenharia de Computação",
+        "instituicao": "UFSC",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -1084,20 +1799,38 @@
         "descricao": "API com JWT e autenticação OAuth2."
       }
     ],
-    "certificacoes": ["Go Developer Certified"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Cloud", "DevOps"]
+    "certificacoes": [
+      "Go Developer Certified"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Cloud",
+      "DevOps"
+    ]
   },
   {
     "id": "2a0d8e9a-bd0c-4a92-bb60-74e6d77288de",
     "nome": "Jéssica Ramos Oliveira",
-    "foto": "https://i.pravatar.cc/150?img=44",
+    "foto": "https://randomuser.me/api/portraits/women/84.jpg",
     "cargo": "UI Designer",
     "resumo": "Especialista em design de interfaces limpas e minimalistas.",
     "localizacao": "São Paulo/SP",
     "area": "Design",
-    "habilidadesTecnicas": ["Figma", "Adobe XD", "Prototipagem", "Design System"],
-    "softSkills": ["Criatividade", "Colaboração"],
+    "habilidadesTecnicas": [
+      "Figma",
+      "Adobe XD",
+      "Prototipagem",
+      "Design System"
+    ],
+    "softSkills": [
+      "Criatividade",
+      "Colaboração"
+    ],
     "experiencias": [
       {
         "empresa": "UIHouse",
@@ -1108,7 +1841,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Design Gráfico", "instituicao": "Senac", "ano": 2020 }
+      {
+        "curso": "Design Gráfico",
+        "instituicao": "Senac",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -1117,20 +1854,39 @@
         "descricao": "Sistema de design corporativo baseado em Tailwind CSS."
       }
     ],
-    "certificacoes": ["UX/UI Advanced – FIAP"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Design", "Educação", "Acessibilidade"]
+    "certificacoes": [
+      "UX/UI Advanced – FIAP"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Design",
+      "Educação",
+      "Acessibilidade"
+    ]
   },
   {
     "id": "1b69de13-1a2a-46e1-b98e-fbe3f2dc11b4",
     "nome": "Kauê Silva Menezes",
-    "foto": "https://i.pravatar.cc/150?img=45",
+    "foto": "https://randomuser.me/api/portraits/men/86.jpg",
     "cargo": "Engenheiro de Software",
     "resumo": "Amante de código limpo e otimização de algoritmos.",
     "localizacao": "Campinas/SP",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["C#", ".NET", "Azure", "SQL Server"],
-    "softSkills": ["Colaboração", "Liderança"],
+    "habilidadesTecnicas": [
+      "C#",
+      ".NET",
+      "Azure",
+      "SQL Server"
+    ],
+    "softSkills": [
+      "Colaboração",
+      "Liderança"
+    ],
     "experiencias": [
       {
         "empresa": "SoftCorp",
@@ -1141,7 +1897,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Computação", "instituicao": "UNICAMP", "ano": 2019 }
+      {
+        "curso": "Engenharia de Computação",
+        "instituicao": "UNICAMP",
+        "ano": 2019
+      }
     ],
     "projetos": [
       {
@@ -1150,20 +1910,38 @@
         "descricao": "Sistema de gestão empresarial baseado em microserviços."
       }
     ],
-    "certificacoes": ["Microsoft Azure Developer"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Cloud", "Arquitetura"]
+    "certificacoes": [
+      "Microsoft Azure Developer"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Cloud",
+      "Arquitetura"
+    ]
   },
   {
     "id": "7a54328e-ef8f-429d-8ad1-f5b8d8a67e7b",
     "nome": "Larissa Gomes Tavares",
-    "foto": "https://i.pravatar.cc/150?img=46",
+    "foto": "https://randomuser.me/api/portraits/women/55.jpg",
     "cargo": "Desenvolvedora Mobile",
     "resumo": "Focada em performance e UX em apps móveis.",
     "localizacao": "Rio de Janeiro/RJ",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["React Native", "Kotlin", "Swift", "Firebase"],
-    "softSkills": ["Comunicação", "Criatividade"],
+    "habilidadesTecnicas": [
+      "React Native",
+      "Kotlin",
+      "Swift",
+      "Firebase"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Criatividade"
+    ],
     "experiencias": [
       {
         "empresa": "AppPro",
@@ -1174,7 +1952,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Sistemas de Informação", "instituicao": "UFRJ", "ano": 2021 }
+      {
+        "curso": "Sistemas de Informação",
+        "instituicao": "UFRJ",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -1183,20 +1965,38 @@
         "descricao": "Versão mobile da plataforma Lifonix Network."
       }
     ],
-    "certificacoes": ["Mobile Developer Expert"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Mobile", "UX"]
+    "certificacoes": [
+      "Mobile Developer Expert"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Mobile",
+      "UX"
+    ]
   },
   {
     "id": "f1bbcbf1-0a24-4ac0-8e79-5f5c5cf56853",
     "nome": "Marcelo Vieira Pires",
-    "foto": "https://i.pravatar.cc/150?img=47",
+    "foto": "https://randomuser.me/api/portraits/men/71.jpg",
     "cargo": "Engenheiro de Software",
     "resumo": "Atua com sistemas de alta disponibilidade e microserviços.",
     "localizacao": "São Paulo/SP",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["Java", "Spring", "Kafka", "Docker"],
-    "softSkills": ["Trabalho em equipe", "Comunicação"],
+    "habilidadesTecnicas": [
+      "Java",
+      "Spring",
+      "Kafka",
+      "Docker"
+    ],
+    "softSkills": [
+      "Trabalho em equipe",
+      "Comunicação"
+    ],
     "experiencias": [
       {
         "empresa": "FinTechLab",
@@ -1207,7 +2007,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Computação", "instituicao": "Mackenzie", "ano": 2020 }
+      {
+        "curso": "Engenharia de Computação",
+        "instituicao": "Mackenzie",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -1216,20 +2020,38 @@
         "descricao": "Sistema para gerenciamento de pagamentos instantâneos."
       }
     ],
-    "certificacoes": ["AWS Developer"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Fintech", "Cloud"]
+    "certificacoes": [
+      "AWS Developer"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Fintech",
+      "Cloud"
+    ]
   },
   {
     "id": "982bc8b7-2da3-4fd1-9ad3-95a1a70cf4a3",
     "nome": "Natasha Duarte Faria",
-    "foto": "https://i.pravatar.cc/150?img=48",
+    "foto": "https://randomuser.me/api/portraits/women/99.jpg",
     "cargo": "Analista de Suporte Técnico",
     "resumo": "Apoia usuários e mantém ambientes corporativos estáveis.",
     "localizacao": "Belo Horizonte/MG",
     "area": "Suporte",
-    "habilidadesTecnicas": ["Windows Server", "Linux", "Help Desk", "VPN"],
-    "softSkills": ["Empatia", "Paciência"],
+    "habilidadesTecnicas": [
+      "Windows Server",
+      "Linux",
+      "Help Desk",
+      "VPN"
+    ],
+    "softSkills": [
+      "Empatia",
+      "Paciência"
+    ],
     "experiencias": [
       {
         "empresa": "TechHelp",
@@ -1240,7 +2062,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Redes de Computadores", "instituicao": "UNA", "ano": 2020 }
+      {
+        "curso": "Redes de Computadores",
+        "instituicao": "UNA",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -1249,20 +2075,38 @@
         "descricao": "Sistema de tickets para suporte interno."
       }
     ],
-    "certificacoes": ["ITIL Foundation"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Básico" }],
-    "areaInteresses": ["Suporte", "Infraestrutura"]
+    "certificacoes": [
+      "ITIL Foundation"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Básico"
+      }
+    ],
+    "areaInteresses": [
+      "Suporte",
+      "Infraestrutura"
+    ]
   },
   {
     "id": "af478a61-699c-4e29-9f4a-c4b67a31f251",
     "nome": "Olívia Santos Rocha",
-    "foto": "https://i.pravatar.cc/150?img=49",
+    "foto": "https://randomuser.me/api/portraits/women/21.jpg",
     "cargo": "Engenheira de Dados",
     "resumo": "Cria pipelines de dados otimizados e confiáveis.",
     "localizacao": "Curitiba/PR",
     "area": "Data Engineering",
-    "habilidadesTecnicas": ["Python", "Spark", "Airflow", "AWS"],
-    "softSkills": ["Detalhismo", "Pensamento lógico"],
+    "habilidadesTecnicas": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "AWS"
+    ],
+    "softSkills": [
+      "Detalhismo",
+      "Pensamento lógico"
+    ],
     "experiencias": [
       {
         "empresa": "DataForge",
@@ -1273,7 +2117,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Computação", "instituicao": "UTFPR", "ano": 2021 }
+      {
+        "curso": "Engenharia de Computação",
+        "instituicao": "UTFPR",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -1282,20 +2130,38 @@
         "descricao": "Pipeline de dados para análise de vendas regionais."
       }
     ],
-    "certificacoes": ["AWS Data Analytics Specialty"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Big Data", "Machine Learning"]
+    "certificacoes": [
+      "AWS Data Analytics Specialty"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Big Data",
+      "Machine Learning"
+    ]
   },
   {
     "id": "1fa8b8b9-37c2-42f2-9f7a-c9adf50e3c47",
     "nome": "Paula Nogueira Almeida",
-    "foto": "https://i.pravatar.cc/150?img=50",
+    "foto": "https://randomuser.me/api/portraits/women/27.jpg",
     "cargo": "Analista de Marketing Digital",
     "resumo": "Focada em performance, SEO e campanhas online.",
     "localizacao": "São Paulo/SP",
     "area": "Marketing",
-    "habilidadesTecnicas": ["Google Ads", "SEO", "Analytics", "Copywriting"],
-    "softSkills": ["Comunicação", "Criatividade"],
+    "habilidadesTecnicas": [
+      "Google Ads",
+      "SEO",
+      "Analytics",
+      "Copywriting"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Criatividade"
+    ],
     "experiencias": [
       {
         "empresa": "Lifonix",
@@ -1306,7 +2172,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Publicidade e Propaganda", "instituicao": "ESPM", "ano": 2020 }
+      {
+        "curso": "Publicidade e Propaganda",
+        "instituicao": "ESPM",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -1315,20 +2185,38 @@
         "descricao": "Criação de estratégia de marketing digital para a Lifonix."
       }
     ],
-    "certificacoes": ["Google Marketing Certification"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Marketing", "Tecnologia"]
+    "certificacoes": [
+      "Google Marketing Certification"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Marketing",
+      "Tecnologia"
+    ]
   },
   {
     "id": "fb17a3f1-d6d3-4dc0-9c7a-3e4b92c0ef68",
     "nome": "Rafael Vieira Duarte",
-    "foto": "https://i.pravatar.cc/150?img=51",
+    "foto": "https://randomuser.me/api/portraits/men/72.jpg",
     "cargo": "DevOps Engineer",
     "resumo": "Automatiza processos e otimiza deploys em pipelines CI/CD.",
     "localizacao": "Campinas/SP",
     "area": "DevOps",
-    "habilidadesTecnicas": ["Docker", "Kubernetes", "AWS", "Terraform"],
-    "softSkills": ["Proatividade", "Pensamento sistêmico"],
+    "habilidadesTecnicas": [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Terraform"
+    ],
+    "softSkills": [
+      "Proatividade",
+      "Pensamento sistêmico"
+    ],
     "experiencias": [
       {
         "empresa": "OpsCloud",
@@ -1339,7 +2227,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Computação", "instituicao": "UNICAMP", "ano": 2020 }
+      {
+        "curso": "Engenharia de Computação",
+        "instituicao": "UNICAMP",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -1348,20 +2240,38 @@
         "descricao": "Automação da infraestrutura da plataforma Lifonix Network."
       }
     ],
-    "certificacoes": ["AWS DevOps Professional"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["DevOps", "Cloud"]
+    "certificacoes": [
+      "AWS DevOps Professional"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "DevOps",
+      "Cloud"
+    ]
   },
   {
     "id": "7f0c53b1-1b0a-4eb3-ae2f-ec64cf8907db",
     "nome": "Sabrina Lopes Martins",
-    "foto": "https://i.pravatar.cc/150?img=52",
+    "foto": "https://randomuser.me/api/portraits/women/59.jpg",
     "cargo": "Cientista de Dados",
     "resumo": "Modelagem e visualização de dados para insights de negócio.",
     "localizacao": "Curitiba/PR",
     "area": "Data Science",
-    "habilidadesTecnicas": ["Python", "Pandas", "TensorFlow", "Power BI"],
-    "softSkills": ["Análise crítica", "Trabalho em equipe"],
+    "habilidadesTecnicas": [
+      "Python",
+      "Pandas",
+      "TensorFlow",
+      "Power BI"
+    ],
+    "softSkills": [
+      "Análise crítica",
+      "Trabalho em equipe"
+    ],
     "experiencias": [
       {
         "empresa": "DataVision",
@@ -1372,7 +2282,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Matemática Aplicada", "instituicao": "UTFPR", "ano": 2019 }
+      {
+        "curso": "Matemática Aplicada",
+        "instituicao": "UTFPR",
+        "ano": 2019
+      }
     ],
     "projetos": [
       {
@@ -1381,20 +2295,38 @@
         "descricao": "Recomendação de conexões entre profissionais com IA."
       }
     ],
-    "certificacoes": ["TensorFlow Developer"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["IA", "Data Science"]
+    "certificacoes": [
+      "TensorFlow Developer"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "IA",
+      "Data Science"
+    ]
   },
   {
     "id": "219b14ee-d78f-48f1-bfe3-49e9d8c65b6f",
     "nome": "Thiago Costa Ribeiro",
-    "foto": "https://i.pravatar.cc/150?img=53",
+    "foto": "https://randomuser.me/api/portraits/men/59.jpg",
     "cargo": "Product Manager",
     "resumo": "Coordena equipes multidisciplinares para produtos digitais.",
     "localizacao": "São Paulo/SP",
     "area": "Gestão de Produto",
-    "habilidadesTecnicas": ["Product Discovery", "Scrum", "Kanban", "Design Thinking"],
-    "softSkills": ["Liderança", "Empatia"],
+    "habilidadesTecnicas": [
+      "Product Discovery",
+      "Scrum",
+      "Kanban",
+      "Design Thinking"
+    ],
+    "softSkills": [
+      "Liderança",
+      "Empatia"
+    ],
     "experiencias": [
       {
         "empresa": "Lifonix",
@@ -1405,7 +2337,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Administração", "instituicao": "FGV", "ano": 2018 }
+      {
+        "curso": "Administração",
+        "instituicao": "FGV",
+        "ano": 2018
+      }
     ],
     "projetos": [
       {
@@ -1414,20 +2350,38 @@
         "descricao": "Rede social corporativa minimalista e moderna."
       }
     ],
-    "certificacoes": ["Scrum Master – PSM I"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Gestão", "Inovação"]
+    "certificacoes": [
+      "Scrum Master – PSM I"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Gestão",
+      "Inovação"
+    ]
   },
   {
     "id": "b9af10b2-83ef-4a6d-9ed5-b6f5b6c9f1cf",
     "nome": "Ubirajara Moreira Pinto",
-    "foto": "https://i.pravatar.cc/150?img=54",
+    "foto": "https://randomuser.me/api/portraits/men/33.jpg",
     "cargo": "Engenheiro de Software Sênior",
     "resumo": "Desenvolve soluções escaláveis com arquitetura orientada a eventos.",
     "localizacao": "Recife/PE",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["Java", "Kafka", "AWS", "Kubernetes"],
-    "softSkills": ["Autonomia", "Liderança técnica"],
+    "habilidadesTecnicas": [
+      "Java",
+      "Kafka",
+      "AWS",
+      "Kubernetes"
+    ],
+    "softSkills": [
+      "Autonomia",
+      "Liderança técnica"
+    ],
     "experiencias": [
       {
         "empresa": "SoftLink",
@@ -1438,7 +2392,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Software", "instituicao": "UPE", "ano": 2016 }
+      {
+        "curso": "Engenharia de Software",
+        "instituicao": "UPE",
+        "ano": 2016
+      }
     ],
     "projetos": [
       {
@@ -1447,20 +2405,38 @@
         "descricao": "Framework interno de eventos distribuídos."
       }
     ],
-    "certificacoes": ["Java Architect Certified"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Arquitetura", "Cloud"]
+    "certificacoes": [
+      "Java Architect Certified"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Arquitetura",
+      "Cloud"
+    ]
   },
   {
     "id": "2ebda39a-762b-4a4d-8456-8d26e3d7f8d7",
     "nome": "Valéria Souza Costa",
-    "foto": "https://i.pravatar.cc/150?img=55",
+    "foto": "https://randomuser.me/api/portraits/women/66.jpg",
     "cargo": "QA Engineer",
     "resumo": "Especialista em testes automatizados e qualidade de software.",
     "localizacao": "São Paulo/SP",
     "area": "Qualidade",
-    "habilidadesTecnicas": ["Cypress", "Selenium", "Postman", "Jest"],
-    "softSkills": ["Detalhismo", "Organização"],
+    "habilidadesTecnicas": [
+      "Cypress",
+      "Selenium",
+      "Postman",
+      "Jest"
+    ],
+    "softSkills": [
+      "Detalhismo",
+      "Organização"
+    ],
     "experiencias": [
       {
         "empresa": "QualityLab",
@@ -1471,7 +2447,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Ciência da Computação", "instituicao": "USP", "ano": 2019 }
+      {
+        "curso": "Ciência da Computação",
+        "instituicao": "USP",
+        "ano": 2019
+      }
     ],
     "projetos": [
       {
@@ -1480,20 +2460,38 @@
         "descricao": "Automação de testes de interface e API da Lifonix Network."
       }
     ],
-    "certificacoes": ["ISTQB Foundation Level"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Qualidade", "Automação"]
+    "certificacoes": [
+      "ISTQB Foundation Level"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Qualidade",
+      "Automação"
+    ]
   },
   {
     "id": "9d2b8290-58a8-4f41-8f4e-5a0de9e8af5c",
     "nome": "William Duarte Nunes",
-    "foto": "https://i.pravatar.cc/150?img=56",
+    "foto": "https://randomuser.me/api/portraits/men/84.jpg",
     "cargo": "Data Engineer",
     "resumo": "Constrói pipelines de dados e integrações entre sistemas complexos.",
     "localizacao": "Rio de Janeiro/RJ",
     "area": "Data Engineering",
-    "habilidadesTecnicas": ["Python", "SQL", "Spark", "AWS Glue"],
-    "softSkills": ["Lógica", "Colaboração"],
+    "habilidadesTecnicas": [
+      "Python",
+      "SQL",
+      "Spark",
+      "AWS Glue"
+    ],
+    "softSkills": [
+      "Lógica",
+      "Colaboração"
+    ],
     "experiencias": [
       {
         "empresa": "DataWorks",
@@ -1504,7 +2502,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Computação", "instituicao": "UERJ", "ano": 2020 }
+      {
+        "curso": "Engenharia de Computação",
+        "instituicao": "UERJ",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -1513,20 +2515,38 @@
         "descricao": "Ingestão de métricas de uso da plataforma Lifonix."
       }
     ],
-    "certificacoes": ["AWS Data Engineer Professional"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Big Data", "ETL"]
+    "certificacoes": [
+      "AWS Data Engineer Professional"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Big Data",
+      "ETL"
+    ]
   },
   {
     "id": "a2ef51bc-86dd-4972-9d4c-cc7b5ff03d52",
     "nome": "Ximena Freitas Andrade",
-    "foto": "https://i.pravatar.cc/150?img=57",
+    "foto": "https://randomuser.me/api/portraits/women/49.jpg",
     "cargo": "Desenvolvedora Full Stack",
     "resumo": "Cria soluções completas integrando front-end e back-end.",
     "localizacao": "São Paulo/SP",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["React", "Node.js", "TypeScript", "PostgreSQL"],
-    "softSkills": ["Autonomia", "Trabalho em equipe"],
+    "habilidadesTecnicas": [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL"
+    ],
+    "softSkills": [
+      "Autonomia",
+      "Trabalho em equipe"
+    ],
     "experiencias": [
       {
         "empresa": "CodeHouse",
@@ -1537,7 +2557,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia de Computação", "instituicao": "USP", "ano": 2021 }
+      {
+        "curso": "Engenharia de Computação",
+        "instituicao": "USP",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -1546,20 +2570,38 @@
         "descricao": "Ferramenta de rede profissional moderna e intuitiva."
       }
     ],
-    "certificacoes": ["Full Stack Expert – FIAP"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Inovação", "Educação"]
+    "certificacoes": [
+      "Full Stack Expert – FIAP"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Inovação",
+      "Educação"
+    ]
   },
   {
     "id": "e2cbac5e-7115-47f2-b26f-d7b8455c9d8d",
     "nome": "Yuri Machado Campos",
-    "foto": "https://i.pravatar.cc/150?img=58",
+    "foto": "https://randomuser.me/api/portraits/men/71.jpg",
     "cargo": "Front-end Developer",
     "resumo": "Constrói interfaces elegantes e performáticas.",
     "localizacao": "Florianópolis/SC",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["Next.js", "Tailwind CSS", "React", "TypeScript"],
-    "softSkills": ["Criatividade", "Foco em detalhes"],
+    "habilidadesTecnicas": [
+      "Next.js",
+      "Tailwind CSS",
+      "React",
+      "TypeScript"
+    ],
+    "softSkills": [
+      "Criatividade",
+      "Foco em detalhes"
+    ],
     "experiencias": [
       {
         "empresa": "FrontendLab",
@@ -1570,7 +2612,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Design Digital", "instituicao": "UFSC", "ano": 2022 }
+      {
+        "curso": "Design Digital",
+        "instituicao": "UFSC",
+        "ano": 2022
+      }
     ],
     "projetos": [
       {
@@ -1579,20 +2625,38 @@
         "descricao": "Interface principal da Lifonix Network baseada em LinkedIn."
       }
     ],
-    "certificacoes": ["Frontend Expert – Alura"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Design", "Tecnologia"]
+    "certificacoes": [
+      "Frontend Expert – Alura"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Design",
+      "Tecnologia"
+    ]
   },
   {
     "id": "a7a1b2e3-67f4-4b6a-9a1e-30c3f2a2d9c4",
     "nome": "Zeca Pereira Gomes",
-    "foto": "https://i.pravatar.cc/150?img=59",
+    "foto": "https://randomuser.me/api/portraits/men/11.jpg",
     "cargo": "Administrador de Banco de Dados",
     "resumo": "Gerencia e otimiza bancos de dados relacionais e NoSQL.",
     "localizacao": "Salvador/BA",
     "area": "Banco de Dados",
-    "habilidadesTecnicas": ["MySQL", "PostgreSQL", "MongoDB", "Backup & Recovery"],
-    "softSkills": ["Detalhismo", "Foco em resultados"],
+    "habilidadesTecnicas": [
+      "MySQL",
+      "PostgreSQL",
+      "MongoDB",
+      "Backup & Recovery"
+    ],
+    "softSkills": [
+      "Detalhismo",
+      "Foco em resultados"
+    ],
     "experiencias": [
       {
         "empresa": "DataSys",
@@ -1603,7 +2667,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Ciência da Computação", "instituicao": "UFBA", "ano": 2017 }
+      {
+        "curso": "Ciência da Computação",
+        "instituicao": "UFBA",
+        "ano": 2017
+      }
     ],
     "projetos": [
       {
@@ -1612,20 +2680,37 @@
         "descricao": "Configuração de cluster PostgreSQL em ambiente cloud."
       }
     ],
-    "certificacoes": ["PostgreSQL DBA Certified"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Banco de Dados", "Segurança"]
+    "certificacoes": [
+      "PostgreSQL DBA Certified"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Banco de Dados",
+      "Segurança"
+    ]
   },
   {
     "id": "f8c6aee4-ec20-44a0-b3a2-f53040b687f3",
     "nome": "Amanda Luzia Pereira",
-    "foto": "https://i.pravatar.cc/150?img=60",
+    "foto": "https://randomuser.me/api/portraits/men/32.jpg",
     "cargo": "Tech Recruiter",
     "resumo": "Especialista em recrutamento de profissionais de tecnologia.",
     "localizacao": "São Paulo/SP",
     "area": "Recursos Humanos",
-    "habilidadesTecnicas": ["Recrutamento Tech", "Entrevistas técnicas", "LinkedIn Recruiter"],
-    "softSkills": ["Comunicação", "Empatia"],
+    "habilidadesTecnicas": [
+      "Recrutamento Tech",
+      "Entrevistas técnicas",
+      "LinkedIn Recruiter"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Empatia"
+    ],
     "experiencias": [
       {
         "empresa": "Lifonix",
@@ -1636,7 +2721,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Psicologia Organizacional", "instituicao": "PUC-SP", "ano": 2020 }
+      {
+        "curso": "Psicologia Organizacional",
+        "instituicao": "PUC-SP",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -1645,20 +2734,38 @@
         "descricao": "Iniciativa de recrutamento de jovens talentos tech."
       }
     ],
-    "certificacoes": ["LinkedIn Recruiter Certification"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Gestão de Pessoas", "Tecnologia"]
+    "certificacoes": [
+      "LinkedIn Recruiter Certification"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Gestão de Pessoas",
+      "Tecnologia"
+    ]
   },
   {
     "id": "9fa3b22c-126b-44c4-a0f1-f5f09f88a6c7",
     "nome": "Bruno Costa Matias",
-    "foto": "https://i.pravatar.cc/150?img=61",
+    "foto": "https://randomuser.me/api/portraits/men/37.jpg",
     "cargo": "Especialista em Segurança da Informação",
     "resumo": "Foca em segurança de aplicações e análise de vulnerabilidades.",
     "localizacao": "Brasília/DF",
     "area": "Segurança",
-    "habilidadesTecnicas": ["Pentest", "Firewall", "OWASP", "Linux Security"],
-    "softSkills": ["Resiliência", "Pensamento analítico"],
+    "habilidadesTecnicas": [
+      "Pentest",
+      "Firewall",
+      "OWASP",
+      "Linux Security"
+    ],
+    "softSkills": [
+      "Resiliência",
+      "Pensamento analítico"
+    ],
     "experiencias": [
       {
         "empresa": "SecureLabs",
@@ -1669,7 +2776,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Segurança da Informação", "instituicao": "UnB", "ano": 2018 }
+      {
+        "curso": "Segurança da Informação",
+        "instituicao": "UnB",
+        "ano": 2018
+      }
     ],
     "projetos": [
       {
@@ -1678,20 +2789,38 @@
         "descricao": "Análise de vulnerabilidades e recomendações de segurança."
       }
     ],
-    "certificacoes": ["CEH – Certified Ethical Hacker"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Cibersegurança", "Auditoria"]
+    "certificacoes": [
+      "CEH – Certified Ethical Hacker"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Cibersegurança",
+      "Auditoria"
+    ]
   },
   {
     "id": "a6a8f16b-5bda-45ee-b63c-2cbba89fcb02",
     "nome": "Carla Mendes Rocha",
-    "foto": "https://i.pravatar.cc/150?img=62",
+    "foto": "https://randomuser.me/api/portraits/men/36.jpg",
     "cargo": "Gerente de Projetos",
     "resumo": "Coordena projetos de tecnologia com foco em entrega de valor.",
     "localizacao": "Rio de Janeiro/RJ",
     "area": "Gestão de Projetos",
-    "habilidadesTecnicas": ["PMBOK", "Scrum", "Kanban", "Jira"],
-    "softSkills": ["Liderança", "Comunicação"],
+    "habilidadesTecnicas": [
+      "PMBOK",
+      "Scrum",
+      "Kanban",
+      "Jira"
+    ],
+    "softSkills": [
+      "Liderança",
+      "Comunicação"
+    ],
     "experiencias": [
       {
         "empresa": "Lifonix",
@@ -1702,7 +2831,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Administração de Empresas", "instituicao": "FGV", "ano": 2018 }
+      {
+        "curso": "Administração de Empresas",
+        "instituicao": "FGV",
+        "ano": 2018
+      }
     ],
     "projetos": [
       {
@@ -1711,20 +2844,38 @@
         "descricao": "Projeto de migração da infraestrutura para nuvem AWS."
       }
     ],
-    "certificacoes": ["PMP – Project Management Professional"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Gestão", "Tecnologia"]
+    "certificacoes": [
+      "PMP – Project Management Professional"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Gestão",
+      "Tecnologia"
+    ]
   },
   {
     "id": "b1df4dc3-f12a-4b69-91bb-5f0f24f3f8d8",
     "nome": "Diego Nascimento Torres",
-    "foto": "https://i.pravatar.cc/150?img=63",
+    "foto": "https://randomuser.me/api/portraits/men/54.jpg",
     "cargo": "Desenvolvedor Front-end",
     "resumo": "Cria interfaces rápidas e acessíveis com React e Tailwind.",
     "localizacao": "Fortaleza/CE",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["React", "Next.js", "TypeScript", "Tailwind CSS"],
-    "softSkills": ["Detalhismo", "Criatividade"],
+    "habilidadesTecnicas": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "softSkills": [
+      "Detalhismo",
+      "Criatividade"
+    ],
     "experiencias": [
       {
         "empresa": "FrontUX",
@@ -1735,7 +2886,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Design Digital", "instituicao": "UFC", "ano": 2021 }
+      {
+        "curso": "Design Digital",
+        "instituicao": "UFC",
+        "ano": 2021
+      }
     ],
     "projetos": [
       {
@@ -1744,20 +2899,38 @@
         "descricao": "Interface principal da plataforma Lifonix."
       }
     ],
-    "certificacoes": ["Frontend Developer Pro"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["UI/UX", "Design"]
+    "certificacoes": [
+      "Frontend Developer Pro"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "UI/UX",
+      "Design"
+    ]
   },
   {
     "id": "c1ec0a8a-d2b1-4213-b6c9-9e7b11dbf7b2",
     "nome": "Elaine Souza Costa",
-    "foto": "https://i.pravatar.cc/150?img=64",
+    "foto": "https://randomuser.me/api/portraits/men/49.jpg",
     "cargo": "Analista de Dados",
     "resumo": "Transforma dados brutos em informações estratégicas.",
     "localizacao": "Belo Horizonte/MG",
     "area": "Data Analytics",
-    "habilidadesTecnicas": ["Power BI", "SQL", "Python", "Excel"],
-    "softSkills": ["Raciocínio lógico", "Trabalho em equipe"],
+    "habilidadesTecnicas": [
+      "Power BI",
+      "SQL",
+      "Python",
+      "Excel"
+    ],
+    "softSkills": [
+      "Raciocínio lógico",
+      "Trabalho em equipe"
+    ],
     "experiencias": [
       {
         "empresa": "DataPlus",
@@ -1768,7 +2941,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Estatística", "instituicao": "UFMG", "ano": 2019 }
+      {
+        "curso": "Estatística",
+        "instituicao": "UFMG",
+        "ano": 2019
+      }
     ],
     "projetos": [
       {
@@ -1777,20 +2954,38 @@
         "descricao": "Monitoramento de métricas da plataforma Lifonix."
       }
     ],
-    "certificacoes": ["Microsoft Data Analyst"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Análise de dados", "Negócios"]
+    "certificacoes": [
+      "Microsoft Data Analyst"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Análise de dados",
+      "Negócios"
+    ]
   },
   {
     "id": "dc71c77c-5675-49de-b1cf-621c6d73b4c0",
     "nome": "Felipe Azevedo Lins",
-    "foto": "https://i.pravatar.cc/150?img=65",
+    "foto": "https://randomuser.me/api/portraits/men/14.jpg",
     "cargo": "Engenheiro de Software",
     "resumo": "Trabalha com back-end escalável e APIs performáticas.",
     "localizacao": "São Paulo/SP",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["Node.js", "NestJS", "PostgreSQL", "Docker"],
-    "softSkills": ["Foco", "Resiliência"],
+    "habilidadesTecnicas": [
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "softSkills": [
+      "Foco",
+      "Resiliência"
+    ],
     "experiencias": [
       {
         "empresa": "CodeMasters",
@@ -1801,7 +2996,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Ciência da Computação", "instituicao": "USP", "ano": 2020 }
+      {
+        "curso": "Ciência da Computação",
+        "instituicao": "USP",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -1810,20 +3009,38 @@
         "descricao": "API principal da plataforma Lifonix."
       }
     ],
-    "certificacoes": ["Node.js Advanced Developer"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Back-end", "Arquitetura"]
+    "certificacoes": [
+      "Node.js Advanced Developer"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Back-end",
+      "Arquitetura"
+    ]
   },
   {
     "id": "d84ecb23-1c44-48f4-aad3-4a5a0296b4aa",
     "nome": "Gabriela Fernandes Souza",
-    "foto": "https://i.pravatar.cc/150?img=66",
+    "foto": "https://randomuser.me/api/portraits/women/1.jpg",
     "cargo": "Product Designer",
     "resumo": "Une estética e funcionalidade para criar produtos digitais incríveis.",
     "localizacao": "São Paulo/SP",
     "area": "Design",
-    "habilidadesTecnicas": ["Figma", "UX Research", "Prototipagem", "Design System"],
-    "softSkills": ["Empatia", "Criatividade"],
+    "habilidadesTecnicas": [
+      "Figma",
+      "UX Research",
+      "Prototipagem",
+      "Design System"
+    ],
+    "softSkills": [
+      "Empatia",
+      "Criatividade"
+    ],
     "experiencias": [
       {
         "empresa": "Lifonix",
@@ -1834,7 +3051,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Design Gráfico", "instituicao": "Belas Artes", "ano": 2020 }
+      {
+        "curso": "Design Gráfico",
+        "instituicao": "Belas Artes",
+        "ano": 2020
+      }
     ],
     "projetos": [
       {
@@ -1843,20 +3064,38 @@
         "descricao": "Sistema de componentes e identidade visual da marca."
       }
     ],
-    "certificacoes": ["UX/UI Expert – Alura"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Intermediário" }],
-    "areaInteresses": ["Design", "Experiência do Usuário"]
+    "certificacoes": [
+      "UX/UI Expert – Alura"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Intermediário"
+      }
+    ],
+    "areaInteresses": [
+      "Design",
+      "Experiência do Usuário"
+    ]
   },
   {
     "id": "e04a88e0-9f37-4f59-93cb-78f2e8f37d0a",
     "nome": "Henrique Carvalho Lopes",
-    "foto": "https://i.pravatar.cc/150?img=67",
+    "foto": "https://randomuser.me/api/portraits/men/6.jpg",
     "cargo": "Engenheiro de Software Sênior",
     "resumo": "Desenvolve sistemas complexos e mentor de equipes técnicas.",
     "localizacao": "Campinas/SP",
     "area": "Desenvolvimento",
-    "habilidadesTecnicas": ["Go", "Kubernetes", "AWS", "GraphQL"],
-    "softSkills": ["Liderança", "Comunicação"],
+    "habilidadesTecnicas": [
+      "Go",
+      "Kubernetes",
+      "AWS",
+      "GraphQL"
+    ],
+    "softSkills": [
+      "Liderança",
+      "Comunicação"
+    ],
     "experiencias": [
       {
         "empresa": "Lifonix",
@@ -1867,7 +3106,11 @@
       }
     ],
     "formacao": [
-      { "curso": "Engenharia da Computação", "instituicao": "UNICAMP", "ano": 2017 }
+      {
+        "curso": "Engenharia da Computação",
+        "instituicao": "UNICAMP",
+        "ano": 2017
+      }
     ],
     "projetos": [
       {
@@ -1876,13 +3119,426 @@
         "descricao": "Infraestrutura e arquitetura da plataforma Lifonix."
       }
     ],
-    "certificacoes": ["AWS Solutions Architect Professional"],
-    "idiomas": [{ "idioma": "Inglês", "nivel": "Avançado" }],
-    "areaInteresses": ["Arquitetura", "Mentoria"]
+    "certificacoes": [
+      "AWS Solutions Architect Professional"
+    ],
+    "idiomas": [
+      {
+        "idioma": "Inglês",
+        "nivel": "Avançado"
+      }
+    ],
+    "areaInteresses": [
+      "Arquitetura",
+      "Mentoria"
+    ]
+  },
+  {
+    "id": "1",
+    "nome": "Renata Santos",
+    "foto": "https://randomuser.me/api/portraits/women/77.jpg",
+    "cargo": "Analista TI",
+    "resumo": "Profissional de TI com foco em inovação e melhoria contínua.",
+    "localizacao": "Curitiba",
+    "area": "TI",
+    "habilidadesTecnicas": [
+      "Excel",
+      "Python",
+      "SQL",
+      "Power BI"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Trabalho em equipe",
+      "Criatividade"
+    ],
+    "experiencias": [
+      {
+        "empresa": "TechCorp",
+        "periodo": "2022-2024",
+        "descricao": "Atuação em projetos de otimização."
+      }
+    ],
+    "formacoes": [
+      {
+        "curso": "Graduação em TI",
+        "instituicao": "Universidade Federal",
+        "ano": "2021"
+      }
+    ],
+    "projetos": [
+      {
+        "titulo": "Projeto de Melhoria",
+        "descricao": "Automação de relatórios internos."
+      }
+    ],
+    "certificacoes": [
+      "Certificação Profissional Internacional"
+    ],
+    "idiomas": [
+      "Português",
+      "Inglês"
+    ],
+    "areaInteresses": [
+      "TI",
+      "Inovação"
+    ]
+  },
+  {
+    "id": "2",
+    "nome": "Marina Teixeira",
+    "foto": "https://randomuser.me/api/portraits/women/44.jpg",
+    "cargo": "Analista TI",
+    "resumo": "Profissional de TI com foco em inovação e melhoria contínua.",
+    "localizacao": "São Paulo",
+    "area": "TI",
+    "habilidadesTecnicas": [
+      "Excel",
+      "Python",
+      "SQL",
+      "Power BI"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Trabalho em equipe",
+      "Criatividade"
+    ],
+    "experiencias": [
+      {
+        "empresa": "TechCorp",
+        "periodo": "2022-2024",
+        "descricao": "Atuação em projetos de otimização."
+      }
+    ],
+    "formacoes": [
+      {
+        "curso": "Graduação em TI",
+        "instituicao": "Universidade Federal",
+        "ano": "2021"
+      }
+    ],
+    "projetos": [
+      {
+        "titulo": "Projeto de Melhoria",
+        "descricao": "Automação de relatórios internos."
+      }
+    ],
+    "certificacoes": [
+      "Certificação Profissional Internacional"
+    ],
+    "idiomas": [
+      "Português",
+      "Inglês"
+    ],
+    "areaInteresses": [
+      "TI",
+      "Inovação"
+    ]
+  },
+  {
+    "id": "3",
+    "nome": "Letícia Silva",
+    "foto": "https://randomuser.me/api/portraits/women/68.jpg",
+    "cargo": "Analista Engenharia",
+    "resumo": "Profissional de Engenharia com foco em inovação e melhoria contínua.",
+    "localizacao": "Porto Alegre",
+    "area": "Engenharia",
+    "habilidadesTecnicas": [
+      "Excel",
+      "Python",
+      "SQL",
+      "Power BI"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Trabalho em equipe",
+      "Criatividade"
+    ],
+    "experiencias": [
+      {
+        "empresa": "TechCorp",
+        "periodo": "2022-2024",
+        "descricao": "Atuação em projetos de otimização."
+      }
+    ],
+    "formacoes": [
+      {
+        "curso": "Graduação em Engenharia",
+        "instituicao": "Universidade Federal",
+        "ano": "2021"
+      }
+    ],
+    "projetos": [
+      {
+        "titulo": "Projeto de Melhoria",
+        "descricao": "Automação de relatórios internos."
+      }
+    ],
+    "certificacoes": [
+      "Certificação Profissional Internacional"
+    ],
+    "idiomas": [
+      "Português",
+      "Inglês"
+    ],
+    "areaInteresses": [
+      "Engenharia",
+      "Inovação"
+    ]
+  },
+  {
+    "id": "4",
+    "nome": "Letícia Souza",
+    "foto": "https://randomuser.me/api/portraits/women/72.jpg",
+    "cargo": "Analista Engenharia",
+    "resumo": "Profissional de Engenharia com foco em inovação e melhoria contínua.",
+    "localizacao": "Curitiba",
+    "area": "Engenharia",
+    "habilidadesTecnicas": [
+      "Excel",
+      "Python",
+      "SQL",
+      "Power BI"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Trabalho em equipe",
+      "Criatividade"
+    ],
+    "experiencias": [
+      {
+        "empresa": "TechCorp",
+        "periodo": "2022-2024",
+        "descricao": "Atuação em projetos de otimização."
+      }
+    ],
+    "formacoes": [
+      {
+        "curso": "Graduação em Engenharia",
+        "instituicao": "Universidade Federal",
+        "ano": "2021"
+      }
+    ],
+    "projetos": [
+      {
+        "titulo": "Projeto de Melhoria",
+        "descricao": "Automação de relatórios internos."
+      }
+    ],
+    "certificacoes": [
+      "Certificação Profissional Internacional"
+    ],
+    "idiomas": [
+      "Português",
+      "Inglês"
+    ],
+    "areaInteresses": [
+      "Engenharia",
+      "Inovação"
+    ]
+  },
+  {
+    "id": "5",
+    "nome": "Lucas Silva",
+    "foto": "https://randomuser.me/api/portraits/men/6.jpg",
+    "cargo": "Analista Dados",
+    "resumo": "Profissional de Dados com foco em inovação e melhoria contínua.",
+    "localizacao": "Porto Alegre",
+    "area": "Dados",
+    "habilidadesTecnicas": [
+      "Excel",
+      "Python",
+      "SQL",
+      "Power BI"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Trabalho em equipe",
+      "Criatividade"
+    ],
+    "experiencias": [
+      {
+        "empresa": "TechCorp",
+        "periodo": "2022-2024",
+        "descricao": "Atuação em projetos de otimização."
+      }
+    ],
+    "formacoes": [
+      {
+        "curso": "Graduação em Dados",
+        "instituicao": "Universidade Federal",
+        "ano": "2021"
+      }
+    ],
+    "projetos": [
+      {
+        "titulo": "Projeto de Melhoria",
+        "descricao": "Automação de relatórios internos."
+      }
+    ],
+    "certificacoes": [
+      "Certificação Profissional Internacional"
+    ],
+    "idiomas": [
+      "Português",
+      "Inglês"
+    ],
+    "areaInteresses": [
+      "Dados",
+      "Inovação"
+    ]
+  },
+  {
+    "id": "6",
+    "nome": "Aline Fernandes",
+    "foto": "https://randomuser.me/api/portraits/women/36.jpg",
+    "cargo": "Analista TI",
+    "resumo": "Profissional de TI com foco em inovação e melhoria contínua.",
+    "localizacao": "Salvador",
+    "area": "TI",
+    "habilidadesTecnicas": [
+      "Excel",
+      "Python",
+      "SQL",
+      "Power BI"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Trabalho em equipe",
+      "Criatividade"
+    ],
+    "experiencias": [
+      {
+        "empresa": "TechCorp",
+        "periodo": "2022-2024",
+        "descricao": "Atuação em projetos de otimização."
+      }
+    ],
+    "formacoes": [
+      {
+        "curso": "Graduação em TI",
+        "instituicao": "Universidade Federal",
+        "ano": "2021"
+      }
+    ],
+    "projetos": [
+      {
+        "titulo": "Projeto de Melhoria",
+        "descricao": "Automação de relatórios internos."
+      }
+    ],
+    "certificacoes": [
+      "Certificação Profissional Internacional"
+    ],
+    "idiomas": [
+      "Português",
+      "Inglês"
+    ],
+    "areaInteresses": [
+      "TI",
+      "Inovação"
+    ]
+  },
+  {
+    "id": "7",
+    "nome": "Bianca Barros",
+    "foto": "https://randomuser.me/api/portraits/women/85.jpg",
+    "cargo": "Analista Design",
+    "resumo": "Profissional de Design com foco em inovação e melhoria contínua.",
+    "localizacao": "Salvador",
+    "area": "Design",
+    "habilidadesTecnicas": [
+      "Excel",
+      "Python",
+      "SQL",
+      "Power BI"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Trabalho em equipe",
+      "Criatividade"
+    ],
+    "experiencias": [
+      {
+        "empresa": "TechCorp",
+        "periodo": "2022-2024",
+        "descricao": "Atuação em projetos de otimização."
+      }
+    ],
+    "formacoes": [
+      {
+        "curso": "Graduação em Design",
+        "instituicao": "Universidade Federal",
+        "ano": "2021"
+      }
+    ],
+    "projetos": [
+      {
+        "titulo": "Projeto de Melhoria",
+        "descricao": "Automação de relatórios internos."
+      }
+    ],
+    "certificacoes": [
+      "Certificação Profissional Internacional"
+    ],
+    "idiomas": [
+      "Português",
+      "Inglês"
+    ],
+    "areaInteresses": [
+      "Design",
+      "Inovação"
+    ]
+  },
+  {
+    "id": "8",
+    "nome": "Letícia Teixeira",
+    "foto": "https://randomuser.me/api/portraits/women/98.jpg",
+    "cargo": "Analista Dados",
+    "resumo": "Profissional de Dados com foco em inovação e melhoria contínua.",
+    "localizacao": "Salvador",
+    "area": "Dados",
+    "habilidadesTecnicas": [
+      "Excel",
+      "Python",
+      "SQL",
+      "Power BI"
+    ],
+    "softSkills": [
+      "Comunicação",
+      "Trabalho em equipe",
+      "Criatividade"
+    ],
+    "experiencias": [
+      {
+        "empresa": "TechCorp",
+        "periodo": "2022-2024",
+        "descricao": "Atuação em projetos de otimização."
+      }
+    ],
+    "formacoes": [
+      {
+        "curso": "Graduação em Dados",
+        "instituicao": "Universidade Federal",
+        "ano": "2021"
+      }
+    ],
+    "projetos": [
+      {
+        "titulo": "Projeto de Melhoria",
+        "descricao": "Automação de relatórios internos."
+      }
+    ],
+    "certificacoes": [
+      "Certificação Profissional Internacional"
+    ],
+    "idiomas": [
+      "Português",
+      "Inglês"
+    ],
+    "areaInteresses": [
+      "Dados",
+      "Inovação"
+    ]
   }
 ]
-
-
-
-
-

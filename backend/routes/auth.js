@@ -4,8 +4,7 @@ const router = express.Router();
 
 // "Banco" de usuários simulados em memória
 let usuarios = [
-  { id: 1, nome: "Administrador Lifonix", email: "admin@lifonix.com", senha: "123456" },
-  { id: 2, nome: "Recrutador FIAP", email: "recrutador@fiap.com", senha: "fiap2025" },
+  { id: 1, nome: "Administrador Lifonix", email: "admin@lifonix.com", senha: "123456" }
 ];
 
 // LOGIN
