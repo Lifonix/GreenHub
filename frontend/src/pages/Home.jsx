@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"; // 👈 import do hook
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
+
 import Header from "../components/Header";
 import SearchFilter from "../components/SearchFilter";
 import ProfileCard from "../components/ProfileCard";
@@ -12,7 +13,8 @@ import CommunityMetrics from "../components/CommunitySection";
 import StoriesSection from "../components/StoriesSection";
 
 export default function Home({ dark, setDark }) {
-  const navigate = useNavigate(); // 👈 inicializa o hook
+  const navigate = useNavigate();
+
   const [profiles, setProfiles] = useState([]);
   const [selectedProfile, setSelectedProfile] = useState(null);
   const [filters, setFilters] = useState({ search: "", area: "", city: "", tech: "" });
@@ -45,6 +47,7 @@ export default function Home({ dark, setDark }) {
 
   return (
     <div className="bg-white dark:bg-[#0B1A0D] text-gray-900 dark:text-gray-100 transition-colors duration-500 min-h-screen flex flex-col">
+
       <Header
         dark={dark}
         setDark={setDark}
@@ -64,21 +67,31 @@ export default function Home({ dark, setDark }) {
         </p>
 
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
-          {/* Botão para explorar profissionais */}
+          
+          {/* Explorar profissionais */}
           <button
             onClick={() => setMostrar(!mostrar)}
-            className="px-6 py-3 rounded-full bg-[#22C55E] hover:bg-[#16A34A] text-white font-medium transition"
+            className="px-6 py-3 rounded-full bg-[#22C55E] hover:bg-[#16A34A] text-white font-medium transition shadow-sm"
           >
             {mostrar ? "Ocultar profissionais" : "Explorar profissionais"}
           </button>
 
-          {/* Botão que leva ao formulário de criação de perfil */}
+          {/* Criar Perfil */}
           <button
-            onClick={() => navigate("/create-profile")} // 👈 navega para a rota de criação de perfil
-            className="px-6 py-3 rounded-full bg-[#15803D] hover:bg-[#166534] text-white font-medium transition"
+            onClick={() => navigate("/create-profile")}
+            className="px-6 py-3 rounded-full bg-[#15803D] hover:bg-[#166534] text-white font-medium transition shadow-sm"
           >
             Criar Seu Perfil
           </button>
+
+          {/* Sou uma Empresa */}
+          <button
+            onClick={() => navigate("/empresas")}
+            className="px-6 py-3 rounded-full bg-[#065F46] hover:bg-[#047857] text-white font-medium transition shadow-sm"
+          >
+            Sou uma Empresa
+          </button>
+
         </div>
       </section>
 
@@ -86,6 +99,7 @@ export default function Home({ dark, setDark }) {
       {mostrar && (
         <div className="max-w-6xl mx-auto px-6 pb-16 fade-in">
           <SearchFilter profiles={profiles} filters={filters} setFilters={setFilters} />
+
           <main className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredProfiles.map((profile) => (
               <ProfileCard
@@ -98,7 +112,7 @@ export default function Home({ dark, setDark }) {
         </div>
       )}
 
-      {/* 🔥 As seções aparecem abaixo dos profissionais */}
+      {/* Seções adicionais */}
       <TrendingSkills />
       <CommunityMetrics />
       <StoriesSection />
