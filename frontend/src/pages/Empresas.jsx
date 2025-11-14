@@ -6,7 +6,6 @@ export default function Empresas() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0B1A0D] via-[#112418] to-[#0B1A0D] text-white dark:text-gray-100 pt-10">
-
       {/* Botão Voltar */}
       <div className="max-w-6xl mx-auto px-6 mb-6">
         <button
@@ -24,7 +23,7 @@ export default function Empresas() {
         </h1>
         <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-lg">
           A Lifonix oferece acesso aos melhores talentos, métricas inteligentes
-          e um painel completo para gerenciar funcionários e expandir seu impacto.
+          e um painel completo para gerenciar equipes e expandir seu impacto.
         </p>
 
         <button
@@ -45,28 +44,28 @@ export default function Empresas() {
           {[
             {
               title: "Acesso a Talentos",
-              desc: "Encontre profissionais qualificados, filtrados por propósito, área e especialização."
+              desc: "Encontre profissionais qualificados, filtrados por propósito, área e especialização.",
             },
             {
               title: "Painel Corporativo",
-              desc: "Gerencie equipes, acompanhe habilidades e receba recomendações inteligentes."
+              desc: "Gerencie equipes, acompanhe habilidades e receba recomendações inteligentes.",
             },
             {
               title: "Visibilidade da Marca",
-              desc: "Destaque sua empresa como líder em inovação e sustentabilidade."
+              desc: "Destaque sua empresa como líder em inovação e sustentabilidade.",
             },
             {
-              title: "Relatórios Inteligentes",
-              desc: "Relatórios automáticos sobre desempenho, talentos e tendências."
+              title: "Dados e Insights",
+              desc: "Relatórios sobre talentos, competências e engajamento para apoiar decisões.",
             },
             {
               title: "Contratações Ágeis",
-              desc: "Ferramentas modernas para entrevistar, analisar e contratar rápido."
+              desc: "Ferramentas modernas para entrevistar, analisar e contratar com agilidade.",
             },
             {
               title: "Ambiente Personalizado",
-              desc: "Crie sua própria página empresarial dentro da plataforma."
-            }
+              desc: "Crie sua própria página empresarial dentro da plataforma Lifonix.",
+            },
           ].map((item, i) => (
             <div
               key={i}
@@ -79,58 +78,95 @@ export default function Empresas() {
         </div>
       </section>
 
-      {/* Seção Premium / Planos */}
+      {/* Como Funciona para Empresas */}
       <section className="py-16 bg-gradient-to-r from-[#14532D]/40 to-[#0f2418]/40 backdrop-blur-xl">
         <h2 className="text-3xl font-bold text-center text-[#4ADE80] mb-10">
-          Planos Corporativos
+          Como Funciona para Empresas
         </h2>
 
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
-
-          {/* Plano Básico */}
           <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-white/10">
-            <h3 className="text-xl font-bold text-[#4ADE80]">Básico</h3>
-            <p className="mt-2 text-gray-300">Ideal para pequenas empresas</p>
-            <ul className="mt-4 space-y-2 text-gray-200">
-              <li>✔ Cadastro de 5 funcionários</li>
-              <li>✔ Página empresarial simples</li>
-              <li>✔ Acesso básico a talentos</li>
-            </ul>
-            <button className="mt-6 w-full py-2 bg-[#22C55E] hover:bg-[#16A34A] rounded-full text-white font-semibold">
-              Escolher
-            </button>
+            <span className="text-sm font-semibold text-[#4ADE80]">Etapa 1</span>
+            <h3 className="text-xl font-bold mt-1 text-white">Crie seu Perfil</h3>
+            <p className="mt-3 text-gray-300 text-sm">
+              Cadastre sua empresa, defina sua atuação, valores, propósito e áreas
+              em que busca talentos e parceiros.
+            </p>
           </div>
 
-          {/* Plano Profissional */}
-          <div className="bg-[#22C55E] p-8 rounded-2xl shadow-xl border-2 border-[#4ADE80] scale-[1.05]">
-            <h3 className="text-xl font-bold text-white">Profissional</h3>
-            <p className="mt-2 text-white/90">Para empresas em crescimento</p>
-            <ul className="mt-4 space-y-2 text-white">
-              <li>✔ Cadastro de 20 funcionários</li>
-              <li>✔ Página empresarial completa</li>
-              <li>✔ Filtros avançados de talentos</li>
-              <li>✔ Relatórios corporativos</li>
-            </ul>
-            <button className="mt-6 w-full py-2 bg-white text-[#15803D] hover:bg-gray-200 rounded-full font-semibold">
-              Escolher
-            </button>
+          <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-[#22C55E]">
+            <span className="text-sm font-semibold text-[#4ADE80]">Etapa 2</span>
+            <h3 className="text-xl font-bold mt-1 text-white">Conecte-se com Talentos</h3>
+            <p className="mt-3 text-gray-300 text-sm">
+              Utilize filtros inteligentes para encontrar profissionais alinhados à
+              sua cultura, projetos e desafios estratégicos.
+            </p>
           </div>
 
-          {/* Plano Enterprise */}
           <div className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-white/10">
-            <h3 className="text-xl font-bold text-[#4ADE80]">Enterprise</h3>
-            <p className="mt-2 text-gray-300">Para grandes empresas</p>
-            <ul className="mt-4 space-y-2 text-gray-200">
-              <li>✔ Funcionários ilimitados</li>
-              <li>✔ Página premium com branding</li>
-              <li>✔ Inteligência avançada</li>
-              <li>✔ Suporte dedicado</li>
-            </ul>
-            <button className="mt-6 w-full py-2 bg-[#22C55E] hover:bg-[#16A34A] rounded-full text-white font-semibold">
-              Escolher
-            </button>
+            <span className="text-sm font-semibold text-[#4ADE80]">Etapa 3</span>
+            <h3 className="text-xl font-bold mt-1 text-white">Acompanhe Resultados</h3>
+            <p className="mt-3 text-gray-300 text-sm">
+              Monitore engajamento, competências e evolução das conexões da sua
+              empresa dentro da Lifonix e da GreenHub.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sistema de Avaliação & Recompensas de Impacto */}
+      <section className="py-16 max-w-6xl mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center text-[#4ADE80] mb-4">
+          Índice de Impacto & Bem-Estar
+        </h2>
+        <p className="text-gray-300 text-center max-w-3xl mx-auto mb-10">
+          As empresas que adotam práticas sustentáveis e cuidam de suas equipes
+          ganham destaque na Lifonix. Criamos um sistema de avaliação que gera
+          selos de impacto, visibilidade extra e confiança para talentos e parceiros.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Card 1 */}
+          <div className="bg-white/10 border border-white/10 rounded-2xl p-6 shadow-xl">
+            <h3 className="text-xl font-semibold text-[#4ADE80]">
+              Selo Empresa Verde
+            </h3>
+            <p className="mt-3 text-gray-300 text-sm">
+              Avaliação baseada em ações sustentáveis, uso responsável de recursos
+              e participação em projetos de impacto ambiental.
+            </p>
+            <p className="mt-4 text-xs text-gray-400">
+              Empresas com melhor score aparecem primeiro na busca da GreenHub.
+            </p>
           </div>
 
+          {/* Card 2 */}
+          <div className="bg-white/10 border border-[#22C55E] rounded-2xl p-6 shadow-xl">
+            <h3 className="text-xl font-semibold text-[#4ADE80]">
+              Bem-Estar & Cultura
+            </h3>
+            <p className="mt-3 text-gray-300 text-sm">
+              Profissionais podem avaliar a experiência na empresa em critérios como
+              respeito, inclusão, equilíbrio de vida e oportunidades de crescimento.
+            </p>
+            <p className="mt-4 text-xs text-gray-400">
+              Bons índices fortalecem a marca empregadora e atraem mais talentos.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-white/10 border border-white/10 rounded-2xl p-6 shadow-xl">
+            <h3 className="text-xl font-semibold text-[#4ADE80]">
+              Recompensas de Destaque
+            </h3>
+            <p className="mt-3 text-gray-300 text-sm">
+              Empresas com melhor desempenho ganham selos especiais no perfil e
+              prioridade em recomendações para projetos e vagas.
+            </p>
+            <p className="mt-4 text-xs text-gray-400">
+              Um diferencial competitivo para quem cuida do planeta e das pessoas.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -140,7 +176,8 @@ export default function Empresas() {
           Pronto para transformar sua empresa?
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto mt-4 text-lg">
-          Construa conexões, fortaleça sua marca e encontre talentos ideais para o seu negócio.
+          Construa conexões, fortaleça sua marca e alcance um novo nível de impacto
+          com a Lifonix e a GreenHub.
         </p>
 
         <button
