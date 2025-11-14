@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Empresas from "./pages/Empresas";
+import CadastroEmpresa from "./pages/CadastroEmpresa"; // ✅ IMPORTADO
 import CreateProfiles from "./components/CreateProfiles";
 import NoticiasAmbientais from "./pages/NoticiasAmbientais";
 
@@ -52,6 +53,10 @@ export default function App() {
 
             <Route path="/sobre" element={<About />} />
             <Route path="/empresas" element={<Empresas />} />
+
+            {/* ✅ ROTA DO CADASTRO DE EMPRESA */}
+            <Route path="/cadastro-empresa" element={<CadastroEmpresa />} />
+
             <Route path="/create-profile" element={<CreateProfiles />} />
             <Route path="/noticias-ambientais" element={<NoticiasAmbientais />} />
           </Routes>
