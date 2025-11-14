@@ -1,3 +1,4 @@
+// src/pages/CadastroEmpresa.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -19,6 +20,7 @@ export default function CadastroEmpresa() {
 
   const [msg, setMsg] = useState("");
   const [erro, setErro] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -28,19 +30,31 @@ export default function CadastroEmpresa() {
     e.preventDefault();
     setErro("");
     setMsg("");
+    setLoading(true);
 
     try {
+      // aguarda a resposta do backend
       const res = await axios.post("http://localhost:5000/api/empresas", form);
-      setMsg("Empresa cadastrada com sucesso!");
-      setTimeout(() => navigate("/"), 1500);
-    } catch (err) {
-      setErro("Erro ao cadastrar empresa. Verifique os dados.");
+
+      // mostra mensagem de sucesso (se o backend retornar algo útil, usamos)
+      setMsg(res.data?.message || "Empresa cadastrada com sucesso!");
+      setErro("");
+      setLoading(false);
+
+      // opcional: redireciona para a página de empresas ou home após 1.2s
+      setTimeout(() => navigate("/empresas"), 1200);
+    } catch (error) {
+      // pega mensagem do backend quando disponível
+      const backendMsg = error.response?.data?.error || error.response?.data?.message;
+      setErro(backendMsg || "Erro ao cadastrar empresa. Verifique os dados e tente novamente.");
+      setMsg("");
+      setLoading(false);
+      console.error("Erro no cadastro da empresa:", error);
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0B1A0D] to-[#112418] text-white py-10 px-4">
-
       {/* Botão Voltar */}
       <div className="max-w-4xl mx-auto mb-6">
         <button
@@ -52,7 +66,6 @@ export default function CadastroEmpresa() {
       </div>
 
       <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-xl border border-white/10 shadow-xl rounded-2xl p-8">
-
         <h1 className="text-4xl font-extrabold text-[#4ADE80] text-center">
           Cadastro de Empresa
         </h1>
@@ -60,8 +73,8 @@ export default function CadastroEmpresa() {
           Registre sua empresa na Lifonix e conecte-se aos melhores talentos do futuro.
         </p>
 
+        {/* FORMULÁRIO - observe o fechamento correto da tag form */}
         <form onSubmit={handleSubmit} className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-
           {/* Nome da empresa */}
           <div className="flex flex-col">
             <label className="text-sm text-gray-300 mb-1">Nome da Empresa</label>
@@ -189,13 +202,14 @@ export default function CadastroEmpresa() {
           <div className="md:col-span-2 flex justify-center mt-4">
             <button
               type="submit"
-              className="px-10 py-3 rounded-full bg-[#22C55E] hover:bg-[#16A34A] text-white text-lg font-semibold shadow-lg transition"
+              className="px-10 py-3 rounded-full bg-[#22C55E] hover:bg-[#16A34A] text-white text-lg font-semibold shadow-lg transition disabled:opacity-60"
+              disabled={loading}
             >
-              Cadastrar Empresa
+              {loading ? "Cadastrando..." : "Cadastrar Empresa"}
             </button>
           </div>
-
         </form>
+        {/* FIM DO FORMULÁRIO */}
       </div>
     </div>
   );

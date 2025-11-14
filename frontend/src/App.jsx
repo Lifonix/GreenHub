@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Empresas from "./pages/Empresas";
 import CreateProfiles from "./components/CreateProfiles";
+import NoticiasAmbientais from "./pages/NoticiasAmbientais";
 
 export default function App() {
   // Tema global (dark mode)
@@ -21,7 +22,7 @@ export default function App() {
     return saved ? JSON.parse(saved) : null;
   });
 
-  // Atualiza tema global no HTML
+  // Atualiza tema global
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
     localStorage.setItem("lifonix-dark", dark);
@@ -34,17 +35,25 @@ export default function App() {
           dark ? "dark bg-gray-900 text-gray-100" : "bg-white text-gray-900"
         }`}
       >
+        {/* Conteúdo principal */}
         <main className="flex-1">
           <Routes>
             <Route
               path="/"
               element={
-                <Home dark={dark} setDark={setDark} user={user} setUser={setUser} />
+                <Home
+                  dark={dark}
+                  setDark={setDark}
+                  user={user}
+                  setUser={setUser}
+                />
               }
             />
+
             <Route path="/sobre" element={<About />} />
             <Route path="/empresas" element={<Empresas />} />
             <Route path="/create-profile" element={<CreateProfiles />} />
+            <Route path="/noticias-ambientais" element={<NoticiasAmbientais />} />
           </Routes>
         </main>
       </div>
