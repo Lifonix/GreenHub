@@ -46,6 +46,7 @@ export default function Header({ dark, setDark, user, onLoginClick, filters, set
             >
               Início
             </Link>
+
             <Link
               to="/sobre"
               className={`hover:text-[#22C55E] transition-colors ${
@@ -53,6 +54,15 @@ export default function Header({ dark, setDark, user, onLoginClick, filters, set
               }`}
             >
               Sobre Nós
+            </Link>
+
+            <Link
+              to="/noticias-ambientais"
+              className={`hover:text-[#22C55E] transition-colors ${
+                location.pathname === "/noticias-ambientais" ? "text-[#22C55E] font-semibold" : ""
+              }`}
+            >
+              Notícias
             </Link>
           </nav>
 
