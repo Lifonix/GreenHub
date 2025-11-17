@@ -1,0 +1,229 @@
+{
+  "perfisRecomendados": [
+    {
+      "id": "e80cfb76-9a72-4b8d-b0de-1cc82b4b3af3",
+      "nome": "Ana Clara Monteiro",
+      "foto": "https://randomuser.me/api/portraits/women/1.jpg",
+      "cargo": "Engenheira de Software",
+      "resumo": "Desenvolvedora full stack apaixonada por IA e soluções escaláveis.",
+      "localizacao": "São Paulo/SP",
+      "area": "Desenvolvimento",
+      "habilidadesTecnicas": [
+        "React",
+        "Node.js",
+        "TypeScript",
+        "Docker"
+      ],
+      "softSkills": [
+        "Comunicação",
+        "Trabalho em equipe",
+        "Resiliência"
+      ],
+      "experiencias": [
+        {
+          "empresa": "TechNova",
+          "cargo": "Desenvolvedora Full Stack",
+          "inicio": "2021-03",
+          "fim": "Atualmente",
+          "descricao": "Desenvolvimento de APIs e interfaces web modernas."
+        }
+      ],
+      "formacao": [
+        {
+          "curso": "Engenharia de Software",
+          "instituicao": "FIAP",
+          "ano": 2023
+        }
+      ],
+      "projetos": [
+        {
+          "titulo": "Plataforma Conecta",
+          "link": "https://github.com/anaclara/conecta",
+          "descricao": "Plataforma de networking profissional."
+        }
+      ],
+      "certificacoes": [
+        "AWS Certified Developer"
+      ],
+      "idiomas": [
+        {
+          "idioma": "Inglês",
+          "nivel": "Avançado"
+        }
+      ],
+      "areaInteresses": [
+        "IA ética",
+        "Educação"
+      ],
+      "recomendadoEm": "2025-11-17T21:19:48.614Z"
+    },
+    {
+      "id": "ebf83a55-8e83-44e2-851d-c9f471e3cc7d",
+      "nome": "Camila Souza Ferreira",
+      "foto": "https://randomuser.me/api/portraits/women/2.jpg",
+      "cargo": "UX Designer",
+      "resumo": "Focada em criar experiências acessíveis e humanas.",
+      "localizacao": "Curitiba/PR",
+      "area": "Design",
+      "habilidadesTecnicas": [
+        "Figma",
+        "HTML",
+        "CSS",
+        "UX Research"
+      ],
+      "softSkills": [
+        "Empatia",
+        "Comunicação visual"
+      ],
+      "experiencias": [
+        {
+          "empresa": "PixelLab",
+          "cargo": "UX/UI Designer",
+          "inicio": "2019-05",
+          "fim": "Atualmente",
+          "descricao": "Criação de interfaces intuitivas para sistemas corporativos."
+        }
+      ],
+      "formacao": [
+        {
+          "curso": "Design Digital",
+          "instituicao": "PUC PR",
+          "ano": 2021
+        }
+      ],
+      "projetos": [
+        {
+          "titulo": "App de Acessibilidade",
+          "link": "https://github.com/camilaferreira/access-app",
+          "descricao": "Aplicativo voltado à inclusão de pessoas com deficiência."
+        }
+      ],
+      "certificacoes": [
+        "Google UX Certification"
+      ],
+      "idiomas": [
+        {
+          "idioma": "Inglês",
+          "nivel": "Avançado"
+        }
+      ],
+      "areaInteresses": [
+        "Design inclusivo",
+        "Acessibilidade"
+      ],
+      "recomendadoEm": "2025-11-17T21:28:19.748Z"
+    },
+    {
+      "id": "ab6ed318-71a2-4c53-b826-73dc57d123b0",
+      "nome": "Henrique Dias Souza",
+      "foto": "https://randomuser.me/api/portraits/men/4.jpg",
+      "cargo": "Engenheiro de Dados",
+      "resumo": "Desenvolve pipelines robustos e escaláveis para big data.",
+      "localizacao": "Recife/PE",
+      "area": "Data Science",
+      "habilidadesTecnicas": [
+        "Python",
+        "Spark",
+        "Airflow",
+        "AWS"
+      ],
+      "softSkills": [
+        "Trabalho em equipe",
+        "Resolução de problemas"
+      ],
+      "experiencias": [
+        {
+          "empresa": "DataLink",
+          "cargo": "Engenheiro de Dados",
+          "inicio": "2020-10",
+          "fim": "Atualmente",
+          "descricao": "Implementação de pipelines ETL e armazenamento em cloud."
+        }
+      ],
+      "formacao": [
+        {
+          "curso": "Ciência da Computação",
+          "instituicao": "UFPE",
+          "ano": 2021
+        }
+      ],
+      "projetos": [
+        {
+          "titulo": "Data Lake Corporativo",
+          "link": "",
+          "descricao": "Criação de arquitetura de dados corporativa na AWS."
+        }
+      ],
+      "certificacoes": [
+        "AWS Data Analytics Specialty"
+      ],
+      "idiomas": [
+        {
+          "idioma": "Inglês",
+          "nivel": "Avançado"
+        }
+      ],
+      "areaInteresses": [
+        "Big Data",
+        "Machine Learning"
+      ],
+      "recomendadoEm": "2025-11-17T21:28:24.950Z"
+    },
+    {
+      "id": "0e2f85c3-97a3-4cf3-a3b2-563db3fb9b87",
+      "nome": "Karen Oliveira Duarte",
+      "foto": "https://randomuser.me/api/portraits/women/6.jpg",
+      "cargo": "Desenvolvedora Mobile",
+      "resumo": "Especialista em aplicativos híbridos com React Native e Flutter.",
+      "localizacao": "Salvador/BA",
+      "area": "Desenvolvimento",
+      "habilidadesTecnicas": [
+        "React Native",
+        "Flutter",
+        "TypeScript",
+        "Firebase"
+      ],
+      "softSkills": [
+        "Criatividade",
+        "Autonomia"
+      ],
+      "experiencias": [
+        {
+          "empresa": "AppFlow",
+          "cargo": "Mobile Developer",
+          "inicio": "2021-01",
+          "fim": "Atualmente",
+          "descricao": "Criação de aplicativos multiplataforma e integração com APIs REST."
+        }
+      ],
+      "formacao": [
+        {
+          "curso": "Análise e Desenvolvimento de Sistemas",
+          "instituicao": "UNIFACS",
+          "ano": 2020
+        }
+      ],
+      "projetos": [
+        {
+          "titulo": "App de Saúde Mental",
+          "link": "",
+          "descricao": "Aplicativo de meditação e bem-estar emocional."
+        }
+      ],
+      "certificacoes": [
+        "Google Associate Android Developer"
+      ],
+      "idiomas": [
+        {
+          "idioma": "Inglês",
+          "nivel": "Intermediário"
+        }
+      ],
+      "areaInteresses": [
+        "Saúde",
+        "Tecnologia"
+      ],
+      "recomendadoEm": "2025-11-17T21:34:16.920Z"
+    }
+  ]
+}

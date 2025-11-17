@@ -1,7 +1,9 @@
+// backend/server.js
 import express from "express";
 import cors from "cors";
 import profilesRoutes from "./routes/profiles.js";
 import authRoutes from "./routes/auth.js";
+import recomendacoesRoutes from "./routes/recomendacoes.js";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -13,6 +15,7 @@ app.use(express.json());
 // Rotas
 app.use("/api/profissionais", profilesRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/recomendacoes", recomendacoesRoutes); // <- aqui
 
 // Rota padrão
 app.get("/", (req, res) => {
