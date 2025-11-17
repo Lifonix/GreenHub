@@ -76,14 +76,6 @@ export default function Header({ dark, setDark, user, onLoginClick, filters, set
             </Link>
           </nav>
 
-          {/* Alternar modo */}
-          <button
-            onClick={() => setDark(!dark)}
-            className="px-3 py-2 rounded-full bg-gray-100/10 hover:bg-gray-200/20 transition text-lg"
-            title="Alternar tema"
-          >
-            {dark ? "☀️" : "🌙"}
-          </button>
 
           {/* Login ou sair */}
           {user ? (
