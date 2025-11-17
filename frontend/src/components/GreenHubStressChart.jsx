@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+
 import { Line } from "react-chartjs-2";
 
 ChartJS.register(
@@ -58,6 +59,7 @@ function GreenHubStressChart() {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false, // permite controlar a altura
     scales: {
       y1: {
         type: "linear",
@@ -113,11 +115,34 @@ function GreenHubStressChart() {
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full h-80 md:h-96"> {/* altura maior aqui */}
       <Line data={data} options={options} />
     </div>
   );
 }
 
+/**
+ * Dashboard com gráficos usando o mesmo GreenHubStressChart (dados do Node-RED)
+ */
+export function GreenHubStressDashboard() {
+  return (
+    <div className="w-full space-y-8">
+      <div className="bg-white dark:bg-[#020617] border border-emerald-100 dark:border-[#1f2937] rounded-2xl p-6 shadow-sm">
+        <h2 className="text-sm font-semibold mb-4 text-[#166534] dark:text-[#4ADE80]">
+          Nível de estresse - Gráfico 1
+        </h2>
+        <GreenHubStressChart />
+      </div>
 
-export default GreenHubStressChart;
+      {/* Se quiser um segundo gráfico, é só descomentar */}
+      {/* <div className="bg-white dark:bg-[#020617] border border-emerald-100 dark:border-[#1f2937] rounded-2xl p-6 shadow-sm">
+        <h2 className="text-sm font-semibold mb-4 text-[#166534] dark:text-[#4ADE80]">
+          Nível de estresse - Gráfico 2
+        </h2>
+        <GreenHubStressChart />
+      </div> */}
+    </div>
+  );
+}
+
+export default GreenHubStressDashboard;

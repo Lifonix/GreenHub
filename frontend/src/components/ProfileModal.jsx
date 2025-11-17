@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 
-export default function ProfileModal({ profile, onClose }) {
+export default function ProfileModal({ profile, onClose, onRecommend }) {
   const [showRecommend, setShowRecommend] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
 
-  const [recText, setRecText] = useState("");
   const [msgText, setMsgText] = useState("");
+  const [recomendado, setRecomendado] = useState(false);
 
   return (
     <>
       <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex justify-center items-center z-50 px-4">
         <div className="bg-white dark:bg-[#1B2E1D] text-gray-800 dark:text-gray-100 rounded-2xl shadow-xl max-w-2xl w-full p-8 relative">
-
           {/* Botão fechar */}
           <button
             onClick={onClose}
@@ -31,7 +30,9 @@ export default function ProfileModal({ profile, onClose }) {
               {profile.nome}
             </h2>
             <p className="text-gray-600 dark:text-gray-300">{profile.cargo}</p>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{profile.localizacao}</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+              {profile.localizacao}
+            </p>
           </div>
 
           {/* Conteúdo */}
@@ -88,11 +89,15 @@ export default function ProfileModal({ profile, onClose }) {
               <ul className="space-y-2">
                 {profile.experiencias?.map((exp, i) => (
                   <li key={i} className="border-l-4 border-[#22C55E] pl-3">
-                    <p className="font-medium text-sm">{exp.cargo} — {exp.empresa}</p>
+                    <p className="font-medium text-sm">
+                      {exp.cargo} — {exp.empresa}
+                    </p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">
                       {exp.inicio} - {exp.fim}
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{exp.descricao}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                      {exp.descricao}
+                    </p>
                   </li>
                 ))}
               </ul>
@@ -105,7 +110,10 @@ export default function ProfileModal({ profile, onClose }) {
               </h3>
               <ul className="space-y-2">
                 {profile.formacao?.map((form, i) => (
-                  <li key={i} className="text-sm text-gray-700 dark:text-gray-300">
+                  <li
+                    key={i}
+                    className="text-sm text-gray-700 dark:text-gray-300"
+                  >
                     🎓 {form.curso} — {form.instituicao} ({form.ano})
                   </li>
                 ))}
@@ -123,7 +131,9 @@ export default function ProfileModal({ profile, onClose }) {
                     <p className="text-sm font-medium text-[#166534] dark:text-[#4ADE80]">
                       {proj.titulo}
                     </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">{proj.descricao}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      {proj.descricao}
+                    </p>
                   </li>
                 ))}
               </ul>
@@ -153,7 +163,6 @@ export default function ProfileModal({ profile, onClose }) {
       {showRecommend && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[60] px-4">
           <div className="bg-white dark:bg-[#1B2E1D] p-6 rounded-2xl shadow-xl w-full max-w-md relative">
-
             <button
               onClick={() => setShowRecommend(false)}
               className="absolute top-3 right-3 text-xl text-gray-400 hover:text-[#22C55E]"
@@ -161,26 +170,42 @@ export default function ProfileModal({ profile, onClose }) {
               ×
             </button>
 
-            <h2 className="text-xl font-bold text-[#166534] dark:text-[#4ADE80] mb-3">
+            <h2 className="text-xl font-bold text-[#166534] dark:text-[#4ADE80] mb-3 text-center">
               Recomendar {profile.nome}
             </h2>
 
-            <textarea
-              value={recText}
-              onChange={(e) => setRecText(e.target.value)}
-              placeholder="Escreva sua recomendação..."
-              className="w-full h-32 p-3 border border-gray-300 dark:border-[#14532D] rounded-md bg-white dark:bg-[#0F2511] text-gray-800 dark:text-gray-100"
-            ></textarea>
+            <p className="text-sm text-gray-600 dark:text-gray-300 text-center mb-4">
+              Clique no botão abaixo para recomendar este profissional.
+            </p>
 
+            {recomendado && (
+              <p className="mb-3 text-sm text-center text-[#16A34A] font-semibold">
+                Você recomendou este profissional!
+              </p>
+            )}
+
+            {/* Botão que marca estrela no card via callback */}
             <button
               onClick={() => {
-                alert("Recomendação enviada!");
-                setShowRecommend(false);
-                setRecText("");
+                if (onRecommend) {
+                  onRecommend(profile);
+                }
+                setRecomendado(true);
+                // tempo da notificação (3 segundos aqui)
+                setTimeout(() => {
+                  setShowRecommend(false);
+                  setRecomendado(false);
+                }, 3000);
               }}
-              className="mt-4 w-full py-2 bg-[#22C55E] text-white rounded-full hover:bg-[#16A34A]"
+              className={
+                "mt-2 w-full py-2 rounded-full flex items-center justify-center gap-2 transition " +
+                (recomendado
+                  ? "bg-[#16A34A] text-white"
+                  : "bg-[#22C55E] hover:bg-[#16A34A] text-white")
+              }
             >
-              Enviar
+              <span>⭐</span>
+              <span>{recomendado ? "Recomendado" : "Recomendar"}</span>
             </button>
           </div>
         </div>
@@ -190,7 +215,6 @@ export default function ProfileModal({ profile, onClose }) {
       {showMessage && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[60] px-4">
           <div className="bg-white dark:bg-[#1B2E1D] p-6 rounded-2xl shadow-xl w-full max-w-md relative">
-
             <button
               onClick={() => setShowMessage(false)}
               className="absolute top-3 right-3 text-xl text-gray-400 hover:text-[#22C55E]"
