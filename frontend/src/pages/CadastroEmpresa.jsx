@@ -3,6 +3,40 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
+// Função para traduzir erros da API em mensagens amigáveis (erros de backend)
+function mapearErroCadastro(error) {
+  const backendMsg =
+    error?.response?.data?.error || error?.response?.data?.message || "";
+  const status = error?.response?.status;
+  const lower = backendMsg.toLowerCase();
+
+  if (status === 409 || (lower.includes("cnpj") && lower.includes("já existe"))) {
+    return "Este CNPJ já está cadastrado na GreenHub. Verifique os dados ou utilize outro CNPJ.";
+  }
+
+  if (lower.includes("email") && lower.includes("já existe")) {
+    return "Já existe uma conta com este e-mail corporativo. Tente outro e-mail ou recupere o acesso.";
+  }
+
+  if (lower.includes("cnpj inválido") || lower.includes("cnpj invalido")) {
+    return "O CNPJ informado parece inválido. Confira o número e tente novamente.";
+  }
+
+  if (lower.includes("campos obrigatórios") || lower.includes("dados incompletos")) {
+    return "Alguns campos obrigatórios não foram preenchidos corretamente. Revise os campos destacados.";
+  }
+
+  if (error.code === "ERR_NETWORK") {
+    return "Não foi possível se conectar ao servidor do GreenHub. Verifique sua conexão e tente novamente em alguns instantes.";
+  }
+
+  if (backendMsg) {
+    return backendMsg;
+  }
+
+  return "Não foi possível concluir o cadastro agora. Revise os dados e tente novamente em alguns minutos.";
+}
+
 export default function CadastroEmpresa() {
   const navigate = useNavigate();
 
@@ -16,11 +50,13 @@ export default function CadastroEmpresa() {
     tamanho: "",
     descricao: "",
     senha: "",
-    semSite: false, // 👈 nova flag
+    semSite: false,
   });
 
+  // Erros por campo
+  const [erros, setErros] = useState({});
   const [msg, setMsg] = useState("");
-  const [erro, setErro] = useState("");
+  const [erroGeral, setErroGeral] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -31,36 +67,96 @@ export default function CadastroEmpresa() {
       [name]: type === "checkbox" ? checked : value,
       ...(name === "semSite" && checked ? { site: "" } : {}),
     }));
+
+    // Apaga erro daquele campo conforme a pessoa digita
+    if (erros[name]) {
+      setErros((prev) => ({ ...prev, [name]: "" }));
+    }
+  };
+
+  // Validação local do formulário
+  const validarForm = () => {
+    const novosErros = {};
+
+    if (!form.nomeEmpresa.trim()) {
+      novosErros.nomeEmpresa = "Informe o nome da empresa.";
+    }
+
+    if (!form.cnpj.trim()) {
+      novosErros.cnpj = "Informe o CNPJ.";
+    } else if (!/^\d{14}$/.test(form.cnpj.replace(/\D/g, ""))) {
+      novosErros.cnpj = "Digite um CNPJ com 14 números (apenas dígitos).";
+    }
+
+    if (!form.email.trim()) {
+      novosErros.email = "Informe um e-mail corporativo.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      novosErros.email = "Digite um e-mail válido.";
+    }
+
+    if (!form.setor.trim()) {
+      novosErros.setor = "Informe o setor de atuação.";
+    }
+
+    if (!form.tamanho) {
+      novosErros.tamanho = "Selecione o tamanho da empresa.";
+    }
+
+    if (!form.descricao.trim()) {
+      novosErros.descricao = "Descreva brevemente a empresa.";
+    }
+
+    if (!form.senha.trim()) {
+      novosErros.senha = "Defina uma senha de acesso.";
+    } else if (form.senha.length < 6) {
+      novosErros.senha = "A senha deve ter pelo menos 6 caracteres.";
+    }
+
+    // Site só é obrigatório se 'semSite' for falso
+    if (!form.semSite && form.site.trim() && !/^https?:\/\//i.test(form.site)) {
+      novosErros.site = "Inclua http:// ou https:// no endereço do site.";
+    }
+
+    return novosErros;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErro("");
+    setErroGeral("");
     setMsg("");
+
+    // validação local
+    const novosErros = validarForm();
+    if (Object.keys(novosErros).length > 0) {
+      setErros(novosErros);
+      return; // não envia para o backend
+    }
+
     setLoading(true);
 
     try {
       const payload = { ...form };
-      // se não tiver site, você pode remover o campo na hora de enviar, se quiser:
       if (payload.semSite) {
         delete payload.site;
       }
 
-      const res = await axios.post("http://localhost:5000/api/empresas", payload);
+      const res = await axios.post(
+        "http://localhost:5000/api/empresas",
+        payload
+      );
 
       setMsg(res.data?.message || "Empresa cadastrada com sucesso!");
-      setErro("");
+      setErroGeral("");
       setLoading(false);
 
       setTimeout(() => navigate("/empresas"), 1200);
     } catch (error) {
-      const backendMsg = error.response?.data?.error || error.response?.data?.message;
-      setErro(
-        backendMsg || "Erro ao cadastrar empresa. Verifique os dados e tente novamente."
-      );
+      console.error("Erro no cadastro da empresa:", error);
+
+      const mensagemAmigavel = mapearErroCadastro(error);
+      setErroGeral(mensagemAmigavel);
       setMsg("");
       setLoading(false);
-      console.error("Erro no cadastro da empresa:", error);
     }
   };
 
@@ -81,6 +177,18 @@ export default function CadastroEmpresa() {
           Ambiente seguro e criptografado para dados corporativos
         </span>
       </div>
+
+      {/* Mensagem geral de erro (backend) */}
+      {erroGeral && (
+        <div className="max-w-6xl mx-auto mb-4 rounded-lg bg-red-900/20 border border-red-500/40 text-red-300 px-4 py-3 text-sm">
+          {erroGeral}
+        </div>
+      )}
+      {msg && (
+        <div className="max-w-6xl mx-auto mb-4 rounded-lg bg-emerald-900/20 border border-emerald-500/40 text-emerald-200 px-4 py-3 text-sm">
+          {msg}
+        </div>
+      )}
 
       {/* Container principal em duas colunas */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_1.2fr] gap-8 items-stretch">
@@ -157,6 +265,7 @@ export default function CadastroEmpresa() {
           {/* Formulário */}
           <form
             onSubmit={handleSubmit}
+            noValidate
             className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6"
           >
             {/* Nome da empresa */}
@@ -167,11 +276,15 @@ export default function CadastroEmpresa() {
               <input
                 type="text"
                 name="nomeEmpresa"
-                required
                 value={form.nomeEmpresa}
                 onChange={handleChange}
                 className="p-3 rounded-xl bg-[#020f0a] border border-[#1f5b39] text-white text-sm outline-none focus:ring-2 focus:ring-[#22C55E] focus:border-[#22C55E]"
               />
+              {erros.nomeEmpresa && (
+                <span className="mt-1 text-[11px] text-red-400">
+                  {erros.nomeEmpresa}
+                </span>
+              )}
             </div>
 
             {/* CNPJ */}
@@ -182,11 +295,15 @@ export default function CadastroEmpresa() {
               <input
                 type="text"
                 name="cnpj"
-                required
                 value={form.cnpj}
                 onChange={handleChange}
                 className="p-3 rounded-xl bg-[#020f0a] border border-[#1f5b39] text-white text-sm outline-none focus:ring-2 focus:ring-[#22C55E] focus:border-[#22C55E]"
               />
+              {erros.cnpj && (
+                <span className="mt-1 text-[11px] text-red-400">
+                  {erros.cnpj}
+                </span>
+              )}
             </div>
 
             {/* E-mail */}
@@ -197,11 +314,15 @@ export default function CadastroEmpresa() {
               <input
                 type="email"
                 name="email"
-                required
                 value={form.email}
                 onChange={handleChange}
                 className="p-3 rounded-xl bg-[#020f0a] border border-[#1f5b39] text-white text-sm outline-none focus:ring-2 focus:ring-[#22C55E] focus:border-[#22C55E]"
               />
+              {erros.email && (
+                <span className="mt-1 text-[11px] text-red-400">
+                  {erros.email}
+                </span>
+              )}
             </div>
 
             {/* Telefone */}
@@ -234,6 +355,11 @@ export default function CadastroEmpresa() {
                   form.semSite ? "opacity-40 cursor-not-allowed" : ""
                 }`}
               />
+              {erros.site && (
+                <span className="mt-1 text-[11px] text-red-400">
+                  {erros.site}
+                </span>
+              )}
               <label className="mt-2 flex items-center gap-2 text-[11px] text-gray-400">
                 <input
                   type="checkbox"
@@ -254,11 +380,15 @@ export default function CadastroEmpresa() {
               <input
                 type="text"
                 name="setor"
-                required
                 value={form.setor}
                 onChange={handleChange}
                 className="p-3 rounded-xl bg-[#020f0a] border border-[#1f5b39] text-white text-sm outline-none focus:ring-2 focus:ring-[#22C55E] focus:border-[#22C55E]"
               />
+              {erros.setor && (
+                <span className="mt-1 text-[11px] text-red-400">
+                  {erros.setor}
+                </span>
+              )}
             </div>
 
             {/* Tamanho */}
@@ -268,18 +398,20 @@ export default function CadastroEmpresa() {
               </label>
               <select
                 name="tamanho"
-                required
                 value={form.tamanho}
                 onChange={handleChange}
                 className="p-3 rounded-xl bg-[#020f0a] border border-[#1f5b39] text-white text-sm outline-none focus:ring-2 focus:ring-[#22C55E] focus:border-[#22C55E]"
               >
-                <option value="" disabled>
-                  Selecione...
-                </option>
+                <option value="">Selecione...</option>
                 <option value="pequena">Pequena</option>
                 <option value="media">Média</option>
                 <option value="grande">Grande</option>
               </select>
+              {erros.tamanho && (
+                <span className="mt-1 text-[11px] text-red-400">
+                  {erros.tamanho}
+                </span>
+              )}
             </div>
 
             {/* Descrição */}
@@ -290,11 +422,15 @@ export default function CadastroEmpresa() {
               <textarea
                 name="descricao"
                 rows="4"
-                required
                 value={form.descricao}
                 onChange={handleChange}
                 className="p-3 rounded-xl bg-[#020f0a] border border-[#1f5b39] text-white text-sm outline-none focus:ring-2 focus:ring-[#22C55E] focus:border-[#22C55E]"
               ></textarea>
+              {erros.descricao && (
+                <span className="mt-1 text-[11px] text-red-400">
+                  {erros.descricao}
+                </span>
+              )}
               <span className="mt-1 text-[11px] text-gray-400">
                 Dica: destaque suas ações sustentáveis, cultura interna e projetos de impacto.
               </span>
@@ -308,27 +444,19 @@ export default function CadastroEmpresa() {
               <input
                 type="password"
                 name="senha"
-                required
                 value={form.senha}
                 onChange={handleChange}
                 className="p-3 rounded-xl bg-[#020f0a] border border-[#1f5b39] text-white text-sm outline-none focus:ring-2 focus:ring-[#22C55E] focus:border-[#22C55E]"
               />
+              {erros.senha && (
+                <span className="mt-1 text-[11px] text-red-400">
+                  {erros.senha}
+                </span>
+              )}
               <span className="mt-1 text-[11px] text-gray-400">
                 Use uma senha forte. Você poderá alterar essas informações depois no painel.
               </span>
             </div>
-
-            {/* Mensagens */}
-            {msg && (
-              <p className="text-center text-green-400 font-semibold md:col-span-2 text-sm">
-                {msg}
-              </p>
-            )}
-            {erro && (
-              <p className="text-center text-red-400 font-semibold md:col-span-2 text-sm">
-                {erro}
-              </p>
-            )}
 
             {/* Botão */}
             <div className="md:col-span-2 flex justify-center mt-2">

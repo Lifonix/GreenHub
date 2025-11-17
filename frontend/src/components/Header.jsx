@@ -64,6 +64,16 @@ export default function Header({ dark, setDark, user, onLoginClick, filters, set
             >
               Notícias
             </Link>
+
+            {/* NOVO ITEM: Dashboard */}
+            <Link
+              to="/dashboard"
+              className={`hover:text-[#22C55E] transition-colors ${
+                location.pathname === "/dashboard" ? "text-[#22C55E] font-semibold" : ""
+              }`}
+            >
+              Dashboard
+            </Link>
           </nav>
 
           {/* Alternar modo */}

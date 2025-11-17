@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Empresas from "./pages/Empresas";
 import CadastroEmpresa from "./pages/CadastroEmpresa"; // ✅ IMPORTADO
 import CreateProfiles from "./components/CreateProfiles";
 import NoticiasAmbientais from "./pages/NoticiasAmbientais";
+import Dashboard from "./pages/Dashboard"; // ✅ NOVO IMPORT
 
 export default function App() {
   // Tema global (dark mode)
@@ -59,6 +56,9 @@ export default function App() {
 
             <Route path="/create-profile" element={<CreateProfiles />} />
             <Route path="/noticias-ambientais" element={<NoticiasAmbientais />} />
+
+            {/* ✅ NOVA ROTA DA DASHBOARD */}
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </main>
       </div>
