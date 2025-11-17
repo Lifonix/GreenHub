@@ -129,18 +129,11 @@ export function GreenHubStressDashboard() {
     <div className="w-full space-y-8">
       <div className="bg-white dark:bg-[#020617] border border-emerald-100 dark:border-[#1f2937] rounded-2xl p-6 shadow-sm">
         <h2 className="text-sm font-semibold mb-4 text-[#166534] dark:text-[#4ADE80]">
-          Nível de estresse - Gráfico 1
+          Nível de estresse 
         </h2>
         <GreenHubStressChart />
       </div>
 
-      {/* Se quiser um segundo gráfico, é só descomentar */}
-      {/* <div className="bg-white dark:bg-[#020617] border border-emerald-100 dark:border-[#1f2937] rounded-2xl p-6 shadow-sm">
-        <h2 className="text-sm font-semibold mb-4 text-[#166534] dark:text-[#4ADE80]">
-          Nível de estresse - Gráfico 2
-        </h2>
-        <GreenHubStressChart />
-      </div> */}
     </div>
   );
 }

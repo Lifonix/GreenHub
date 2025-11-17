@@ -6,6 +6,36 @@ export default function ProfileModal({ profile, onClose, onRecommend }) {
 
   const [msgText, setMsgText] = useState("");
   const [recomendado, setRecomendado] = useState(false);
+  const [loadingRec, setLoadingRec] = useState(false);
+  const [erroRec, setErroRec] = useState("");
+
+  // chama o backend para salvar o perfil recomendado no JSON
+  async function salvarRecomendacaoBackend() {
+    try {
+      setErroRec("");
+      setLoadingRec(true);
+
+      const resp = await fetch("http://localhost:5000/api/recomendacoes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ profile }),
+      });
+
+      if (!resp.ok) {
+        console.error("Erro ao salvar recomendação no backend:", resp.status);
+        setErroRec("Não foi possível salvar a recomendação no servidor.");
+        return;
+      }
+
+      const json = await resp.json();
+      console.log("Recomendação salva:", json);
+    } catch (err) {
+      console.error("Erro na requisição de recomendação:", err);
+      setErroRec("Erro de conexão com o servidor ao recomendar.");
+    } finally {
+      setLoadingRec(false);
+    }
+  }
 
   return (
     <>
@@ -178,34 +208,51 @@ export default function ProfileModal({ profile, onClose, onRecommend }) {
               Clique no botão abaixo para recomendar este profissional.
             </p>
 
-            {recomendado && (
+            {erroRec && (
+              <p className="mb-2 text-xs text-center text-red-500">
+                {erroRec}
+              </p>
+            )}
+
+            {recomendado && !erroRec && (
               <p className="mb-3 text-sm text-center text-[#16A34A] font-semibold">
                 Você recomendou este profissional!
               </p>
             )}
 
-            {/* Botão que marca estrela no card via callback */}
+            {/* Botão que salva no backend + marca no front */}
             <button
-              onClick={() => {
-                if (onRecommend) {
-                  onRecommend(profile);
+              disabled={loadingRec}
+              onClick={async () => {
+                await salvarRecomendacaoBackend();
+
+                if (!erroRec) {
+                  if (onRecommend) {
+                    onRecommend(profile); // estrela/estado no front
+                  }
+                  setRecomendado(true);
+                  setTimeout(() => {
+                    setShowRecommend(false);
+                    setRecomendado(false);
+                  }, 3000);
                 }
-                setRecomendado(true);
-                // tempo da notificação (3 segundos aqui)
-                setTimeout(() => {
-                  setShowRecommend(false);
-                  setRecomendado(false);
-                }, 3000);
               }}
               className={
                 "mt-2 w-full py-2 rounded-full flex items-center justify-center gap-2 transition " +
                 (recomendado
                   ? "bg-[#16A34A] text-white"
-                  : "bg-[#22C55E] hover:bg-[#16A34A] text-white")
+                  : "bg-[#22C55E] hover:bg-[#16A34A] text-white") +
+                (loadingRec ? " opacity-70 cursor-wait" : "")
               }
             >
               <span>⭐</span>
-              <span>{recomendado ? "Recomendado" : "Recomendar"}</span>
+              <span>
+                {loadingRec
+                  ? "Salvando..."
+                  : recomendado
+                  ? "Recomendado"
+                  : "Recomendar"}
+              </span>
             </button>
           </div>
         </div>

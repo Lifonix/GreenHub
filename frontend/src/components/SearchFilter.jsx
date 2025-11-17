@@ -5,7 +5,6 @@ export default function SearchFilter({ profiles, filters, setFilters }) {
   const cities = [...new Set(profiles.map((p) => p.localizacao))];
   const techs = [...new Set(profiles.flatMap((p) => p.habilidadesTecnicas || []))];
 
-  // Estados para abrir/fechar dropdowns
   const [openArea, setOpenArea] = useState(false);
   const [openCity, setOpenCity] = useState(false);
   const [openTech, setOpenTech] = useState(false);
@@ -54,7 +53,6 @@ export default function SearchFilter({ profiles, filters, setFilters }) {
 
   return (
     <div className="flex flex-wrap justify-center gap-4 p-4 bg-white dark:bg-[#1B2E1D] border border-[#D1FAE5] dark:border-[#14532D] rounded-2xl shadow-md transition-colors duration-500">
-      
       <Dropdown
         label="Todas as áreas"
         options={areas}
@@ -82,7 +80,9 @@ export default function SearchFilter({ profiles, filters, setFilters }) {
 
       {/* Botão Limpar tudo */}
       <button
-        onClick={() => setFilters({ search: "", area: "", city: "", tech: "" })}
+        onClick={() =>
+          setFilters({ search: "", area: "", city: "", tech: "", recommendedOnly: false })
+        }
         className="px-5 py-2 rounded-xl border border-[#D1FAE5] dark:border-[#14532D] 
                    bg-gray-50 dark:bg-[#0F1E11] text-gray-700 dark:text-gray-300 font-medium
                    hover:shadow-md hover:bg-gray-100 dark:hover:bg-[#14532D]/50 transition-all duration-300"
