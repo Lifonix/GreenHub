@@ -104,13 +104,13 @@ function ValuesSection({ dark }) {
   return (
     <section className="max-w-6xl mx-auto px-6 py-16 text-center">
       <h2
-        className={
-          "text-2xl font-bold mb-8 " +
-          (dark ? "text-[#93C5FD]" : "text-[#2563EB]")
-        }
-      >
-        Nossos Valores
-      </h2>
+      className={
+        "text-2xl font-bold mb-8 " +
+        (dark ? "text-[#4ADE80]" : "text-[#15803D]")
+      }
+    >
+      Nossos Valores
+    </h2>
       <div className="grid md:grid-cols-3 gap-8">
         {valores.map((v, i) => (
           <div

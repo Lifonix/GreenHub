@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-export default function Header({ dark, setDark, user, onLoginClick, filters, setFilters }) {
+export default function Header({ dark, user, onLoginClick, filters, setFilters }) {
   const location = useLocation();
 
   const headerBg = dark
@@ -75,8 +75,6 @@ export default function Header({ dark, setDark, user, onLoginClick, filters, set
               Dashboard
             </Link>
           </nav>
-
-
           {/* Login ou sair */}
           {user ? (
             <button
