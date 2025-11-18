@@ -25,8 +25,11 @@ function salvarRecomendados(data) {
   fs.writeFileSync(RECOMENDADOS_PATH, JSON.stringify(data, null, 2), "utf-8");
 }
 
-// POST /api/recomendacoes
-// body esperado: { profile: { id, nome, ... } }
+/**
+ * POST /api/recomendacoes
+ * body esperado: { profile: { id, nome, ... } }
+ * Adiciona um perfil à lista de recomendados (se ainda não estiver).
+ */
 router.post("/", (req, res) => {
   try {
     const { profile } = req.body;
@@ -67,7 +70,10 @@ router.post("/", (req, res) => {
   }
 });
 
-// (opcional) GET /api/recomendacoes para listar
+/**
+ * GET /api/recomendacoes
+ * Lista todos os perfis recomendados.
+ */
 router.get("/", (req, res) => {
   try {
     const data = lerRecomendados();
@@ -75,6 +81,62 @@ router.get("/", (req, res) => {
   } catch (err) {
     console.error("Erro ao listar recomendados:", err);
     res.status(500).json({ error: "Erro ao listar recomendados." });
+  }
+});
+
+/**
+ * DELETE /api/recomendacoes/:id
+ * Remove UM perfil específico da lista de recomendados.
+ */
+router.delete("/:id", (req, res) => {
+  try {
+    const { id } = req.params;
+
+    if (!id) {
+      return res
+        .status(400)
+        .json({ error: "ID é obrigatório para remover recomendação." });
+    }
+
+    const data = lerRecomendados();
+    const antes = data.perfisRecomendados.length;
+
+    // filtra tirando o perfil com aquele id
+    data.perfisRecomendados = data.perfisRecomendados.filter(
+      (p) => String(p.id) !== String(id)
+    );
+
+    // se nada mudou, é porque não encontrou o perfil
+    if (data.perfisRecomendados.length === antes) {
+      return res.status(404).json({ error: "Perfil não encontrado nos recomendados." });
+    }
+
+    salvarRecomendados(data);
+
+    return res.json({ message: "Perfil removido dos recomendados com sucesso." });
+  } catch (err) {
+    console.error("Erro ao remover recomendação:", err);
+    return res
+      .status(500)
+      .json({ error: "Erro interno ao remover recomendação." });
+  }
+});
+
+/**
+ * (Opcional) DELETE /api/recomendacoes
+ * Remove TODOS os recomendados de uma vez.
+ */
+router.delete("/", (req, res) => {
+  try {
+    const data = lerRecomendados();
+    data.perfisRecomendados = [];
+    salvarRecomendados(data);
+    return res.json({ message: "Todos os recomendados foram removidos." });
+  } catch (err) {
+    console.error("Erro ao limpar recomendados:", err);
+    return res
+      .status(500)
+      .json({ error: "Erro interno ao limpar recomendados." });
   }
 });
 
