@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function ProfileModal({ profile, onClose, onRecommend }) {
   const [showRecommend, setShowRecommend] = useState(false);
@@ -9,7 +9,27 @@ export default function ProfileModal({ profile, onClose, onRecommend }) {
   const [loadingRec, setLoadingRec] = useState(false);
   const [erroRec, setErroRec] = useState("");
 
-  // chama o backend para salvar o perfil recomendado no JSON
+  // AO ABRIR: verifica se esse profile já está nos recomendados.json
+  useEffect(() => {
+    async function checarSeJaRecomendado() {
+      if (!profile || profile.id == null) return;
+
+      try {
+        const resp = await fetch("http://localhost:5000/api/recomendacoes");
+        if (!resp.ok) return;
+
+        const lista = await resp.json();
+        const ja = lista.some((p) => String(p.id) === String(profile.id));
+        setRecomendado(ja);
+      } catch (err) {
+        console.error("Erro ao checar recomendados:", err);
+      }
+    }
+
+    checarSeJaRecomendado();
+  }, [profile]);
+
+  // POST - chama o backend para salvar o perfil recomendado no JSON
   async function salvarRecomendacaoBackend() {
     try {
       setErroRec("");
@@ -24,16 +44,82 @@ export default function ProfileModal({ profile, onClose, onRecommend }) {
       if (!resp.ok) {
         console.error("Erro ao salvar recomendação no backend:", resp.status);
         setErroRec("Não foi possível salvar a recomendação no servidor.");
-        return;
+        return false;
       }
 
       const json = await resp.json();
       console.log("Recomendação salva:", json);
+      return true;
     } catch (err) {
       console.error("Erro na requisição de recomendação:", err);
       setErroRec("Erro de conexão com o servidor ao recomendar.");
+      return false;
     } finally {
       setLoadingRec(false);
+    }
+  }
+
+  // DELETE - chama o backend para REMOVER esse perfil dos recomendados
+  async function removerRecomendacaoBackend() {
+    try {
+      setErroRec("");
+      setLoadingRec(true);
+
+      const resp = await fetch(
+        `http://localhost:5000/api/recomendacoes/${profile.id}`,
+        {
+          method: "DELETE",
+        }
+      );
+
+      if (!resp.ok) {
+        console.error("Erro ao remover recomendação no backend:", resp.status);
+        setErroRec("Não foi possível remover a recomendação no servidor.");
+        return false;
+      }
+
+      const json = await resp.json();
+      console.log("Recomendação removida:", json);
+      return true;
+    } catch (err) {
+      console.error("Erro na requisição de remoção:", err);
+      setErroRec("Erro de conexão com o servidor ao remover.");
+      return false;
+    } finally {
+      setLoadingRec(false);
+    }
+  }
+
+  // BOTÃO: se não recomendado -> POST; se já recomendado -> DELETE
+  async function handleToggleRecomendacao() {
+    if (!profile || profile.id == null) {
+      setErroRec("Perfil inválido.");
+      return;
+    }
+
+    if (!recomendado) {
+      // recomendar
+      const ok = await salvarRecomendacaoBackend();
+      if (ok) {
+        setRecomendado(true);
+        if (onRecommend) onRecommend(profile, true); // true = virou recomendado
+
+        // fecha modal de recomendação depois de um tempo, se quiser
+        setTimeout(() => {
+          setShowRecommend(false);
+        }, 1500);
+      }
+    } else {
+      // retirar dos recomendados
+      const ok = await removerRecomendacaoBackend();
+      if (ok) {
+        setRecomendado(false);
+        if (onRecommend) onRecommend(profile, false); // false = deixou de ser recomendado
+
+        setTimeout(() => {
+          setShowRecommend(false);
+        }, 1500);
+      }
     }
   }
 
@@ -176,7 +262,7 @@ export default function ProfileModal({ profile, onClose, onRecommend }) {
               onClick={() => setShowRecommend(true)}
               className="px-5 py-2 rounded-full bg-[#22C55E] text-white hover:bg-[#16A34A] transition"
             >
-              Recomendar Profissional
+              {recomendado ? "Gerenciar recomendação" : "Recomendar Profissional"}
             </button>
 
             <button
@@ -201,11 +287,15 @@ export default function ProfileModal({ profile, onClose, onRecommend }) {
             </button>
 
             <h2 className="text-xl font-bold text-[#166534] dark:text-[#4ADE80] mb-3 text-center">
-              Recomendar {profile.nome}
+              {recomendado
+                ? `Esse profissional já está recomendado`
+                : `Recomendar ${profile.nome}`}
             </h2>
 
             <p className="text-sm text-gray-600 dark:text-gray-300 text-center mb-4">
-              Clique no botão abaixo para recomendar este profissional.
+              {recomendado
+                ? "Você pode retirar este profissional da lista de recomendados."
+                : "Clique no botão abaixo para recomendar este profissional."}
             </p>
 
             {erroRec && (
@@ -214,33 +304,20 @@ export default function ProfileModal({ profile, onClose, onRecommend }) {
               </p>
             )}
 
-            {recomendado && !erroRec && (
+            {recomendado && !erroRec && !loadingRec && (
               <p className="mb-3 text-sm text-center text-[#16A34A] font-semibold">
-                Você recomendou este profissional!
+                Este profissional está nos recomendados.
               </p>
             )}
 
-            {/* Botão que salva no backend + marca no front */}
+            {/* Botão que salva ou remove no backend + marca no front */}
             <button
               disabled={loadingRec}
-              onClick={async () => {
-                await salvarRecomendacaoBackend();
-
-                if (!erroRec) {
-                  if (onRecommend) {
-                    onRecommend(profile); // estrela/estado no front
-                  }
-                  setRecomendado(true);
-                  setTimeout(() => {
-                    setShowRecommend(false);
-                    setRecomendado(false);
-                  }, 3000);
-                }
-              }}
+              onClick={handleToggleRecomendacao}
               className={
                 "mt-2 w-full py-2 rounded-full flex items-center justify-center gap-2 transition " +
                 (recomendado
-                  ? "bg-[#16A34A] text-white"
+                  ? "bg-red-500 hover:bg-red-600 text-white"
                   : "bg-[#22C55E] hover:bg-[#16A34A] text-white") +
                 (loadingRec ? " opacity-70 cursor-wait" : "")
               }
@@ -248,9 +325,9 @@ export default function ProfileModal({ profile, onClose, onRecommend }) {
               <span>⭐</span>
               <span>
                 {loadingRec
-                  ? "Salvando..."
+                  ? "Processando..."
                   : recomendado
-                  ? "Recomendado"
+                  ? "Tirar dos recomendados"
                   : "Recomendar"}
               </span>
             </button>

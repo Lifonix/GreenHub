@@ -438,7 +438,7 @@ export default function Home() {
               <span>⭐</span>
               <span>
                 {onlyRecommended
-                  ? "Mostrando apenas recomendados (recomendados.json)"
+                  ? "Mostrando apenas recomendados"
                   : "Ver apenas recomendados"}
               </span>
             </button>
