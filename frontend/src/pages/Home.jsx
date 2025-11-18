@@ -386,7 +386,7 @@ export default function Home() {
             (dark ? "text-gray-300" : "text-gray-600")
           }
         >
-          Descubra talentos e propósitos na plataforma Lifonix — feita para unir
+          Descubra talentos e propósitos na plataforma GreenHub — feita para unir
           tecnologia, propósito e pessoas.
         </p>
 

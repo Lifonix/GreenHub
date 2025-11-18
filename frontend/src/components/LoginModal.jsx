@@ -142,7 +142,7 @@ export default function LoginModal({ onClose, setUser }) {
 
         {/* Título */}
         <h2 className="text-2xl font-bold text-center mb-2 text-[#166534] dark:text-[#4ADE80]">
-          {modo === "login" ? "Entrar na Lifonix" : "Cadastrar-se"}
+          {modo === "login" ? "Entrar na GreenHub" : "Cadastrar-se"}
         </h2>
         <p className="text-sm text-gray-500 dark:text-gray-400 text-center mb-4">
           {modo === "login"

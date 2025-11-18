@@ -196,7 +196,7 @@ export default function CadastroEmpresa() {
         <aside className="hidden lg:flex flex-col justify-between rounded-3xl bg-gradient-to-b from-[#052e16] via-[#064e3b] to-[#022c22] border border-[#14532D] shadow-[0_0_60px_rgba(0,0,0,0.8)] p-8">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-emerald-300/80">
-              GreenHub • Lifonix
+              GreenHub • WorkWell
             </p>
             <h1 className="mt-4 text-3xl font-extrabold text-[#4ADE80] leading-snug">
               Cadastro de Empresa
@@ -224,7 +224,7 @@ export default function CadastroEmpresa() {
               </span>
               <p>
                 Acesso a profissionais alinhados ao propósito da sua empresa e aos
-                projetos da GreenHub.
+                projetos da Lifonix.
               </p>
             </div>
             <div className="flex items-start gap-3">
@@ -251,13 +251,13 @@ export default function CadastroEmpresa() {
           {/* Header mobile */}
           <div className="lg:hidden mb-6">
             <p className="text-xs uppercase tracking-[0.25em] text-emerald-300/80">
-              GreenHub • Lifonix
+              GreenHub • WorkWell
             </p>
             <h1 className="mt-3 text-2xl font-extrabold text-[#4ADE80]">
               Cadastro de Empresa
             </h1>
             <p className="mt-2 text-sm text-gray-300">
-              Registre sua empresa na Lifonix e conecte-se aos melhores talentos
+              Registre sua empresa na GreenHub e conecte-se aos melhores talentos
               do futuro.
             </p>
           </div>

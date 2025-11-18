@@ -282,7 +282,7 @@ export default function NoticiasAmbientais() {
               Sobre o portal
             </h3>
             <p className="mt-2 text-xs text-emerald-100/80">
-              O Portal de Notícias Ambientais GreenHub by Lifonix reúne histórias,
+              O Portal de Notícias Ambientais dentro da GreenHub que reúne histórias,
               projetos e tecnologias que conectam empresas, profissionais e
               comunidades em prol da transição ecológica.
             </p>

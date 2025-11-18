@@ -97,7 +97,7 @@ export default function Empresas() {
             },
             {
               title: "Ambiente Personalizado",
-              desc: "Crie sua própria página empresarial dentro da plataforma Lifonix.",
+              desc: "Crie sua própria página empresarial dentro da plataforma GreenHub.",
             },
           ].map((item, i) => (
             <div key={i} className={`${cardGlass} hover:translate-y-0.5`}>
@@ -163,7 +163,7 @@ export default function Empresas() {
             <h3 className="text-lg font-bold mt-1">Acompanhe Resultados</h3>
             <p className={`${smallText} mt-3 text-sm`}>
               Monitore engajamento, competências e evolução das conexões da sua
-              empresa dentro da Lifonix e da GreenHub.
+              empresa dentro do WorkWell e da GreenHub.
             </p>
           </div>
         </div>
@@ -178,7 +178,7 @@ export default function Empresas() {
           className={`${smallText} text-center max-w-3xl mx-auto mb-8 text-sm sm:text-base`}
         >
           As empresas que adotam práticas sustentáveis e cuidam de suas equipes
-          ganham destaque na Lifonix. Criamos um sistema de avaliação que gera
+          ganham destaque na GreenHub. Criamos um sistema de avaliação que gera
           selos de impacto, visibilidade extra e confiança para talentos e
           parceiros.
         </p>
@@ -245,7 +245,7 @@ export default function Empresas() {
           className={`${heroText} max-w-2xl mx-auto mt-4 text-base sm:text-lg`}
         >
           Construa conexões, fortaleça sua marca e alcance um novo nível de
-          impacto com a Lifonix e a GreenHub.
+          impacto com o WorkWell e a GreenHub.
         </p>
 
         <button

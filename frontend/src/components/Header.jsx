@@ -21,7 +21,7 @@ export default function Header({ dark, user, onLoginClick, filters, setFilters }
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between p-4 gap-4">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-[#22C55E]">
-          Lifonix
+          GreenHub
         </Link>
 
         {/* Campo de busca (só aparece na Home) */}

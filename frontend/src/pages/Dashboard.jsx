@@ -22,7 +22,7 @@ function Dashboard() {
             </div>
 
             <h1 className="text-3xl md:text-4xl font-bold text-emerald-300 drop-shadow-sm">
-              GreenHub – Monitoramento de Bem-Estar
+              WorkWell – Monitoramento de Bem-Estar
             </h1>
 
             <p className="text-sm md:text-[15px] text-gray-300 max-w-2xl leading-relaxed">
