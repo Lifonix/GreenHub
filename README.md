@@ -11,9 +11,17 @@ Juntos, GreenHub e WorkWell formam um ecossistema que conecta pessoas, tecnologi
 
 ***
 
+## Problema
+
+
+
+As empresas e profissionais ainda têm dificuldade em monitorar, de forma contínua e orientada por dados, as condições reais de bem-estar no trabalho e em conectar isso a oportunidades de carreira alinhadas a propósito e sustentabilidade. Faltam ferramentas integradas que coletem dados ambientais, traduzam essas informações em indicadores de estresse e qualidade de vida e, ao mesmo tempo, aproximem talentos e organizações comprometidas com um futuro do trabalho mais saudável, humano e sustentável.
+
 ## 🔭 Visão geral da solução
 
 ### GreenHub (site e API)
+
+Link do repositorio: https://github.com/Lifonix/GreenHub.git
 
 - Aplicação SPA em React no diretório `frontend/`, com páginas como Home, Dashboard, Empresas, Cadastro de Empresas, About e Notícias Ambientais.
 - Backend Node/Express simples em `backend/`, servindo dados de profissionais e recomendados a partir de arquivos JSON.
@@ -21,6 +29,8 @@ Juntos, GreenHub e WorkWell formam um ecossistema que conecta pessoas, tecnologi
 - Suporte a modo claro/escuro controlado na Home.
 
 ### WorkWell (IoT + bem-estar)
+
+Link do repositorio: https://github.com/Lifonix/IoT-Lifonix.git
 
 - Dispositivo com ESP32 coleta dados de sensores (ex.: temperatura, umidade e luminosidade) como proxies para condições de estresse.
 - Broker MQTT recebe e encaminha mensagens usando tópicos dedicados ao WorkWell.
@@ -459,11 +469,17 @@ Fluxo JSON do WorkWell (Node‑RED):
 ]
 ```
 
+
+
 ***
 
 ## 🚀 Passo a passo para rodar o IoT WorkWell
 
 ### 1. Abrir a simulação no Wokwi
+
+Foto da simulação
+<img width="929" height="733" alt="wokwicircuito" src="https://github.com/user-attachments/assets/ebe9ab81-6b0b-4f64-83ec-b686d9aed126" />
+
 
 1. Acesse o projeto Wokwi do WorkWell:  
    `https://wokwi.com/projects/447651098360541185`.
@@ -481,7 +497,6 @@ Fluxo JSON do WorkWell (Node‑RED):
    const int   default_BROKER_PORT = 1883;
    ```
 
-2. Se você usar outro broker (Mosquitto local, por exemplo), altere esses valores para o IP/host e porta corretos e certifique-se de que o Node‑RED consegue acessar o mesmo broker.
 
 ### 3. Rodar o ESP32 no Wokwi
 
@@ -499,37 +514,20 @@ Fluxo JSON do WorkWell (Node‑RED):
 
 2. Acesse o editor em `http://localhost:1880`.
 3. Adicione um nó **MQTT in** e configure o mesmo broker/porta do ESP32.
-4. Assine o tópico principal de ambiente:
+4. Importe o JSON fornecido acima do fluxo do Node-Red, ele ficara assim:
+   
+<img width="1614" height="641" alt="Node-Red-Circuito" src="https://github.com/user-attachments/assets/dd9bf8c8-1917-4c00-9cc9-e3e0091e4dc1" />
 
-   - `/lifonix/workwell/env`
 
-5. Conecte o nó MQTT ao fluxo de ingestão (JSON → Calcula estresse → dados.json / Ponto).
-6. Clique em **Deploy** e confirme que o nó MQTT está “connected”.
-
-### 5. (Opcional) Criar dashboard Node‑RED
-
-1. Garanta que o `node-red-dashboard` esteja instalado/ativado.
-2. Crie um **tab** e um **group** para o WorkWell.
-3. Adicione componentes de dashboard (gauge, chart) conectados ao nó `Ponto (time,temp,umid,lum,stress)` ou diretamente ao JSON já processado.
-4. Acesse `http://localhost:1880/ui` para ver os dados em tempo real.
-
-### 6. Enviar comandos para o WorkWell (ligar/desligar saída)
-
-1. Crie um nó **MQTT out** apontando para o tópico `/lifonix/workwell/cmd`.
-2. Conecte‑o a dois nós `inject`:
-   - Payload `workwell@on|` → liga saída.
-   - Payload `workwell@off|` → desliga saída.
-3. Faça deploy e clique nos injects para enviar os comandos; veja o estado mudar no monitor serial e na saída D4.
-
-### 7. Integrar com dashboard React (WorkWell / GreenHub)
-
-1. No Node‑RED, use o bloco **API /dadosGreenHub** (HTTP in) ligado ao fluxo `Ler dados.json` → `Linhas → Array JSON` → `Resposta JSON` para expor o histórico pelo endpoint `/dadosGreenHub`.
-2. Na dashboard React (WorkWell ou `Dashboard.jsx` do GreenHub), use Axios ou fetch para consumir esse endpoint periodicamente e atualizar os gráficos.
-3. Assim, a mesma simulação do Wokwi alimenta tanto o Node‑RED quanto a interface React da solução WorkWell.
+5. De o deploy no fluxo.
+6. Abra o site da GreenHub
 
 ***
 
 ## 🔗 Conexão entre GreenHub e WorkWell
+
+<img width="1452" height="912" alt="Dashboard" src="https://github.com/user-attachments/assets/2d896a13-ae9e-4a18-b383-bee6572b282f" />
+
 
 - GreenHub é a fachada web que usuários acessam para visualizar perfis, histórias, valores e, futuramente, dados agregados de bem-estar.
 - WorkWell complementa com uma vertente IoT de bem-estar, monitorando condições ambientais e, em versões futuras, indicadores mais diretos de estresse.
@@ -551,6 +549,10 @@ Essa integração fortalece a narrativa de uma solução completa para o futuro 
   - Verificação do endpoint `/dadosGreenHub` servindo o JSON para o frontend.
 
 ***
+
+## Link do video:
+
+https://youtu.be/TcRKw3Z6CBc 
 
 ## 👥 Equipe
 
